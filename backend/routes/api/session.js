@@ -1,3 +1,5 @@
+// this file will hold the resources for the route paths beginning with '/api/session'
+
 const express = require('express');
 const asyncHandler = require('express-async-handler'); // will wrap async route handlers + custom middlewares
 
@@ -5,8 +7,6 @@ const { setTokenCookie, restoreUser } = require('../../utils/auth');
 const { User } = require('../../db/models');
 
 const router = express.Router();
-
-// this file will hold the resources for the route paths beginning with '/api/session'
 
 // Log in
 router.post(
