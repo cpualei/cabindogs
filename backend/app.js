@@ -5,44 +5,40 @@ const cors = require('cors');
 const csurf = require('csurf');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
+const routes = require('./routes');
 
 // check environment key in config file to
     // determine if environment is in production
 const { environment } = require('./config');
 const isProduction = environment === 'production';
 
-// initialize express app
-const app = express();
+const app = express(); // initialize express app
 
-// morgan middleware for logging info about
-    // requests and responses
-app.use(morgan('dev'));
-
-// middleware for parsing cookies and JSON bodies
-    // with Content-Type of 'application/json'
-app.use(cookieParser());
-app.use(express.json());
+app.use(morgan('dev')); // morgan middleware for logging info about requests and responses
+app.use(cookieParser()); // middleware for parsing cookies
+app.use(express.json()); // middleware for parsing JSON bodies with content-type 'application/json'
 
 // Security Middleware
 if (!isProduction) {
-    // enable cors only in development
-    app.use(cors());
+    app.use(cors()); // enable cors only in development
 }
 
-// helmet helps set a variety of headers to better secure your app
 app.use(
-    helmet.crossOriginResourcePolicy({
+    helmet.crossOriginResourcePolicy({ // helmet helps set a variety of headers to better secure your app
       policy: "cross-origin"
     })
   );
 
-  // Set the _csrf token and create req.csrfToken method
-  app.use(
-    csurf({
-      cookie: {
-        secure: isProduction,
-        sameSite: isProduction && "Lax",
-        httpOnly: true
-      }
-    })
-  );
+app.use(
+csurf({  // Set the _csrf token and create req.csrfToken method
+    cookie: {
+    secure: isProduction,
+    sameSite: isProduction && "Lax",
+    httpOnly: true
+    }
+})
+);
+
+app.use(routes);
+
+module.exports = app;
