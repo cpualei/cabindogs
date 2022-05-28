@@ -7,6 +7,8 @@ const { handleValidationErrors } = require('../../utils/validation');
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { User } = require('../../db/models');
 
+// const { csrfProtection, asyncHandler } = require('../../utils/csrf_async');
+
 const router = express.Router();
 
 const validateListing = [
@@ -38,6 +40,14 @@ const validateListing = [
       .withMessage('Please upload an image for your listing.')
 ];
 
-
+// router.get('/', asyncHandler(async(req, res) => {
+//   const { userId } = req.session.auth;
+//   const listings = await Listing.findAll({
+//     where: {
+//       userId
+//     }
+//   })
+//   console.log(listings)
+// }))
 
 module.exports = router;
