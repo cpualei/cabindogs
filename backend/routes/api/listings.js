@@ -15,6 +15,29 @@ const validateListing = [
       .withMessage('Listing must have a name.')
       .isLength({ max: 50 })
       .withMessage('Listing cannot be longer than 50 characters.'),
+    check('state')
+      .exists({ checkFalsy: true })
+      .withMessage('Please select the state where listing is located.'),
+    check('country')
+      .exists({ checkFalsy: true })
+      .withMessage('Please select the country where listing is located.'),
+    check('cost')
+      .exists({ checkFalsy: true })
+      .withMessage('Please provide cost per day for your listing.'),
+    check('img1')
+      .exists({ checkFalsy: true })
+      .withMessage('Please upload an image for your listing.'),
+    check('img2')
+      .exists({ checkFalsy: true })
+      .withMessage('Please upload an image for your listing.'),
+    check('img3')
+      .exists({ checkFalsy: true })
+      .withMessage('Please upload an image for your listing.'),
+    check('img4')
+      .exists({ checkFalsy: true })
+      .withMessage('Please upload an image for your listing.')
 ];
+
+
 
 module.exports = router;
