@@ -31,19 +31,19 @@ module.exports = {
       },
       img1: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255)
       },
       img2: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255)
       },
       img3: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255)
       },
       img4: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255)
       },
       createdAt: {
         allowNull: false,
