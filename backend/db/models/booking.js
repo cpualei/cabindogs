@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Bookings = sequelize.define('Bookings', {
+  const Booking = sequelize.define('Booking', {
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -24,8 +24,9 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     }
   }, {});
-  Bookings.associate = function(models) {
-    // associations can be defined here
+  Booking.associate = function(models) {
+    Booking.belongsTo(models.Listing, { foreignKey: 'listingId' });
+    Booking.belongsTo(models.User, { foreignKey: 'userId' });
   };
-  return Bookings;
+  return Booking;
 };
