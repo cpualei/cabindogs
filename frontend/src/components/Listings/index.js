@@ -7,7 +7,6 @@ const Listings = () => {
     const listings = useSelector(state => {
         return Object.values(state.listings);
     });
-    console.log(listings)
 
     const dispatch = useDispatch();
 
@@ -21,6 +20,10 @@ const Listings = () => {
                 {listings.map((listing) => (
                     <i key={listing.id}>
                         <img src={listing.img1}></img>
+                        <div>{listing.name}</div>
+                        <div>{listing.state}</div>
+                        <div>{listing.country}</div>
+                        <div>${listing.cost} / night</div>
                     </i>
                 ))}
             </ul>
