@@ -41,9 +41,9 @@ const validateListing = [
 ];
 
 router.get('/', asyncHandler(async (req, res) => {
-  // const listings = await Listing.list();
-  res.send('hello')
-}))
+  const listings = await Listing.findAll();
+  return res.json(listings);
+}));
 
 
 module.exports = router;
