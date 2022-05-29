@@ -5,7 +5,7 @@ const { check } = require('express-validator'); // check will be used with handl
 const { handleValidationErrors } = require('../../utils/validation');
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User } = require('../../db/models');
+const { User, Listing } = require('../../db/models');
 
 // const { csrfProtection, asyncHandler } = require('../../utils/csrf_async');
 
@@ -42,12 +42,17 @@ const validateListing = [
 
 // router.get('/', asyncHandler(async(req, res) => {
 //   const { userId } = req.session.auth;
+//   console.log(userId)
 //   const listings = await Listing.findAll({
 //     where: {
 //       userId
 //     }
 //   })
 //   console.log(listings)
+// }))
+
+// router.get('/', asyncHandler(async(req, res) => {
+//   res.render('hello')
 // }))
 
 module.exports = router;
