@@ -40,19 +40,10 @@ const validateListing = [
       .withMessage('Please upload an image for your listing.')
 ];
 
-// router.get('/', asyncHandler(async(req, res) => {
-//   const { userId } = req.session.auth;
-//   console.log(userId)
-//   const listings = await Listing.findAll({
-//     where: {
-//       userId
-//     }
-//   })
-//   console.log(listings)
-// }))
+router.get('/', asyncHandler(async (req, res) => {
+  // const listings = await Listing.list();
+  res.send('hello')
+}))
 
-// router.get('/', asyncHandler(async(req, res) => {
-//   res.render('hello')
-// }))
 
 module.exports = router;
