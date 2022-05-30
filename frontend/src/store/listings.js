@@ -2,8 +2,8 @@ import { csrfFetch } from "./csrf";
 
 // ACTIONS
 export const LOAD_LISTINGS = 'cabins/LOAD_LISTINGS';
-export const UPDATE_LISTING = 'cabins/UPDATE_LISTING';
 export const ADD_LISTING = 'cabins/ADD_LISTING';
+export const UPDATE_LISTING = 'cabins/UPDATE_LISTING';
 export const REMOVE_LISTING = 'cabins/REMOVE_LISTING';
 
 // ACTION CREATORS
@@ -14,18 +14,18 @@ const load = (listings) => {
     };
 };
 
-// const update = (listing) => {
-//     return {
-//         type: UPDATE_LISTING,
-//         listing
-//     };
-// };
+const add = (listingId) => {
+    return {
+        type: ADD_LISTING,
+        listingId
+    };
+};
 
-// const add = (listing) => {
-//     return {
-//         type: ADD_LISTING,
-//         listingId
-//     };
+// const update = (listing) => {
+    //     return {
+        //         type: UPDATE_LISTING,
+        //         listing
+        //     };
 // };
 
 // const remove = (listingId, userId) => {
@@ -46,6 +46,24 @@ export const getListings = () => async (dispatch) => {
     };
 };
 
+// ---------- ADD LISTING THUNK / COULD NOT FIGURE OUT
+// export const addListing = (listingInfo) => async (dispatch) => {
+//     console.log('TOP OF CREATE THUNK -- DATA ->', listingInfo)
+//     const res = await csrfFetch(`/api/listings`, {
+//         method: 'post',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(listingInfo)
+//     });
+
+//     if (res.ok) {
+//         const listing = await res.json();
+//         dispatch(add(listing))
+//         return listing
+//     }
+// };
+
 // REDUCER
 const listingsReducer = (state = {}, action) => {
     switch(action.type) {
@@ -57,7 +75,7 @@ const listingsReducer = (state = {}, action) => {
             return {
                 ...normalizedListings,
                 ...state,
-            }
+            };
     default:
         return state;
     };
