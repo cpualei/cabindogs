@@ -15,19 +15,25 @@ function Navigation({ isLoaded }){
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
+        <NavLink to="/login" className='login-btn' style={{textDecoration:'none'}}>Log In</NavLink>
+        <NavLink to="/signup" className='signup-btn' style={{textDecoration:'none'}}>Sign Up</NavLink>
       </>
     );
   }
 
   return (
-    <ul>
-      <li>
-        <NavLink exact to="/">Home</NavLink>
-        {isLoaded && sessionLinks}
-      </li>
-    </ul>
+    <div>
+      <div className='top-msg-bar'>We've updated our terms of service. Learn more here.</div>
+      <div className='inner-navbar-div'>
+        <div id='left-side-nav'>
+          <i className='fa-solid fa-dog'/>
+          <NavLink exact to="/" style={{textDecoration:'none'}}>CabinDawgs</NavLink>
+        </div>
+        <div id='right-side-nav'>
+          {isLoaded && sessionLinks}
+        </div>
+      </div>
+    </div>
   );
 }
 

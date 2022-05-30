@@ -52,7 +52,7 @@ const CreateListingForm = () => {
                 <ul>
                     {errors.map((error, idx) => <li key={idx}>{error}</li>)}
                 </ul>
-                <label>Name:</label>
+                <label>Listing Name:</label>
                 <input value={name} onChange={e => setName(e.target.value)}></input>
                 <label>State:</label>
                 <input value={state} onChange={e => setState(e.target.value)}></input>

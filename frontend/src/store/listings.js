@@ -48,7 +48,7 @@ export const getListings = () => async (dispatch) => {
 
 // ---------- ADD LISTING THUNK
 export const addListing = (listingInfo) => async (dispatch) => {
-    const res = await csrfFetch(`/api/listings`, {
+    const res = await csrfFetch(`/api/newlisting`, {
         method: 'post',
         body: JSON.stringify(listingInfo)
     });

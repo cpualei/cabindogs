@@ -10,9 +10,4 @@ router.get('/', asyncHandler(async (req, res) => {
   return res.json(listings);
 }));
 
-// router.post('/', requireAuth, validateListing, asyncHandler(async (req, res) => {
-//   const newListing = await Listing.create(req.body);
-//   return res.json(newListing);
-// }));
-
 module.exports = router;
