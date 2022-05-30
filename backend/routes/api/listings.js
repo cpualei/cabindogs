@@ -25,7 +25,9 @@ const validateListing = [
       .withMessage('Please select the country where listing is located.'),
     check('cost')
       .exists({ checkFalsy: true })
-      .withMessage('Please provide cost per day for your listing.'),
+      .withMessage('Please provide cost per day for your listing.')
+      .isDecimal()
+      .withMessage('Has to be a number.'),
     check('img1')
       .exists({ checkFalsy: true })
       .withMessage('Please upload an image for your listing.'),
@@ -37,7 +39,9 @@ const validateListing = [
       .withMessage('Please upload an image for your listing.'),
     check('img4')
       .exists({ checkFalsy: true })
-      .withMessage('Please upload an image for your listing.')
+      .withMessage('Please upload an image for your listing.'),
+
+    handleValidationErrors
 ];
 
 router.get('/', asyncHandler(async (req, res) => {
@@ -45,5 +49,10 @@ router.get('/', asyncHandler(async (req, res) => {
   return res.json(listings);
 }));
 
+router.post('/', asyncHandler(async (req, res) => {
+  console.log('REACHED POST ROUTE---------')
+  const newListing = await Listing.create(req.body);
+  return res.json(newListing);
+}));
 
 module.exports = router;
