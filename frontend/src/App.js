@@ -6,6 +6,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Listings from "./components/Listings/ListingsPage";
+import CreateListingForm from "./components/Listings/CreateListingForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ function App() {
           </Route>
         </Switch>
       )}
+      <CreateListingForm />
     </>
   );
 }

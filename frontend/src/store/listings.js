@@ -14,10 +14,11 @@ const load = (listings) => {
     };
 };
 
-const add = (listingId) => {
+const add = (newListing) => {
+    console.log(' ==== HIT ACTION ====')
     return {
         type: ADD_LISTING,
-        listingId
+        newListing
     };
 };
 
@@ -41,28 +42,25 @@ export const getListings = () => async (dispatch) => {
 
     if (res.ok) {
         const listings = await res.json();
-        console.log('listings', listings)
         dispatch(load(listings));
     };
 };
 
-// ---------- ADD LISTING THUNK / COULD NOT FIGURE OUT
-// export const addListing = (listingInfo) => async (dispatch) => {
-//     console.log('TOP OF CREATE THUNK -- DATA ->', listingInfo)
-//     const res = await csrfFetch(`/api/listings`, {
-//         method: 'post',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(listingInfo)
-//     });
+// ---------- ADD LISTING THUNK
+export const addListing = (listingInfo) => async (dispatch) => {
+    const res = await csrfFetch(`/api/listings`, {
+        method: 'post',
+        body: JSON.stringify(listingInfo)
+    });
 
-//     if (res.ok) {
-//         const listing = await res.json();
-//         dispatch(add(listing))
-//         return listing
-//     }
-// };
+    const newListing = await res.json();
+
+    if (newListing) {
+        dispatch(add(newListing));
+    };
+
+    return newListing;
+};
 
 // REDUCER
 const listingsReducer = (state = {}, action) => {
@@ -76,6 +74,9 @@ const listingsReducer = (state = {}, action) => {
                 ...normalizedListings,
                 ...state,
             };
+        case ADD_LISTING:
+            const newState = { ...state, [action.newListing.id]: action.newListing };
+            return newState;
     default:
         return state;
     };
