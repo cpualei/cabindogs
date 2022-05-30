@@ -71,7 +71,7 @@ const CreateListingForm = () => {
                 <button>Submit Listing</button>
             </form>
         </div>
-    )
-}
+    );
+};
 
 export default CreateListingForm;
