@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Route, Switch, NavLink } from "react-router-dom";
 import { getListings } from "../../store/listings";
+import ListingDetailsPage from "../ListingDetailsPage";
 
-const Listings = () => {
+const AllListings = () => {
   const listings = useSelector((state) => {
     return Object.values(state.listings);
   });
+  console.log(listings)
 
   const dispatch = useDispatch();
 
@@ -30,4 +33,4 @@ const Listings = () => {
   );
 };
 
-export default Listings;
+export default AllListings;

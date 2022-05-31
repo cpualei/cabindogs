@@ -5,8 +5,9 @@ import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
-import Listings from "./components/Listings/ListingsPage";
-import CreateListingForm from "./components/Listings/CreateListingForm";
+import AllListings from "./components/AllListings";
+import CreateListingForm from "./components/CreateListingForm";
+import ListingDetailsPage from "./components/ListingDetailsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,10 +28,10 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route exact path="/listings">
-            <Listings />
+            <AllListings />
           </Route>
           <Route exact path="/listings/:id">
-            <Listings />
+            <ListingDetailsPage />
           </Route>
           <Route exact path="/newlisting">
             <CreateListingForm />
