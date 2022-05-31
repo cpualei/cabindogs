@@ -15,7 +15,6 @@ const load = (listings) => {
 };
 
 const add = (newListing) => {
-  console.log(" ==== HIT ACTION ====");
   return {
     type: ADD_LISTING,
     newListing,
@@ -43,6 +42,15 @@ export const getListings = () => async (dispatch) => {
   if (res.ok) {
     const listings = await res.json();
     dispatch(load(listings));
+  };
+};
+
+export const getListing = (id) => async (dispatch) => {
+  const res = await csrfFetch(`/api/listings/${id}`);
+
+  if (res.ok) {
+    const listing = await res.json();
+    dispatch(load(listing));
   };
 };
 
@@ -93,13 +101,12 @@ export const addListing = (listingInfo) => async (dispatch) => {
 const listingsReducer = (state = {}, action) => {
   switch (action.type) {
     case LOAD_LISTINGS:
-      const normalizedListings = {};
+      const normalizedListings = {...state};
       action.listings.forEach((listing) => {
         normalizedListings[listing.id] = listing;
       });
       return {
         ...normalizedListings,
-        ...state,
       };
     case ADD_LISTING:
       const newState = { ...state, [action.newListing.id]: action.newListing };
