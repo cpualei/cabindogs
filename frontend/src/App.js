@@ -20,16 +20,19 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
-          <Route path="/login">
+          <Route exact path="/login">
             <LoginFormPage />
           </Route>
-          <Route path="/signup">
+          <Route exact path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/listings">
+          <Route exact path="/listings">
             <Listings />
           </Route>
-          <Route path="/newlisting">
+          <Route exact path="/listings/:id">
+            <Listings />
+          </Route>
+          <Route exact path="/newlisting">
             <CreateListingForm />
           </Route>
         </Switch>
