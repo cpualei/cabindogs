@@ -22,19 +22,19 @@ const add = (newListing) => {
   };
 };
 
-// const update = (listing) => {
-//     return {
-//         type: UPDATE_LISTING,
-//         listing
-//     };
-// };
-
-const remove = (listingId, userId) => {
-  return {
-    type: REMOVE_LISTING,
-    listingId,
-  };
+const update = (listing) => {
+    return {
+        type: UPDATE_LISTING,
+        listing
+    };
 };
+
+// const remove = (listingId, userId) => {
+//   return {
+//     type: REMOVE_LISTING,
+//     listingId,
+//   };
+// };
 
 // -------- THUNK ACTION CREATORS --------
 export const getListings = () => async (dispatch) => {
@@ -43,7 +43,7 @@ export const getListings = () => async (dispatch) => {
   if (res.ok) {
     const listings = await res.json();
     dispatch(load(listings));
-  }
+  };
 };
 
 // ADD LISTING THUNK
@@ -57,10 +57,24 @@ export const addListing = (listingInfo) => async (dispatch) => {
 
   if (newListing) {
     dispatch(add(newListing));
-  }
+  };
 
   return newListing;
 };
+
+// EDIT LISTING THUNK
+// export const updateListing = (listingInfo) => async (dispatch) => {
+//   const res = await csrfFetch(`/api/listing/${listing.id}`, {
+//     method: "post",
+//     body: JSON.stringify(listingInfo),
+//   });
+
+//   if (res.ok) {
+//     const listing = await res.json();
+//     dispatch(update(listing));
+//     return listing;
+//   };
+// };
 
 // DELETE LISTING THUNK
 // export const deleteListing = (listingId) => async (dispatch) => {

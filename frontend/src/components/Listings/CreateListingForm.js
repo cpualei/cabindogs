@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addListing } from "../../store/listings";
@@ -7,6 +7,7 @@ const CreateListingForm = () => {
   const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
+
   const [name, setName] = useState("");
   const [state, setState] = useState("");
   const [country, setCountry] = useState("");
@@ -20,7 +21,7 @@ const CreateListingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newListing = {
+    const newListing = { // newListing === payload
       userId: sessionUser.id,
       name,
       state,
@@ -37,9 +38,9 @@ const CreateListingForm = () => {
       if (data && data.errors) setErrors(data.errors);
     });
 
-    if (errors.length > 0) {
-      history.push("/");
-    }
+    if (errors.length < 0 && newListing) {
+      history.push("/listings");
+    };
   };
 
   const handleCancelClick = (e) => {
