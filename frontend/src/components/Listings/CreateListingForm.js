@@ -5,46 +5,43 @@ import { addListing } from '../../store/listings';
 
 const CreateListingForm = () => {
 
-    const sessionUser = useSelector(state => state.session.user);
+  const sessionUser = useSelector(state => state.session.user);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const [name, setName] = useState('');
+  const [state, setState] = useState('');
+  const [country, setCountry] = useState('');
+  const [cost, setCost] = useState('');
+  const [img1, setImg1] = useState('');
+  const [img2, setImg2] = useState('');
+  const [img3, setImg3] = useState('');
+  const [img4, setImg4] = useState('');
+  const [errors, setErrors] = useState([]);
 
-    const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    const history = useHistory();
+  const newListing = {
+    userId: sessionUser.id,
+    name,
+    state,
+    country,
+    cost,
+    img1,
+    img2,
+    img3,
+    img4
+  };
 
-    const [name, setName] = useState('');
-    const [state, setState] = useState('');
-    const [country, setCountry] = useState('');
-    const [cost, setCost] = useState('');
-    const [img1, setImg1] = useState('');
-    const [img2, setImg2] = useState('');
-    const [img3, setImg3] = useState('');
-    const [img4, setImg4] = useState('');
-    const [errors, setErrors] = useState([]);
+  dispatch(addListing(newListing)).catch(async (res) => {
+    const data = await res.json();
+    if (data && data.errors) setErrors(data.errors);
+  });
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const newListing = {
-            userId: sessionUser.id,
-            name,
-            state,
-            country,
-            cost,
-            img1,
-            img2,
-            img3,
-            img4
-        };
-
-        dispatch(addListing(newListing)).catch(async (res) => {
-            const data = await res.json();
-            if (data && data.errors) setErrors(data.errors);
-          });
-
-        if (errors.length > 0) {
-            history.push('/');
-        };
-    };
+  if (errors.length > 0) {
+    history.push('/');
+  };
+};
 
     return (
         <div>
