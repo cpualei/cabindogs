@@ -43,6 +43,11 @@ const CreateListingForm = () => {
   };
 };
 
+    const handleCancelClick = (e) => {
+        e.preventDefault();
+        history.push('/listings')
+    }
+
     return (
         <div>
             <form onSubmit={e => handleSubmit(e)}>
@@ -65,7 +70,8 @@ const CreateListingForm = () => {
                 <input value={img3} onChange={e => setImg3(e.target.value)}></input>
                 <label>Image 4:</label>
                 <input value={img4} onChange={e => setImg4(e.target.value)}></input>
-                <button>Submit Listing</button>
+                <button type='submit'>Submit Listing</button>
+                <button type='button' onClick={handleCancelClick}>Cancel</button>
             </form>
         </div>
     );
