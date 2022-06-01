@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Route, Switch, NavLink } from "react-router-dom";
 import { getListings } from "../../store/listings";
-import ListingDetailsPage from "../ListingDetailsPage";
 
 const AllListings = () => {
   const listings = useSelector((state) => {
@@ -25,7 +23,7 @@ const AllListings = () => {
             <div>{listing.name}</div>
             <div>{listing.state}</div>
             <div>{listing.country}</div>
-            <div>${listing.cost} / night</div>
+            <div>From ${listing.cost} / night</div>
           </i>
         ))}
       </ul>
