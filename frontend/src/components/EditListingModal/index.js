@@ -5,12 +5,13 @@ import { updateListing } from "../../store/listings";
 
 const EditListingForm = () => {
   const { id } = useParams();
+  console.log(id)
   const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const listings = useSelector((state) => state.listings);
-  const listingsArray = Object.values(listings);
+  // const listings = useSelector((state) => state.listings);
+  // const listingsArray = Object.values(listings);
   // const listing = listingsArray[id];
 
   const [name, setName] = useState("");

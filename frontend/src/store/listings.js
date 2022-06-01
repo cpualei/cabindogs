@@ -72,17 +72,16 @@ export const addListing = (listingInfo) => async (dispatch) => {
 
 // EDIT LISTING THUNK
 export const updateListing = (id, listing) => async (dispatch) => {
-  const res = await csrfFetch(`/api/listings/${id}`, {
+  const res = await csrfFetch(`/api/listing/${id}`, {
     method: "put",
-    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(listing),
   });
 
   if (res.ok) {
     const listing = await res.json();
     dispatch(update(listing));
+    return listing;
   };
-  return listing;
 };
 
 // DELETE LISTING THUNK
@@ -112,6 +111,9 @@ const listingsReducer = (state = {}, action) => {
     case ADD_LISTING:
       const newState = { ...state, [action.newListing.id]: action.newListing };
       return newState;
+    case UPDATE_LISTING:
+      const updatedState = { ...state, [action.listing.id]: action.listing };
+      return updatedState;
     default:
       return state;
   }
