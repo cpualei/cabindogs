@@ -28,7 +28,7 @@ const ListingDetailsPage = () => {
       <div>{listing?.name}</div>
       <div>{listing?.state}</div>
       <div>{listing?.country}</div>
-      <div>${listing?.cost} / night</div>
+      <div>From ${listing?.cost} / night</div>
     </div>
   );
 };
