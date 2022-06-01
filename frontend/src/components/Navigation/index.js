@@ -40,7 +40,7 @@ function Navigation({ isLoaded }) {
         <div id="left-side-nav">
           <i className="fa-solid fa-dog" />
           <NavLink exact to="/" style={{ textDecoration: "none" }}>
-            CabinDawgs
+            CABINDOGS
           </NavLink>
         </div>
         <div id="right-side-nav">{isLoaded && sessionLinks}</div>

@@ -71,18 +71,19 @@ export const addListing = (listingInfo) => async (dispatch) => {
 };
 
 // EDIT LISTING THUNK
-// export const updateListing = (listingInfo) => async (dispatch) => {
-//   const res = await csrfFetch(`/api/listing/${listing.id}`, {
-//     method: "post",
-//     body: JSON.stringify(listingInfo),
-//   });
+export const updateListing = (id, listing) => async (dispatch) => {
+  const res = await csrfFetch(`/api/listings/${id}`, {
+    method: "put",
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(listing),
+  });
 
-//   if (res.ok) {
-//     const listing = await res.json();
-//     dispatch(update(listing));
-//     return listing;
-//   };
-// };
+  if (res.ok) {
+    const listing = await res.json();
+    dispatch(update(listing));
+  };
+  return listing;
+};
 
 // DELETE LISTING THUNK
 // export const deleteListing = (listingId) => async (dispatch) => {
