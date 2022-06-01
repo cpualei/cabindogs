@@ -5,8 +5,9 @@ import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
-import Listings from "./components/Listings/ListingsPage";
-import CreateListingForm from "./components/Listings/CreateListingForm";
+import Listings from "./components/AllListingsPage/ListingsPage";
+import CreateListingForm from "./components/CreateListingPage/CreateListingForm";
+import ListingDetailsPage from "./components/ListingDetailsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,16 +21,19 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
-          <Route path="/login">
+          <Route exact path="/login">
             <LoginFormPage />
           </Route>
-          <Route path="/signup">
+          <Route exact path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/listings">
+          <Route exact path="/listings">
             <Listings />
           </Route>
-          <Route path="/newlisting">
+          <Route exact path="/listings/:id">
+            <ListingDetailsPage />
+          </Route>
+          <Route exact path="/newlisting">
             <CreateListingForm />
           </Route>
         </Switch>

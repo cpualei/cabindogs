@@ -93,13 +93,12 @@ export const addListing = (listingInfo) => async (dispatch) => {
 const listingsReducer = (state = {}, action) => {
   switch (action.type) {
     case LOAD_LISTINGS:
-      const normalizedListings = {};
+      const normalizedListings = {...state};
       action.listings.forEach((listing) => {
         normalizedListings[listing.id] = listing;
       });
       return {
-        ...normalizedListings,
-        ...state,
+        ...normalizedListings
       };
     case ADD_LISTING:
       const newState = { ...state, [action.newListing.id]: action.newListing };

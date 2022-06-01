@@ -13,6 +13,16 @@ router.get(
   })
 );
 
+router.get(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const listing = await Listing.findByPk(req.body.id, {
+      include: { model: User }
+    });
+    return res.json(listing);
+  })
+);
+
 // console.log('HITTING DELETE ROUTTE')
 // router.delete(
 //   "/:id",
