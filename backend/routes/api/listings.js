@@ -86,7 +86,9 @@ router.put(
 router.delete(
   "/:id",
   asyncHandler(async (req, res) => {
-    const id = await Listing.deleteItem(req.params.id);
+    const id = req.params.id;
+    const deleteListing = await Listing.findByPk(id);
+    await deleteListing.destroy();
     return res.json({ id });
   })
 );
