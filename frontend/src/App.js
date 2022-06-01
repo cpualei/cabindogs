@@ -5,8 +5,8 @@ import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
-import Listings from "./components/AllListingsPage/ListingsPage";
-import CreateListingForm from "./components/CreateListingPage/CreateListingForm";
+import AllListings from "./components/AllListings";
+import CreateListingForm from "./components/CreateListingForm";
 import ListingDetailsPage from "./components/ListingDetailsPage";
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route exact path="/listings">
-            <Listings />
+            <AllListings />
           </Route>
           <Route exact path="/listings/:id">
             <ListingDetailsPage />
