@@ -28,10 +28,10 @@ const update = (listing) => {
   };
 };
 
-const remove = (listing) => {
+const remove = (listingId) => {
   return {
     type: REMOVE_LISTING,
-    listing,
+    listingId,
   };
 };
 
@@ -86,12 +86,14 @@ export const updateListing = (id, listing) => async (dispatch) => {
 
 // DELETE LISTING THUNK
 export const deleteListing = (listing) => async (dispatch) => {
-  const res = await fetch(`/api/listings/${listing}`, {
+  const res = await csrfFetch(`/api/listings/${listing}`, {
     method: "delete",
   });
 
   if (res.ok) {
-    dispatch(remove(listing));
+    const { id } = await res.json()
+    console.log(id)
+    dispatch(remove(id));
     return listing;
   }
 };
@@ -115,6 +117,7 @@ const listingsReducer = (state = {}, action) => {
       return updatedState;
     case REMOVE_LISTING:
       const deletedState = { ...state };
+      delete deletedState[action.listingId]
       return deletedState;
     default:
       return state;
