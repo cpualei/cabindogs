@@ -1,42 +1,36 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getListing } from "../../store/listings";
+import { getListings } from "../../store/listings";
 
 const ListingDetailsPage = () => {
-  const listings = useSelector((state) => state?.listings);
-  console.log(listings)
-  const listingdetails = Object?.values(listings);
-  console.log(listingdetails)
-
-
   const { id } = useParams();
-    // const listing = listings.find((listing) => id === listing.id);
-//   const listing = listings.filter((listing) => {
-//     return +id === listing.id;
-//   });
-//   console.log(listing);
-
+  console.log(id)
   const dispatch = useDispatch();
 
-  //   useEffect(() => {
-  //     dispatch(getListing(id));
+  const listings = useSelector((state) => state.listings);
+  console.log(listings);
+  const listingsArray = Object.values(listings);
+  const listing = listingsArray[id];
+  console.log(listing)
 
-  //     if (listing) {
-  //       return;
-  //     }
-  //   }, [dispatch, id]);
+  useEffect(() => {
+    dispatch(getListings());
+  }, [dispatch]);
 
-  //   return (
-  //     <div>
-  //       <img src={listing.img1}></img>
+  return (
+    <div>
+      <img src={listing?.img1}></img>
+      <img src={listing?.img2}></img>
+      <img src={listing?.img3}></img>
+      <img src={listing?.img4}></img>
 
-  //       <div>{listing.name}</div>
-  //       <div>{listing.state}</div>
-  //       <div>{listing.country}</div>
-  //       <div>${listing.cost} / night</div>
-  //     </div>
-  //   );
+      <div>{listing?.name}</div>
+      <div>{listing?.state}</div>
+      <div>{listing?.country}</div>
+      <div>${listing?.cost} / night</div>
+    </div>
+  );
 };
 
 export default ListingDetailsPage;
