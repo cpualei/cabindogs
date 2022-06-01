@@ -24,7 +24,7 @@ const EditListingForm = () => {
   const [img4, setImg4] = useState("");
   const [errors, setErrors] = useState([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const listing = { // newListing === payload
@@ -39,12 +39,12 @@ const EditListingForm = () => {
       img4,
     };
 
-    let updatedListing = dispatch(updateListing(id, listing))
+    let updatedListing = await dispatch(updateListing(id, listing));
 
-    dispatch(updateListing(listing)).catch(async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      });
+    // dispatch(updateListing(listing)).catch(async (res) => {
+    //     const data = await res.json();
+    //     if (data && data.errors) setErrors(data.errors);
+    //   });
 
       if (updatedListing) {
         history.push(`/listings/${id}`);

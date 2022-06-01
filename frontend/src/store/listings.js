@@ -72,7 +72,7 @@ export const addListing = (listingInfo) => async (dispatch) => {
 
 // EDIT LISTING THUNK
 export const updateListing = (id, listing) => async (dispatch) => {
-  const res = await csrfFetch(`/api/listing/${id}`, {
+  const res = await csrfFetch(`/api/listings/${id}`, {
     method: "put",
     body: JSON.stringify(listing),
   });

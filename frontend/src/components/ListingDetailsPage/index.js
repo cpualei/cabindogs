@@ -3,17 +3,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getListings } from "../../store/listings";
 import EditListingForm from "../EditListingModal";
-import EditListingFormModal from "../EditListingModal";
+import { Modal } from "../../context/Modal";
 
 const ListingDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
   const listings = useSelector((state) => state.listings);
-  const listingsArray = Object.values(listings);
-  const listing = listingsArray[id];
+  const listing = listings[id];
 
-  const [showEditForm, setShowEditForm] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     dispatch(getListings());
@@ -21,10 +20,12 @@ const ListingDetailsPage = () => {
 
   return (
     <div>
-      <div>
-        <button onClick={(e) => setShowEditForm(true)}>Edit Listing</button>
-        <EditListingFormModal />
-      </div>
+      <button onClick={() => setShowModal(true)}>Edit Listing</button>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)}>
+            <EditListingForm />
+          </Modal>
+        )}
       {/* <button onClick={(e) => }>Delete Listing</button> */}
       <img src={listing?.img1} alt="img1"></img>
       <img src={listing?.img2} alt="img2"></img>
@@ -36,6 +37,7 @@ const ListingDetailsPage = () => {
       <div>{listing?.country}</div>
       <div>From ${listing?.cost} / night</div>
     </div>
+
   );
 };
 

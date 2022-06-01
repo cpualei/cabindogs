@@ -2,15 +2,14 @@ import React, { useState } from "react";
 import { Modal } from "../../context/Modal";
 import EditListingForm from ".";
 
-function EditListingFormModal() {
-    const [showModal, setShowModal] = useState(false);
+function EditListingFormModal({ showModal, setShowModal }) {
 
     return (
       <>
         <button onClick={() => setShowModal(true)}>Edit Listing</button>
         {showModal && (
           <Modal onClose={() => setShowModal(false)}>
-            <EditListingForm />
+            <EditListingForm showModal={showModal} setShowModal={setShowModal} />
           </Modal>
         )}
       </>
