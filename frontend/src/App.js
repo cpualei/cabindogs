@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import AllListings from "./components/AllListings";
 import CreateListingForm from "./components/CreateListingForm";
 import ListingDetailsPage from "./components/ListingDetailsPage";
+import EditListingForm from "./components/EditListingModal";
 
 function App() {
   const dispatch = useDispatch();
