@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         userId: 3,
-        name: 'Sugar Bear Cove--10 acres of beachfront property',
+        name: 'Sugar Bear Cove',
         state: 'Shirley, British Columbia',
         country: 'Canada',
         cost: 230,
@@ -44,7 +44,7 @@ module.exports = {
       },
       {
         userId: 1,
-        name: 'Midcentury in the Poconos close to Lake',
+        name: 'Midcentury in the Poconos',
         state: 'Pennsylvania',
         country: 'USA',
         cost: 200,

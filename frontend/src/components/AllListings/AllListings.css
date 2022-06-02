@@ -1,21 +1,27 @@
 
 .listings-div {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    float: left;
+    width: 50%;
 }
 
 .listings-ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
+    padding-left: 0px;
 }
 
 #i {
     display: flex;
     flex-direction: column;
     height: 320px;
-    width: 373.02px;
-    justify-content: space-between;
+    margin-bottom: 15px;
+    /* width: 373.02px; */
+    /* justify-content: space-between; */
 }
 
 #listing-imgs {

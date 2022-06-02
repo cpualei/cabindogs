@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getListings } from "../../store/listings";
 import "./AllListings.css"
+// import "../images/map"
 
 const AllListings = () => {
   const listings = useSelector((state) => {
@@ -28,6 +29,7 @@ const AllListings = () => {
           </i>
         ))}
       </ul>
+      {/* <img className="googlemap" src="images/map.png" alt="map" /> */}
     </div>
   );
 };

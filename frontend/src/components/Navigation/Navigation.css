@@ -38,3 +38,8 @@ body {
     display: flex;
     margin-right: 10px;
 }
+
+#cabindogs {
+    color:rgba(69, 69, 69, 0.886);
+    font-weight: 900;
+}
