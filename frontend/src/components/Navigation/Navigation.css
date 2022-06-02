@@ -27,6 +27,7 @@ body {
 #left-side-nav {
     display: flex;
     text-decoration: none;
+    font-size: 20px;
 }
 
 #right-side-nav {
@@ -36,4 +37,9 @@ body {
 .login-btn {
     display: flex;
     margin-right: 10px;
+}
+
+#cabindogs {
+    color:rgba(69, 69, 69, 0.886);
+    font-weight: 900;
 }

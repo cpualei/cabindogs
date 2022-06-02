@@ -39,7 +39,7 @@ function Navigation({ isLoaded }) {
       <div className="inner-navbar-div">
         <div id="left-side-nav">
           <i className="fa-solid fa-dog" />
-          <NavLink exact to="/" style={{ textDecoration: "none" }}>
+          <NavLink id="cabindogs" exact to="/" style={{ textDecoration: "none" }}>
             CABINDOGS
           </NavLink>
         </div>
