@@ -44,12 +44,23 @@ const remove = (bookingId) => {
 };
 
 // ------- THUNK ACTION CREATORS -------
+export const getBookings = () => async (dispatch) => {
+  console.log("THUNK IS HIT======")
+  const res = await csrfFetch(`/api/bookings`);
+  console.log("RES IS HIT======", res)
+
+  if (res.ok) {
+    const allbookings = await res.json();
+    dispatch(load(allbookings));
+  }
+};
+
 export const getBookingPage = (id) => async (dispatch) => {
   const res = await csrfFetch(`/api/listings/${id}/book`);
 
   if (res.ok) {
-    const getBookingPage = await res.json();
-    dispatch(loadOne(getBookingPage));
+    const booking = await res.json();
+    dispatch(loadOne(booking));
   }
 };
 
@@ -57,11 +68,11 @@ export const getBookingPage = (id) => async (dispatch) => {
 const bookingsReducer = (state = {}, action) => {
   switch (action.type) {
     case LOAD_BOOKINGS:
-      const normalizedBooking = { ...state };
-      action.listings.forEach((listing) => {
-        normalizedBooking[listing.id] = listing;
+      const normalizedBookings = { ...state };
+      action.bookings.forEach((booking) => {
+        normalizedBookings[booking.id] = booking;
       });
-      return { ...normalizedBooking };
+      return { ...normalizedBookings };
     case LOAD_BOOKING:
       const newState = { ...state };
       newState[action.booking.id] = action.booking;

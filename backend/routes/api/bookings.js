@@ -1,19 +1,23 @@
-// const express = require("express");
-// const asyncHandler = require("express-async-handler");
+const express = require("express");
+const asyncHandler = require("express-async-handler");
 
-// const { check } = require("express-validator");
-// const { handleValidationErrors } = require("../../utils/validation");
-// const { setTokenCookie, requireAuth } = require("../../utils/auth");
+const { check } = require("express-validator");
+const { handleValidationErrors } = require("../../utils/validation");
+const { setTokenCookie, requireAuth } = require("../../utils/auth");
 
-// const { User, Listing } = require("../../db/models");
+const { User, Booking } = require("../../db/models");
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.get(
-//     "/:id",
-//     asyncHandler(async (req, res) => {
-//         const listing = await Listing.findByPk()
-//     })
-// )
+router.get(
+  "/",
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    const bookings = await Booking.findAll({
+        where: User
+    });
+    return res.json(bookings);
+  })
+);
 
-// module.exports = router;
+module.exports = router;
