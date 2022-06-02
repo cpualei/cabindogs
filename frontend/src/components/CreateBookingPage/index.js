@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBookingPage } from "../../store/bookings";
-import Calendar from "react-calendar";
+import { Calendar } from 'react-calendar';
+import "./Calendar.css"
 
 
 const CreateBookingPage = () => {
 
     const { id } = useParams();
 
-    // const [date, setDate] = useState(new Date());
+    const [value, onChange] = useState(new Date());
 
     // const calendar = useSelector((state) => state = {
     //     date: new Date()
@@ -24,14 +25,16 @@ const CreateBookingPage = () => {
         dispatch(getBookingPage(id));
     }, [dispatch, id]);
 
-    // const onChange = (date) => {
+    const history = useHistory();
 
-    // }
+    const confirmBookingBtn = (e) => {
+        history.push("/bookings")
+    }
 
     return (
         <div>
-            <Calendar />
-            <button>Confirm Booking</button>
+            <div><Calendar onChange={onChange} value={value} /></div>
+            <button onClick={confirmBookingBtn}>Confirm Booking</button>
             <img src={booking?.img1} alt="img1"></img>
             <div>{booking?.name}</div>
             <div>{booking?.state}</div>
