@@ -36,7 +36,7 @@ const CreateBookingPage = () => {
             <div>{listing?.name}</div>
             <div>{listing?.state}</div>
             <div>{listing?.country}</div>
-            <div>Total Cost: ${listing?.cost+(.4*listing.cost)}</div>
+            <div>Total Cost: ${listing?.cost}</div>
         </div>
     )
 }
