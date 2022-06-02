@@ -2,6 +2,7 @@ import { csrfFetch } from "./csrf";
 
 // ACTIONS
 export const LOAD_BOOKINGS = "cabins/LOAD_BOOKINGS";
+export const LOAD_BOOKING = "cabins/LOAD_BOOKING";
 export const ADD_BOOKING = "cabins/ADD_BOOKING";
 export const UPDATE_BOOKING = "cabins/UPDATE_BOOKING";
 export const REMOVE_BOOKING = "cabins/REMOVE_BOOKING";
@@ -11,6 +12,13 @@ const load = (bookings) => {
   return {
     type: LOAD_BOOKINGS,
     bookings,
+  };
+};
+
+const loadOne = (booking) => {
+  return {
+    type: LOAD_BOOKING,
+    booking,
   };
 };
 
@@ -41,7 +49,7 @@ export const getBookingPage = (id) => async (dispatch) => {
 
   if (res.ok) {
     const getBookingPage = await res.json();
-    dispatch(load(getBookingPage));
+    dispatch(loadOne(getBookingPage));
   }
 };
 
@@ -54,7 +62,13 @@ const bookingsReducer = (state = {}, action) => {
         normalizedBooking[listing.id] = listing;
       });
       return { ...normalizedBooking };
+    case LOAD_BOOKING:
+      const newState = { ...state };
+      newState[action.booking.id] = action.booking;
+      return newState;
     default:
         return state;
   }
 };
+
+export default bookingsReducer;

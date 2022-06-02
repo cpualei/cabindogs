@@ -15,8 +15,8 @@ const CreateBookingPage = () => {
     //     date: new Date()
     // });
 
-    const listings = useSelector((state) => state.listings);
-    const listing = listings[id];
+    const booking = useSelector((state) => state.bookings[id]);
+    // const listing = listings[id];
 
     const dispatch = useDispatch();
 
@@ -32,11 +32,11 @@ const CreateBookingPage = () => {
         <div>
             <Calendar />
             <button>Confirm Booking</button>
-            <img src={listing?.img1} alt="img1"></img>
-            <div>{listing?.name}</div>
-            <div>{listing?.state}</div>
-            <div>{listing?.country}</div>
-            <div>Total Cost: ${listing?.cost}</div>
+            <img src={booking?.img1} alt="img1"></img>
+            <div>{booking?.name}</div>
+            <div>{booking?.state}</div>
+            <div>{booking?.country}</div>
+            <div>Total Cost: ${booking?.cost+(booking?.cost*0.4)}</div>
         </div>
     )
 }
