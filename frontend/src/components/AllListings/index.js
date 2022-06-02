@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getListings } from "../../store/listings";
+import "./AllListings.css"
 
 const AllListings = () => {
   const listings = useSelector((state) => {
@@ -15,15 +16,15 @@ const AllListings = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <ul>
+    <div className="listings-div">
+      <ul className="listings-ul">
         {listings.map((listing) => (
-          <i key={listing.id}>
-            <img src={listing.img1}></img>
-            <div>{listing.name}</div>
-            <div>{listing.state}</div>
-            <div>{listing.country}</div>
-            <div>From ${listing.cost} / night</div>
+          <i id="i" key={listing.id}>
+            <img id="listing-imgs" src={listing.img1}></img>
+            <div className="listing-description" id="listing-name">{listing.name}</div>
+            <div className="listing-description">{listing.state}</div>
+            <div className="listing-description">{listing.country}</div>
+            <div className="listing-description" id="listing-cost">From ${listing.cost} / night</div>
           </i>
         ))}
       </ul>

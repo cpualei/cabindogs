@@ -39,21 +39,19 @@ const EditListingForm = () => {
       img4,
     };
 
-    let updatedListing = await dispatch(updateListing(id, listing));
+    let updatedListing = await dispatch(updateListing(id, listing)).catch(async (res) => {
+      const data = await res.json();
+      if (data && data.errors) setErrors(data.errors);
+    });;
 
-    // dispatch(updateListing(listing)).catch(async (res) => {
-    //     const data = await res.json();
-    //     if (data && data.errors) setErrors(data.errors);
-    //   });
-
-      if (updatedListing) {
-        history.push(`/listings/${id}`);
-      };
+    if (updatedListing) {
+      history.push(`/listings${id}`);
+    };
   };
 
   const handleCancelClick = (e) => {
     e.preventDefault();
-    history.push(`/listings`);
+    history.push(`/listings/${id}`);
   };
 
   return (
@@ -84,9 +82,7 @@ const EditListingForm = () => {
         <label>Image 4:</label>
         <input value={img4} onChange={(e) => setImg4(e.target.value)}></input>
         <button type="submit">Update Listing</button>
-        <button type="button" onClick={handleCancelClick}>
-          Cancel
-        </button>
+        <button type="button" onClick={handleCancelClick}>Cancel</button>
       </form>
     </div>
   );
