@@ -21,7 +21,7 @@ const AllListings = () => {
       <ul className="listings-ul">
         {listings.map((listing) => (
           <i id="i" key={listing.id}>
-            <img id="listing-imgs" src={listing.img1}></img>
+            <img id="listing-imgs" src={listing.img1} alt="img"></img>
             <div className="listing-description" id="listing-name">{listing.name}</div>
             <div className="listing-description">{listing.state}</div>
             <div className="listing-description">{listing.country}</div>
