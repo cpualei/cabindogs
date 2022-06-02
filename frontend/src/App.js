@@ -10,6 +10,7 @@ import AllListings from "./components/AllListings";
 import CreateListingForm from "./components/CreateListingForm";
 import ListingDetailsPage from "./components/ListingDetailsPage";
 import EditListingForm from "./components/EditListingModal";
+import CreateBookingForm from "./components/CreateBookingForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route exact path="/newlisting">
             <CreateListingForm />
+          </Route>
+          <Route exact path="/listings/:id/book">
+            <CreateBookingForm />
           </Route>
         </Switch>
       )}

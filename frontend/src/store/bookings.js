@@ -36,11 +36,25 @@ const remove = (bookingId) => {
 };
 
 // ------- THUNK ACTION CREATORS -------
-// export const addBooking = (bookingInfo) => async (dispatch) => {
-//   const res = await csrfFetch(`/api/listings/${id}/book`);
+export const getBookingPage = (id) => async (dispatch) => {
+  const res = await csrfFetch(`/api/listings/${id}/book`);
 
-//   if (res.ok) {
-//     const booking = await res.json();
-//     dispatch(load(booking));
-//   }
-// };
+  if (res.ok) {
+    const getBookingPage = await res.json();
+    dispatch(load(getBookingPage));
+  }
+};
+
+// ------- REDUCER -------
+const bookingsReducer = (state = {}, action) => {
+  switch (action.type) {
+    case LOAD_BOOKINGS:
+      const normalizedBooking = { ...state };
+      action.listings.forEach((listing) => {
+        normalizedBooking[listing.id] = listing;
+      });
+      return { ...normalizedBooking };
+    default:
+        return state;
+  }
+};

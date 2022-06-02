@@ -12,7 +12,7 @@
 // router.get(
 //     "/:id",
 //     asyncHandler(async (req, res) => {
-//         const listing = await Listing.findByPk(req.params.id)
+//         const listing = await Listing.findByPk()
 //     })
 // )
 

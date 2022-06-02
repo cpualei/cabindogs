@@ -106,9 +106,7 @@ const listingsReducer = (state = {}, action) => {
       action.listings.forEach((listing) => {
         normalizedListings[listing.id] = listing;
       });
-      return {
-        ...normalizedListings,
-      };
+      return { ...normalizedListings };
     case ADD_LISTING:
       const newState = { ...state, [action.newListing.id]: action.newListing };
       return newState;
