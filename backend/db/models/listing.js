@@ -37,6 +37,10 @@ module.exports = (sequelize, DataTypes) => {
     img4: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    img5: {
+      type: DataTypes.STRING(255),
+      allowNull: false
     }
   }, {});
   Listing.associate = function(models) {
