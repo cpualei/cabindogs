@@ -50,7 +50,7 @@ const EditListingForm = () => {
   };
 
   const handleCancelClick = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     history.push(`/listings/${id}`);
   };
 

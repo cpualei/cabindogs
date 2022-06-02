@@ -93,4 +93,13 @@ router.delete(
   })
 );
 
+// router.get(
+//   "/:id/book",
+//   asyncHandler(async (req, res) => {
+//     const id = req.params.id;
+//     const booking = await Listing.findByPk(id);
+//     return res.json(booking);
+//   })
+// );
+
 module.exports = router;

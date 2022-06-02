@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { deleteListing, getListings } from "../../store/listings";
 import EditListingForm from "../EditListingModal";
 import EditListingFormModal from "../EditListingModal/editListingModal";
@@ -18,10 +18,18 @@ const ListingDetailsPage = () => {
     dispatch(getListings(id));
   }, [dispatch, id]);
 
+  const history = useHistory();
+
+  const bookButtonClick = (e) => {
+    // ===== UNCOMMENT WHEN ROUTE IS MADE =====
+    // history.push(`/listings/${id}/book`);
+  }
+
   return (
     <div>
       <EditListingFormModal />
       <button onClick={(e) => dispatch(deleteListing(id))}>Delete Listing</button>
+      <button onClick={bookButtonClick}>Book</button>
       <div className="dscrpt-div">
         <div className="state-country-div">{listing?.state}, {listing?.country}</div>
         <div>{listing?.name}</div>
