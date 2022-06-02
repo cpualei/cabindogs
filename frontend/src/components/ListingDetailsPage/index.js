@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import { deleteListing, getListings } from "../../store/listings";
-import EditListingForm from "../EditListingModal";
 import EditListingFormModal from "../EditListingModal/editListingModal";
 
 import "./ListingDetailsPage.css"
@@ -21,8 +20,7 @@ const ListingDetailsPage = () => {
   const history = useHistory();
 
   const bookButtonClick = (e) => {
-    // ===== UNCOMMENT WHEN ROUTE IS MADE =====
-    // history.push(`/listings/${id}/book`);
+    history.push(`/listings/${id}/book`);
   }
 
   return (
