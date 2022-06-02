@@ -34,3 +34,13 @@ const remove = (bookingId) => {
     bookingId,
   };
 };
+
+// ------- THUNK ACTION CREATORS -------
+// export const addBooking = (bookingInfo) => async (dispatch) => {
+//   const res = await csrfFetch(`/api/listings/${id}/book`);
+
+//   if (res.ok) {
+//     const booking = await res.json();
+//     dispatch(load(booking));
+//   }
+// };
