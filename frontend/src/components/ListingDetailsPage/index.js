@@ -27,7 +27,7 @@ const ListingDetailsPage = () => {
     <div>
       <EditListingFormModal />
       <button onClick={(e) => dispatch(deleteListing(id))}>Delete Listing</button>
-      <button onClick={bookButtonClick}>Check Availability</button>
+      <button onClick={bookButtonClick}>Book</button>
       <div className="dscrpt-div">
         <div className="state-country-div">{listing?.state}, {listing?.country}</div>
         <div>{listing?.name}</div>

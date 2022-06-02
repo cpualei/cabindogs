@@ -9,8 +9,7 @@ import SplashPage from "./components/SplashPage";
 import AllListings from "./components/AllListings";
 import CreateListingForm from "./components/CreateListingForm";
 import ListingDetailsPage from "./components/ListingDetailsPage";
-import EditListingForm from "./components/EditListingModal";
-import CreateBookingForm from "./components/CreateBookingForm";
+import CreateBookingPage from "./components/CreateBookingPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,7 +42,7 @@ function App() {
             <CreateListingForm />
           </Route>
           <Route exact path="/listings/:id/book">
-            <CreateBookingForm />
+            <CreateBookingPage />
           </Route>
         </Switch>
       )}
