@@ -42,10 +42,7 @@ const AllBookings = () => {
           bookingsArr.map((booking) => (
             <li key={booking.id}>
               <div>{booking.startDate} to {booking.endDate}</div>
-
-              <NavLink to={`/bookings/`}>
               <img src={listings[booking.listingId]?.img1}></img>
-              </NavLink>
               <div>{listings[booking.listingId]?.name}</div>
               <div>{listings[booking.listingId]?.state}</div>
               <div>{listings[booking.listingId]?.country}</div>
