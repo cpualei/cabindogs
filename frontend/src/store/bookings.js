@@ -64,6 +64,21 @@ export const getBookingPage = (id) => async (dispatch) => {
   }
 };
 
+export const addBooking = (bookingInfo) => async (dispatch) => {
+  const res = await csrfFetch(`/api/bookings`, {
+    method: "post",
+    body: JSON.stringify(bookingInfo),
+  });
+
+  const newBooking = await res.json();
+
+  if (newBooking) {
+    dispatch(add(newBooking));
+  }
+
+  return newBooking;
+};
+
 // ------- REDUCER -------
 const bookingsReducer = (state = {}, action) => {
   switch (action.type) {
@@ -77,6 +92,9 @@ const bookingsReducer = (state = {}, action) => {
       const newState = { ...state };
       newState[action.booking.id] = action.booking;
       return newState;
+    case ADD_BOOKING:
+      const addState = { ...state, [action.newBooking.id]: action.newBooking }
+      return addState;
     default:
         return state;
   }
