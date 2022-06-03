@@ -16,6 +16,7 @@ const CreateListingForm = () => {
   const [img2, setImg2] = useState("");
   const [img3, setImg3] = useState("");
   const [img4, setImg4] = useState("");
+  const [img5, setImg5] = useState("");
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = (e) => {
@@ -31,6 +32,7 @@ const CreateListingForm = () => {
       img2,
       img3,
       img4,
+      img5
     };
 
     dispatch(addListing(newListing)).catch(async (res) => {
@@ -38,7 +40,7 @@ const CreateListingForm = () => {
       if (data && data.errors) setErrors(data.errors);
     });
 
-    if (errors.length < 0 && newListing) {
+    if (errors.length === 0 && newListing) {
       history.push("/listings");
     };
   };
@@ -75,6 +77,8 @@ const CreateListingForm = () => {
         <input value={img3} onChange={(e) => setImg3(e.target.value)} />
         <label>Image 4:</label>
         <input value={img4} onChange={(e) => setImg4(e.target.value)} />
+        <label>Image 5:</label>
+        <input value={img5} onChange={(e) => setImg5(e.target.value)} />
         <button type="submit">Submit Listing</button>
         <button type="button" onClick={handleCancelClick}>
           Cancel
