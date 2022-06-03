@@ -9,7 +9,25 @@ function Navigation({ isLoaded }) {
 
   let sessionLinks;
   if (sessionUser) {
-    sessionLinks = <ProfileButton user={sessionUser} />;
+    sessionLinks = (
+      <>
+        <NavLink
+          to="/bookings"
+          className="bookings-btn"
+          style={{ textDecoration: "none" }}
+        >
+          Bookings
+        </NavLink>
+        <NavLink
+          to="/newlisting"
+          className="addlisting-btn"
+          style={{ textDecoration: "none" }}
+        >
+          Add a Listing
+        </NavLink>
+        <ProfileButton user={sessionUser} />
+      </>
+    );
   } else {
     sessionLinks = (
       <>
@@ -39,7 +57,12 @@ function Navigation({ isLoaded }) {
       <div className="inner-navbar-div">
         <div id="left-side-nav">
           <i className="fa-solid fa-dog" />
-          <NavLink id="cabindogs" exact to="/" style={{ textDecoration: "none" }}>
+          <NavLink
+            id="cabindogs"
+            exact
+            to="/"
+            style={{ textDecoration: "none" }}
+          >
             CABINDOGS
           </NavLink>
         </div>
