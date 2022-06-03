@@ -44,7 +44,7 @@ const CreateBookingPage = () => {
         if (data && data.errors) setErrors(data.errors);
       });
 
-      if (errors.length < 0 && newBooking) {
+      if (errors.length === 0 && newBooking) {
         history.push("/bookings");
       }
   };
@@ -53,10 +53,6 @@ const CreateBookingPage = () => {
     dispatch(getBookingPage(id));
     dispatch(getListings());
   }, [dispatch, id]);
-
-  //   const confirmBookingBtn = (e) => {
-  //     history.push("/bookings");
-  //   };
 
   return (
     <div>
