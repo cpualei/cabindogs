@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBookingPage, addBooking } from "../../store/bookings";
-import { Calendar } from "react-calendar";
 import { getListings } from "../../store/listings";
 
 const CreateBookingPage = () => {
@@ -10,8 +9,7 @@ const CreateBookingPage = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
-  // const bookedListingId = useSelector((state) => state.listings[booking.listingId].id)
-  // console.log(bookedListingId)
+
   const listing = useSelector((state) => state.listings[id])
   console.log(listing)
   const booking = useSelector((state) => state.bookings[id]);
@@ -21,10 +19,6 @@ const CreateBookingPage = () => {
   const [endDate, setEndDate] = useState("");
   const [errors, setErrors] = useState([]);
   const [value, onChange] = useState(new Date());
-
-  // const calendar = useSelector((state) => state = {
-  //     date: new Date()
-  // });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,8 +30,6 @@ const CreateBookingPage = () => {
       startDate,
       endDate,
     };
-
-
 
     dispatch(addBooking(newBooking)).catch(async (res) => {
         const data = await res.json();
@@ -74,9 +66,6 @@ const CreateBookingPage = () => {
             />
           <label>End Date:</label>
           <input value={endDate} onChange={(e) => setEndDate(e.target.value)} />
-          <div>
-            <Calendar onChange={onChange} value={value} />
-          </div>
           <p>Total Cost: ${booking?.cost + booking?.cost * 0.4}</p>
           <label>Confirm Total Cost:</label>
           <input
