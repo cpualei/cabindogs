@@ -28,10 +28,6 @@ const AllBookings = () => {
                 {listings && bookings.map((booking) => (
                     <li key={booking.id}>
                         <img src={listings[booking.listingId].img1}></img>
-                        <img src={listings[booking.listingId].img2}></img>
-                        <img src={listings[booking.listingId].img3}></img>
-                        <img src={listings[booking.listingId].img4}></img>
-                        <img src={listings[booking.listingId].img5}></img>
                     </li>
                 ))}
             </ul>
