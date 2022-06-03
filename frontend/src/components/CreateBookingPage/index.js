@@ -1,22 +1,23 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBookingPage } from "../../store/bookings";
-import Calendar from "react-calendar";
+import { Calendar } from 'react-calendar';
+import "./Calendar.css"
 
 
 const CreateBookingPage = () => {
 
     const { id } = useParams();
 
-    // const [date, setDate] = useState(new Date());
+    const [value, onChange] = useState(new Date());
 
     // const calendar = useSelector((state) => state = {
     //     date: new Date()
     // });
 
-    const listings = useSelector((state) => state.listings);
-    const listing = listings[id];
+    const booking = useSelector((state) => state.bookings[id]);
+    // const listing = listings[id];
 
     const dispatch = useDispatch();
 
@@ -24,19 +25,21 @@ const CreateBookingPage = () => {
         dispatch(getBookingPage(id));
     }, [dispatch, id]);
 
-    // const onChange = (date) => {
+    const history = useHistory();
 
-    // }
+    const confirmBookingBtn = (e) => {
+        history.push("/bookings")
+    }
 
     return (
         <div>
-            <Calendar />
-            <button>Confirm Booking</button>
-            <img src={listing?.img1} alt="img1"></img>
-            <div>{listing?.name}</div>
-            <div>{listing?.state}</div>
-            <div>{listing?.country}</div>
-            <div>Total Cost: ${listing?.cost}</div>
+            <div><Calendar onChange={onChange} value={value} /></div>
+            <button onClick={confirmBookingBtn}>Confirm Booking</button>
+            <img src={booking?.img1} alt="img1"></img>
+            <div>{booking?.name}</div>
+            <div>{booking?.state}</div>
+            <div>{booking?.country}</div>
+            <div>Total Cost: ${booking?.cost+(booking?.cost*0.4)}</div>
         </div>
     )
 }

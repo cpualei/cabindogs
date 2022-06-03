@@ -1,19 +1,30 @@
-// const express = require("express");
-// const asyncHandler = require("express-async-handler");
+const express = require("express");
+const asyncHandler = require("express-async-handler");
 
-// const { check } = require("express-validator");
-// const { handleValidationErrors } = require("../../utils/validation");
-// const { setTokenCookie, requireAuth } = require("../../utils/auth");
+const { check } = require("express-validator");
+const { handleValidationErrors } = require("../../utils/validation");
+const { setTokenCookie, requireAuth } = require("../../utils/auth");
 
-// const { User, Listing } = require("../../db/models");
+const { User, Booking } = require("../../db/models");
 
-// const router = express.Router();
+const { Op } = require('sequelize');
 
-// router.get(
-//     "/:id",
-//     asyncHandler(async (req, res) => {
-//         const listing = await Listing.findByPk()
-//     })
-// )
+const router = express.Router();
 
-// module.exports = router;
+router.get(
+  "/",
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    // const user = User.findByPk(req.session.user.id)
+    const bookings = await Booking.findAll({
+        where: {
+            userId: {
+                [Op.eq]: req.user.id
+            }
+        }
+    });
+    return res.json(bookings);
+  })
+);
+
+module.exports = router;

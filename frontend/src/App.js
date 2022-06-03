@@ -6,9 +6,10 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import SplashPage from "./components/SplashPage";
-import AllListings from "./components/AllListings";
+import AllListings from "./components/AllListingsPage";
 import CreateListingForm from "./components/CreateListingForm";
 import ListingDetailsPage from "./components/ListingDetailsPage";
+import AllBookings from "./components/AllBookingsPage";
 import CreateBookingPage from "./components/CreateBookingPage";
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
           </Route>
           <Route exact path="/listings/:id/book">
             <CreateBookingPage />
+          </Route>
+          <Route exact path="/bookings">
+            <AllBookings />
           </Route>
         </Switch>
       )}

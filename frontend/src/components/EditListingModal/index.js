@@ -45,7 +45,7 @@ const EditListingForm = () => {
     });;
 
     if (updatedListing) {
-      history.push(`/listings${id}`);
+      history.push(`/listings/${id}`);
     };
   };
 
