@@ -108,15 +108,15 @@ const listingsReducer = (state = {}, action) => {
       });
       return { ...normalizedListings };
     case ADD_LISTING:
-      const newState = { ...state, [action.newListing.id]: action.newListing };
-      return newState;
+      const addState = { ...state, [action.newListing.id]: action.newListing };
+      return addState;
     case UPDATE_LISTING:
-      const updatedState = { ...state, [action.listing.id]: action.listing };
-      return updatedState;
+      const updateState = { ...state, [action.listing.id]: action.listing };
+      return updateState;
     case REMOVE_LISTING:
-      const deletedState = { ...state };
-      delete deletedState[action.listingId]
-      return deletedState;
+      const deleteState = { ...state };
+      delete deleteState[action.listingId]
+      return deleteState;
     default:
       return state;
   }
