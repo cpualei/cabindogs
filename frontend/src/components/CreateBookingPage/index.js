@@ -3,7 +3,6 @@ import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBookingPage } from "../../store/bookings";
 import { Calendar } from 'react-calendar';
-import "./Calendar.css"
 
 
 const CreateBookingPage = () => {
@@ -39,7 +38,7 @@ const CreateBookingPage = () => {
             <div>{booking?.name}</div>
             <div>{booking?.state}</div>
             <div>{booking?.country}</div>
-            <div>Total Cost: ${booking?.cost+(booking?.cost*0.4)}</div>
+            <p>Total Cost: ${booking?.cost+(booking?.cost*0.4)}</p>
         </div>
     )
 }
