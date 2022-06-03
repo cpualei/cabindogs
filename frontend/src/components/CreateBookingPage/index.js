@@ -3,6 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBookingPage, addBooking } from "../../store/bookings";
 import { Calendar } from "react-calendar";
+import { getListings } from "../../store/listings";
 
 const CreateBookingPage = () => {
   const { id } = useParams();
@@ -12,6 +13,7 @@ const CreateBookingPage = () => {
   // const bookedListingId = useSelector((state) => state.listings[booking.listingId].id)
   // console.log(bookedListingId)
   const listing = useSelector((state) => state.listings[id])
+  console.log(listing)
   const booking = useSelector((state) => state.bookings[id]);
 
   const [totalCost, setTotalCost] = useState("");
@@ -28,7 +30,7 @@ const CreateBookingPage = () => {
     e.preventDefault();
 
     const newBooking = {
-      userId: sessionUser,
+      userId: sessionUser.id,
       listingId: listing.id,
       totalCost,
       startDate,
@@ -49,6 +51,7 @@ const CreateBookingPage = () => {
 
   useEffect(() => {
     dispatch(getBookingPage(id));
+    dispatch(getListings());
   }, [dispatch, id]);
 
   //   const confirmBookingBtn = (e) => {
