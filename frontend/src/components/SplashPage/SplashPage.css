@@ -44,10 +44,29 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 20px;
 }
 
 #boy-girl-dog-img {
     display: flex;
+    border-radius: 24px 24px 24px 24px;
+    object-fit: cover;
+    object-position: 50% 32%;
+}
+
+.snowy-cabin-img-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: row;
+    float: left;
+    margin: 20px;
+
+}
+
+#snowy-cabin-img {
+
+    height: 500px;
+    width: 500px;
     border-radius: 24px 24px 24px 24px;
     object-fit: cover;
     object-position: 50% 32%;
