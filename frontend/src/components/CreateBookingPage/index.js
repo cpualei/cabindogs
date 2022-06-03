@@ -30,37 +30,43 @@ const CreateBookingPage = () => {
       startDate,
       endDate,
     };
+
+    dispatch(addBooking(newBooking)).catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      });
+
+      if (errors.length < 0 && newBooking) {
+        history.push("/bookings");
+      }
   };
 
   useEffect(() => {
-    dispatch(getBookingPage(id)).catch(async (res) => {
-      const data = await res.json();
-      if (data && data.errors) setErrors(data.errors);
-    });
+    dispatch(getBookingPage(id));
   }, [dispatch, id]);
 
-  const confirmBookingBtn = (e) => {
-    history.push("/bookings");
-  };
+  //   const confirmBookingBtn = (e) => {
+  //     history.push("/bookings");
+  //   };
 
   return (
     <div>
       <div>
         <form onSubmit={(e) => handleSubmit(e)}>
+          <div>{booking?.name}</div>
+          <div>{booking?.state}</div>
+          <div>{booking?.country}</div>
+          <img src={booking?.img1} alt="img1"></img>
           <ul>
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>
             ))}
           </ul>
-          <div>{booking?.name}</div>
-          <div>{booking?.state}</div>
-          <div>{booking?.country}</div>
-          <img src={booking?.img1} alt="img1"></img>
           <label>Start Date:</label>
           <input
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
-          />
+            />
           <label>End Date:</label>
           <input value={endDate} onChange={(e) => setEndDate(e.target.value)} />
           <div>
