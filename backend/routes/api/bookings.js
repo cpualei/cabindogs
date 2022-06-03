@@ -41,11 +41,13 @@ router.get(
 );
 
 router.post(
-  "/",
+  "/book",
   requireAuth,
   validateBooking,
   asyncHandler(async (req, res) => {
+    const { userId, listingId, totalCost, startDate, endDate } = req.body;
     const newBooking = await Booking.create(req.body);
+    // console.log(listingId)
     return res.json(newBooking);
   })
 );
