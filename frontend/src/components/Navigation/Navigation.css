@@ -36,7 +36,25 @@ body {
 
 .login-btn {
     display: flex;
-    margin-right: 10px;
+    margin-right: 20px;
+    color:rgba(69, 69, 69, 0.886);
+}
+
+.signup-btn {
+    color:rgba(69, 69, 69, 0.886);
+}
+
+.bookings-btn {
+    display: flex;
+    margin-right: 20px;
+    color: black;
+    color:rgba(69, 69, 69, 0.886);
+}
+
+.addlisting-btn {
+    display: flex;
+    margin-right: 20px;
+    color:rgba(69, 69, 69, 0.886);
 }
 
 #cabindogs {
