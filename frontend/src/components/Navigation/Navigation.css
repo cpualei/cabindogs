@@ -44,10 +44,15 @@ body {
     color:rgba(69, 69, 69, 0.886);
 }
 
+.listings-btn {
+    display: flex;
+    margin-right: 20px;
+    color:rgba(69, 69, 69, 0.886);
+}
+
 .bookings-btn {
     display: flex;
     margin-right: 20px;
-    color: black;
     color:rgba(69, 69, 69, 0.886);
 }
 
