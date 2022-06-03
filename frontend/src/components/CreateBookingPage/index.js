@@ -9,6 +9,9 @@ const CreateBookingPage = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
+  // const bookedListingId = useSelector((state) => state.listings[booking.listingId].id)
+  // console.log(bookedListingId)
+  const listing = useSelector((state) => state.listings[id])
   const booking = useSelector((state) => state.bookings[id]);
 
   const [totalCost, setTotalCost] = useState("");
@@ -26,10 +29,13 @@ const CreateBookingPage = () => {
 
     const newBooking = {
       userId: sessionUser,
+      listingId: listing.id,
       totalCost,
       startDate,
       endDate,
     };
+
+
 
     dispatch(addBooking(newBooking)).catch(async (res) => {
         const data = await res.json();
