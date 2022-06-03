@@ -12,6 +12,13 @@ function Navigation({ isLoaded }) {
     sessionLinks = (
       <>
         <NavLink
+          to="/listings"
+          className="listings-btn"
+          style={{ textDecoration: "none" }}
+        >
+          Listings
+        </NavLink>
+        <NavLink
           to="/bookings"
           className="bookings-btn"
           style={{ textDecoration: "none" }}
