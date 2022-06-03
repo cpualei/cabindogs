@@ -66,7 +66,7 @@ export const getBookingPage = (id) => async (dispatch) => {
 
 export const addBooking = (bookingInfo) => async (dispatch) => {
   const res = await csrfFetch(`/api/bookings/book`, {
-    method: "post",
+    method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(bookingInfo),
   });
@@ -79,6 +79,18 @@ export const addBooking = (bookingInfo) => async (dispatch) => {
 
   return newBooking;
 };
+
+export const deleteBooking = (booking) => async (dispatch) => {
+  const res = await csrfFetch(`/api/bookings/${booking.id}`, {
+    method: "DELETE",
+  });
+
+  if (res.ok) {
+    const id = await res.json();
+    dispatch(remove(id));
+    return booking;
+  }
+}
 
 // ------- REDUCER -------
 const bookingsReducer = (state = {}, action) => {
@@ -96,6 +108,10 @@ const bookingsReducer = (state = {}, action) => {
     case ADD_BOOKING:
       const addState = { ...state, [action.newBooking.id]: action.newBooking }
       return addState;
+    case REMOVE_BOOKING:
+      const deleteState= { ...state }
+      delete deleteState[action.bookingId]
+      return deleteState;
     default:
         return state;
   }

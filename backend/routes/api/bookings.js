@@ -52,4 +52,14 @@ router.post(
   })
 );
 
+router.delete(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const id = req.params.id;
+    const deleteBooking = await Booking.findByPk(id);
+    await deleteBooking.destroy();
+    return res.json(id)
+  })
+);
+
 module.exports = router;
