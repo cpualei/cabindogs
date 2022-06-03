@@ -1,4 +1,5 @@
 import "./SplashPage.css";
+// import "./images/splashimg.png"
 
 const SplashPage = () => {
   return (
@@ -11,6 +12,9 @@ const SplashPage = () => {
           Discover and book tent camping, RV <br></br>
           parks, cabins, treehouses, and glamping.
         </h3>
+      <div className="boy-girl-dog-img-div">
+        <img id="boy-girl-dog-img" src="https://www.purina.co.uk/sites/default/files/2020-12/Why%20are%20dogs%20so%20loyalTEASER.jpg"></img>
+      </div>
       </div>
     </div>
   );

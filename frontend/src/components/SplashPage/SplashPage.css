@@ -9,8 +9,8 @@ body {
 }
 
 #h1 {
-    /* display: flex; */
-    font-size: 63px;
+    display: flex;
+    font-size: 60px;
     line-height: 80px;
     letter-spacing: 0px;
     font-weight: 700;
@@ -22,19 +22,33 @@ body {
 
 .h3-div {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #h3 {
-    /* display: flex; */
-    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
     line-height: 36px;
     letter-spacing: 0px;
     font-weight: 500;
     text-align: center;
     font-family: Calibre, Helvetica, Arial, sans-serif;
-    font-family: Calibre, "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
+    /* -webkit-font-smoothing: antialiased; */
     width: 490px;
     margin-top: 5px;
+}
+
+.boy-girl-dog-img-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#boy-girl-dog-img {
+    display: flex;
+    border-radius: 24px 24px 24px 24px;
+    object-fit: cover;
+    object-position: 50% 32%;
 }
