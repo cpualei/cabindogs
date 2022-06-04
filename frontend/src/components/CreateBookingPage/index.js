@@ -37,6 +37,7 @@ const CreateBookingPage = () => {
       });
 
       if (errors.length === 0 && newBooking) {
+        e.preventDefault()
         history.push("/bookings");
       }
   };
