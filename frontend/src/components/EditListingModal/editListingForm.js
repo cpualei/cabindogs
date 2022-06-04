@@ -1,18 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateListing } from "../../store/listings";
 
-const EditListingForm = ({setShowModal}) => {
+const EditListingForm = ({ setShowModal }) => {
   const { id } = useParams();
-  console.log(id)
   const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
-
-  // const listings = useSelector((state) => state.listings);
-  // const listingsArray = Object.values(listings);
-  // const listing = listingsArray[id];
 
   const [name, setName] = useState("");
   const [state, setState] = useState("");
@@ -25,10 +20,28 @@ const EditListingForm = ({setShowModal}) => {
   const [img5, setImg5] = useState("");
   const [errors, setErrors] = useState([]);
 
-  const handleSubmit = async (e) => {
+  useEffect(() => {
+    const errors = [];
+
+    if (!name) errors.push("Please enter a listing a name.");
+    if (!state)
+      errors.push("Please select the state where listing is located.");
+    if (!country)
+      errors.push("Please select the country where listing is located.");
+    if (!cost) errors.push("Please provide the cost per day for your listing.");
+    if (!img1) errors.push("Please upload an image for your listing.");
+    if (!img2) errors.push("Please upload an image for your listing.");
+    if (!img3) errors.push("Please upload an image for your listing.");
+    if (!img4) errors.push("Please upload an image for your listing.");
+    if (!img5) errors.push("Please upload an image for your listing.");
+
+    setErrors(errors);
+  }, [name, state, country, cost, img1, img2, img3, img4, img5]);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const listing = { // newListing === payload
+    const listing = {
       userId: sessionUser.id,
       name,
       state,
@@ -38,22 +51,14 @@ const EditListingForm = ({setShowModal}) => {
       img2,
       img3,
       img4,
-      img5
+      img5,
     };
 
-    let updatedListing = await dispatch(updateListing(id, listing)).catch(async (res) => {
-      const data = await res.json();
-      if (data && data.errors) setErrors(data.errors);
-    });;
+    const updatedListing = dispatch(updateListing(id, listing));
 
     if (updatedListing) {
-      setShowModal(false)
-    };
-  };
-
-  const handleCancelClick = (e) => {
-    // e.preventDefault();
-    history.push(`/listings/${id}`);
+      setShowModal(false);
+    }
   };
 
   return (
@@ -65,26 +70,68 @@ const EditListingForm = ({setShowModal}) => {
           ))}
         </ul>
         <label>Listing Name:</label>
-        <input value={name} onChange={(e) => setName(e.target.value)}></input>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
         <label>State:</label>
-        <input value={state} onChange={(e) => setState(e.target.value)}></input>
+        <input
+          value={state}
+          onChange={(e) => setState(e.target.value)}
+          required
+        />
         <label>Country:</label>
         <input
           value={country}
           onChange={(e) => setCountry(e.target.value)}
-        ></input>
+          required
+        />
         <label>Cost Per Night:</label>
-        <input value={cost} onChange={(e) => setCost(e.target.value)}></input>
+        <input
+          value={cost}
+          onChange={(e) => setCost(e.target.value)}
+          required
+        />
         <label>Image 1:</label>
-        <input value={img1} onChange={(e) => setImg1(e.target.value)}></input>
+        <input
+          value={img1}
+          alt="img1"
+          onChange={(e) => setImg1(e.target.value)}
+          required
+        />
         <label>Image 2:</label>
-        <input value={img2} onChange={(e) => setImg2(e.target.value)}></input>
+        <input
+          value={img2}
+          alt="img2"
+          onChange={(e) => setImg2(e.target.value)}
+          required
+        />
         <label>Image 3:</label>
-        <input value={img3} onChange={(e) => setImg3(e.target.value)}></input>
+        <input
+          value={img3}
+          alt="img3"
+          onChange={(e) => setImg3(e.target.value)}
+          required
+        />
         <label>Image 4:</label>
-        <input value={img4} onChange={(e) => setImg4(e.target.value)}></input>
+        <input
+          value={img4}
+          alt="img4"
+          onChange={(e) => setImg4(e.target.value)}
+          required
+        />
+        <label>Image 5:</label>
+        <input
+          value={img5}
+          alt="img5"
+          onChange={(e) => setImg5(e.target.value)}
+          required
+        />
         <button type="submit">Update Listing</button>
-        <button type="button" onClick={handleCancelClick}>Cancel</button>
+        <button type="button" onClick={(e) => history.push("/listings")}>
+          Cancel
+        </button>
       </form>
     </div>
   );

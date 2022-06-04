@@ -32,7 +32,6 @@ const AllListings = () => {
           </i>
         ))}
       </ul>
-      {/* <img className="googlemap" src="images/map.png" alt="map" /> */}
     </div>
   );
 };
