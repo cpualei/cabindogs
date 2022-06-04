@@ -22,6 +22,7 @@ const EditListingForm = ({setShowModal}) => {
   const [img2, setImg2] = useState("");
   const [img3, setImg3] = useState("");
   const [img4, setImg4] = useState("");
+  const [img5, setImg5] = useState("");
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = async (e) => {
@@ -37,6 +38,7 @@ const EditListingForm = ({setShowModal}) => {
       img2,
       img3,
       img4,
+      img5
     };
 
     let updatedListing = await dispatch(updateListing(id, listing)).catch(async (res) => {

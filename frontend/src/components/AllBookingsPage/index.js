@@ -5,7 +5,6 @@ import { getBookings, deleteBooking } from "../../store/bookings";
 import { getListings } from "../../store/listings";
 
 const AllBookings = () => {
-
   const { id } = useParams();
   const history = useHistory();
 
@@ -13,8 +12,8 @@ const AllBookings = () => {
   //   return Object.values(state.bookings);
   // });
 
-  const bookings = useSelector((state) => state.bookings)
-  const bookingsArr = Object.values(bookings)
+  const bookings = useSelector((state) => state.bookings);
+  const bookingsArr = Object.values(bookings);
 
   const listings = useSelector((state) => state.listings);
 
@@ -24,11 +23,6 @@ const AllBookings = () => {
     dispatch(getBookings());
     dispatch(getListings());
   }, [dispatch]);
-
-  const handleDeleteClick = (e) => {
-    // dispatch(deleteBooking(booking))
-    history.push("/bookings")
-  }
 
   // const startDateObj = new Date({booking.startDate}).getMonth
   // const startDay = startDateObj.getDay
@@ -41,14 +35,23 @@ const AllBookings = () => {
         {listings &&
           bookingsArr.map((booking) => (
             <li key={booking.id}>
-              <div>{booking.startDate} to {booking.endDate}</div>
+              <div>
+                {booking.startDate} to {booking.endDate}
+              </div>
               <img src={listings[booking.listingId]?.img1}></img>
               <div>{listings[booking.listingId]?.name}</div>
               <div>{listings[booking.listingId]?.state}</div>
               <div>{listings[booking.listingId]?.country}</div>
               <div>Total Paid: ${listings[booking.listingId]?.cost}</div>
               <button>Edit Booking Dates</button>
-              <button onClick={(e) => dispatch(deleteBooking(booking))}>Cancel Booking</button>
+              <button
+                onClick={(e) => {
+                  dispatch(deleteBooking(booking));
+                  history.push("/bookings");
+                }}
+              >
+                Cancel Booking
+              </button>
             </li>
           ))}
       </ul>

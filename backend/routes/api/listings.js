@@ -38,6 +38,9 @@ const validateEditedListing = [
   check("img4")
     .exists({ checkFalsy: true })
     .withMessage("Please upload an image for your listing."),
+  check("img5")
+    .exists({ checkFalsy: true })
+    .withMessage("Please upload an image for your listing."),
 
   handleValidationErrors,
 ];
@@ -54,7 +57,7 @@ router.get(
   "/:id",
   asyncHandler(async (req, res) => {
     const listing = await Listing.findByPk(req.params.id, {
-      include: { model: User }
+      include: { model: User },
     });
     return res.json(listing);
   })
@@ -76,7 +79,7 @@ router.put(
       img1,
       img2,
       img3,
-      img4
+      img4,
     });
 
     return res.json(listing);
@@ -101,7 +104,5 @@ router.get(
     return res.json(booking);
   })
 );
-
-
 
 module.exports = router;

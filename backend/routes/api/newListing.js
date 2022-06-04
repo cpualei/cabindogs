@@ -38,6 +38,9 @@ const validateListing = [
   check("img4")
     .exists({ checkFalsy: true })
     .withMessage("Please upload an image for your listing."),
+  check("img5")
+    .exists({ checkFalsy: true })
+    .withMessage("Please upload an image for your listing."),
 
   handleValidationErrors,
 ];
