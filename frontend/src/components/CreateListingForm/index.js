@@ -22,7 +22,7 @@ const CreateListingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newListing = { // newListing === payload
+    const listing = { // newListing === payload
       userId: sessionUser.id,
       name,
       state,
@@ -35,14 +35,22 @@ const CreateListingForm = () => {
       img5
     };
 
-    dispatch(addListing(newListing)).catch(async (res) => {
+    const newListing = dispatch(addListing(listing)).catch(async (res) => {
       const data = await res.json();
       if (data && data.errors) setErrors(data.errors);
     });
 
-    if (errors.length === 0 && newListing) {
-      history.push("/listings");
-    };
+    if (newListing && errors.length <= 0) {
+      history.push("/listings")
+    }
+    // dispatch(addListing(newListing)).catch(async (res) => {
+    //   const data = await res.json();
+    //   if (data && data.errors) setErrors(data.errors);
+    // });
+
+    // if (errors.length === 0) {
+    //   history.push("/listings");
+    // };
   };
 
   const handleCancelClick = (e) => {
