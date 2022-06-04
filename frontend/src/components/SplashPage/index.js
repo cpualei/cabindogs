@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./SplashPage.css";
 // import "./images/splashimg.png"
 
@@ -20,10 +21,12 @@ const SplashPage = () => {
         ></img>
       </div>
       <div className="snowy-cabin-img-div">
+        <NavLink to="/listings">
         <img
           id="snowy-cabin-img"
           src="https://newenglandwithlove.com/wp-content/uploads/2020/08/f69c2d9b.f10.webp"
         ></img>
+        </NavLink>
       </div>
     </div>
   );

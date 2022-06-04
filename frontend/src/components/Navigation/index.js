@@ -32,7 +32,9 @@ function Navigation({ isLoaded }) {
         >
           Add a Listing
         </NavLink>
-        <ProfileButton user={sessionUser} />
+        <ProfileButton
+          className="profile-btn"
+          user={sessionUser} />
       </>
     );
   } else {
