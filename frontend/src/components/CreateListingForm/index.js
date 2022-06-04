@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addListing } from "../../store/listings";
@@ -19,10 +19,29 @@ const CreateListingForm = () => {
   const [img5, setImg5] = useState("");
   const [errors, setErrors] = useState([]);
 
+  useEffect(() => {
+    const errors = [];
+
+    if (!name) errors.push("Please enter a listing a name.");
+    if (!state)
+      errors.push("Please select the state where listing is located.");
+    if (!country)
+      errors.push("Please select the country where listing is located.");
+    if (!cost) errors.push("Please provide the cost per day for your listing.");
+    if (!img1) errors.push("Please upload an image for your listing.");
+    if (!img2) errors.push("Please upload an image for your listing.");
+    if (!img3) errors.push("Please upload an image for your listing.");
+    if (!img4) errors.push("Please upload an image for your listing.");
+    if (!img5) errors.push("Please upload an image for your listing.");
+
+    setErrors(errors);
+  }, [name, state, country, cost, img1, img2, img3, img4, img5]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const listing = { // newListing === payload
+    const listing = {
+      // newListing === payload
       userId: sessionUser.id,
       name,
       state,
@@ -32,25 +51,14 @@ const CreateListingForm = () => {
       img2,
       img3,
       img4,
-      img5
+      img5,
     };
 
-    const newListing = dispatch(addListing(listing)).catch(async (res) => {
-      const data = await res.json();
-      if (data && data.errors) setErrors(data.errors);
-    });
+    const newListing = dispatch(addListing(listing));
 
-    if (newListing && errors.length <= 0) {
-      history.push("/listings")
+    if (errors.length === 0 && newListing) {
+      history.push("/listings");
     }
-    // dispatch(addListing(newListing)).catch(async (res) => {
-    //   const data = await res.json();
-    //   if (data && data.errors) setErrors(data.errors);
-    // });
-
-    // if (errors.length === 0) {
-    //   history.push("/listings");
-    // };
   };
 
   const handleCancelClick = (e) => {

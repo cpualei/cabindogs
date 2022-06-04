@@ -12,7 +12,7 @@ const router = express.Router();
 const validateEditedListing = [
   check("name")
     .exists({ checkFalsy: true })
-    .withMessage("Listing must have a name.")
+    .withMessage()
     .isLength({ max: 50 })
     .withMessage("Listing cannot be longer than 50 characters."),
   check("state")
