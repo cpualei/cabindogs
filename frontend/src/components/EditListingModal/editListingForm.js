@@ -3,7 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateListing } from "../../store/listings";
 
-const EditListingForm = ({setShowModal}) => {
+const EditListingForm = ({ setShowModal }) => {
   const { id } = useParams();
   const sessionUser = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
@@ -38,11 +38,10 @@ const EditListingForm = ({setShowModal}) => {
     setErrors(errors);
   }, [name, state, country, cost, img1, img2, img3, img4, img5]);
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const listing = { // newListing === payload
+    const listing = {
       userId: sessionUser.id,
       name,
       state,
@@ -52,18 +51,15 @@ const EditListingForm = ({setShowModal}) => {
       img2,
       img3,
       img4,
-      img5
+      img5,
     };
 
-    const updatedListing = dispatch(updateListing(id, listing))
+    const updatedListing = dispatch(updateListing(id, listing));
 
     if (updatedListing) {
-      setShowModal(false)
-    };
-
-    if (errors.length > 0) e.preventDefault()
+      setShowModal(false);
+    }
   };
-
 
   return (
     <div>
@@ -71,29 +67,71 @@ const EditListingForm = ({setShowModal}) => {
         <ul>
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
-            ))}
+          ))}
         </ul>
         <label>Listing Name:</label>
-        <input value={name} onChange={(e) => setName(e.target.value)}></input>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
         <label>State:</label>
-        <input value={state} onChange={(e) => setState(e.target.value)}></input>
+        <input
+          value={state}
+          onChange={(e) => setState(e.target.value)}
+          required
+        />
         <label>Country:</label>
         <input
           value={country}
           onChange={(e) => setCountry(e.target.value)}
-        ></input>
+          required
+        />
         <label>Cost Per Night:</label>
-        <input value={cost} onChange={(e) => setCost(e.target.value)}></input>
+        <input
+          value={cost}
+          onChange={(e) => setCost(e.target.value)}
+          required
+        />
         <label>Image 1:</label>
-        <input value={img1} onChange={(e) => setImg1(e.target.value)}></input>
+        <input
+          value={img1}
+          alt="img1"
+          onChange={(e) => setImg1(e.target.value)}
+          required
+        />
         <label>Image 2:</label>
-        <input value={img2} onChange={(e) => setImg2(e.target.value)}></input>
+        <input
+          value={img2}
+          alt="img2"
+          onChange={(e) => setImg2(e.target.value)}
+          required
+        />
         <label>Image 3:</label>
-        <input value={img3} onChange={(e) => setImg3(e.target.value)}></input>
+        <input
+          value={img3}
+          alt="img3"
+          onChange={(e) => setImg3(e.target.value)}
+          required
+        />
         <label>Image 4:</label>
-        <input value={img4} onChange={(e) => setImg4(e.target.value)}></input>
+        <input
+          value={img4}
+          alt="img4"
+          onChange={(e) => setImg4(e.target.value)}
+          required
+        />
+        <label>Image 5:</label>
+        <input
+          value={img5}
+          alt="img5"
+          onChange={(e) => setImg5(e.target.value)}
+          required
+        />
         <button type="submit">Update Listing</button>
-        <button type="button" onClick={(e) => history.push("/listings")}>Cancel</button>
+        <button type="button" onClick={(e) => history.push("/listings")}>
+          Cancel
+        </button>
       </form>
     </div>
   );

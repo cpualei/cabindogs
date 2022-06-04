@@ -10,16 +10,23 @@ const CreateBookingPage = () => {
   const history = useHistory();
   const sessionUser = useSelector((state) => state.session.user);
 
-  const listing = useSelector((state) => state.listings[id])
-  console.log(listing)
+  const listing = useSelector((state) => state.listings[id]);
   const booking = useSelector((state) => state.bookings[id]);
 
   const [totalCost, setTotalCost] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [errors, setErrors] = useState([]);
-  const [value, onChange] = useState(new Date());
-  
+
+  useEffect(() => {
+    const errors = [];
+
+    if (!totalCost) errors.push("Please confirm total cost");
+    if (!startDate) errors.push("Please select a start date.");
+    if (!endDate) errors.push("Please select an end date.");
+
+    setErrors(errors);
+  }, [totalCost, startDate, endDate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,15 +39,12 @@ const CreateBookingPage = () => {
       endDate,
     };
 
-    dispatch(addBooking(newBooking)).catch(async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      });
+    dispatch(addBooking(newBooking))
 
-      if (errors.length === 0 && newBooking) {
-        e.preventDefault()
-        history.push("/bookings");
-      }
+    if (errors.length === 0 && newBooking) {
+      e.preventDefault();
+      history.push("/bookings");
+    }
   };
 
   useEffect(() => {
@@ -65,14 +69,20 @@ const CreateBookingPage = () => {
           <input
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
-            />
+            required
+          />
           <label>End Date:</label>
-          <input value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+          <input
+            value={endDate}
+            onChange={(e) => setEndDate(e.target.value)}
+            required
+          />
           <p>Total Cost: ${booking?.cost + booking?.cost * 0.4}</p>
           <label>Confirm Total Cost:</label>
           <input
             value={totalCost}
             onChange={(e) => setTotalCost(e.target.value)}
+            required
           />
           <button type="submit">Confirm Booking</button>
         </form>
