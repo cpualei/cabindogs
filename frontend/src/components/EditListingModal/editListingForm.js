@@ -51,10 +51,10 @@ const EditListingForm = ({setShowModal}) => {
     };
   };
 
-  const handleCancelClick = (e) => {
-    // e.preventDefault();
-    history.push(`/listings/${id}`);
-  };
+  // const handleCancelClick = (e) => {
+  //   // e.preventDefault();
+  //   history.push(`/listings/${id}`);
+  // };
 
   return (
     <div>
@@ -84,7 +84,7 @@ const EditListingForm = ({setShowModal}) => {
         <label>Image 4:</label>
         <input value={img4} onChange={(e) => setImg4(e.target.value)}></input>
         <button type="submit">Update Listing</button>
-        <button type="button" onClick={handleCancelClick}>Cancel</button>
+        <button type="button" onClick={(e) => history.push("/listings")}>Cancel</button>
       </form>
     </div>
   );
