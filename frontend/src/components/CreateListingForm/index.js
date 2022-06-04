@@ -60,12 +60,7 @@ const CreateListingForm = () => {
       history.push("/listings");
     }
   };
-
-  const handleCancelClick = (e) => {
-    e.preventDefault();
-    history.push("/listings");
-  };
-
+  
   return (
     <div>
       <form onSubmit={(e) => handleSubmit(e)}>
@@ -96,7 +91,7 @@ const CreateListingForm = () => {
         <label>Image 5:</label>
         <input value={img5} onChange={(e) => setImg5(e.target.value)} />
         <button type="submit">Submit Listing</button>
-        <button type="button" onClick={handleCancelClick}>
+        <button type="button" onClick={(e) => history.push("/listings")}>
           Cancel
         </button>
       </form>

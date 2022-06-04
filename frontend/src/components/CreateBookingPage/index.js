@@ -19,6 +19,7 @@ const CreateBookingPage = () => {
   const [endDate, setEndDate] = useState("");
   const [errors, setErrors] = useState([]);
   const [value, onChange] = useState(new Date());
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
