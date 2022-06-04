@@ -7,17 +7,14 @@ import { getListings } from "../../store/listings";
 const AllBookings = () => {
   const { id } = useParams();
   const history = useHistory();
-
-  // let bookingsArr = useSelector((state) => {
-  //   return Object.values(state.bookings);
-  // });
+  const dispatch = useDispatch();
 
   const bookings = useSelector((state) => state.bookings);
-  const bookingsArr = Object.values(bookings);
-
   const listings = useSelector((state) => state.listings);
+  const bookingsArr = Object.values(bookings);
+  // const booking = bookings[id];
+  // console.log(booking)
 
-  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getBookings());
@@ -34,14 +31,12 @@ const AllBookings = () => {
       <ul>
         {listings &&
           bookingsArr.map((booking) => (
-            <li key={booking.id}>
-              <div>
-                {booking.startDate} to {booking.endDate}
-              </div>
+            <i key={booking.id}>
               <img src={listings[booking.listingId]?.img1}></img>
               <div>{listings[booking.listingId]?.name}</div>
               <div>{listings[booking.listingId]?.state}</div>
               <div>{listings[booking.listingId]?.country}</div>
+              <div>{booking.startDate} to {booking.endDate}</div>
               <div>Total Paid: ${listings[booking.listingId]?.cost}</div>
               <button>Edit Booking Dates</button>
               <button
@@ -52,7 +47,7 @@ const AllBookings = () => {
               >
                 Cancel Booking
               </button>
-            </li>
+            </i>
           ))}
       </ul>
     </div>
