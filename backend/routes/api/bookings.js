@@ -15,7 +15,7 @@ router.get(
           [Op.eq]: req.user.id,
         },
       },
-    });
+  });
     return res.json(bookings);
   })
 );
