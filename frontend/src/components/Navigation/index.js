@@ -61,7 +61,7 @@ function Navigation({ isLoaded }) {
   return (
     <div>
       <div className="top-msg-bar">
-        We've updated our terms of service. Learn more here.
+        Website created by: Caitlin Buen-Lucas
       </div>
       <div className="inner-navbar-div">
         <div id="left-side-nav">

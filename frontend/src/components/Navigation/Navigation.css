@@ -22,7 +22,7 @@ body {
 
 .inner-navbar-div {
     display: flex;
-    align-items: row;
+    align-items: center;
     justify-content: space-between;
     font-family: Calibre, Helvetica, Arial, sans-serif;
 
@@ -74,4 +74,3 @@ body {
     font-size: 25px;
     font-weight: 900;
 }
-
