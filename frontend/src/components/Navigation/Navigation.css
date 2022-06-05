@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(243, 242, 239);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0;
+}
+
+.top-msg-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(234, 232, 228);
+    color: rgb(40, 64, 12);
+    font-size: 12px;
+    font-weight: 700;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-height: 40px;
+}
+
+.inner-navbar-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+
+    margin-top: 27px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+#left-side-nav {
+    display: flex;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#right-side-nav {
+    display: flex;
+}
+
+.login-btn {
+    display: flex;
+    margin-right: 20px;
+    color:rgba(69, 69, 69, 0.886);
+}
+
+.signup-btn {
+    color:rgba(69, 69, 69, 0.886);
+}
+
+.listings-btn {
+    display: flex;
+    margin-right: 20px;
+    color:rgba(69, 69, 69, 0.886);
+}
+
+.bookings-btn {
+    display: flex;
+    margin-right: 20px;
+    color:rgba(69, 69, 69, 0.886);
+}
+
+.addlisting-btn {
+    display: flex;
+    margin-right: 20px;
+    color:rgba(69, 69, 69, 0.886);
+}
+
+#cabindogs {
+    color:rgba(69, 69, 69, 0.886);
+    font-size: 25px;
+    font-weight: 900;
+}
