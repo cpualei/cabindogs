@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addListing } from "../../store/listings";
+import "./CreateListing.css";
 
 const CreateListingForm = () => {
   const sessionUser = useSelector((state) => state.session.user);
@@ -60,74 +61,88 @@ const CreateListingForm = () => {
       history.push("/listings");
     }
   };
-  
+
   return (
     <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <ul>
-          {errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
-          ))}
-        </ul>
-        <label>Listing Name:</label>
-        <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <label>State:</label>
-        <input
-          value={state}
-          onChange={(e) => setState(e.target.value)}
-          required
-        />
-        <label>Country:</label>
-        <input
-          value={country}
-          onChange={(e) => setCountry(e.target.value)}
-          required
-        />
-        <label>Cost Per Night:</label>
-        <input
-          value={cost}
-          onChange={(e) => setCost(e.target.value)}
-          required
-        />
-        <label>Image 1:</label>
-        <input
-          value={img1}
-          onChange={(e) => setImg1(e.target.value)}
-          required
-        />
-        <label>Image 2:</label>
-        <input
-          value={img2}
-          onChange={(e) => setImg2(e.target.value)}
-          required
-        />
-        <label>Image 3:</label>
-        <input
-          value={img3}
-          onChange={(e) => setImg3(e.target.value)}
-          required
-        />
-        <label>Image 4:</label>
-        <input
-          value={img4}
-          onChange={(e) => setImg4(e.target.value)}
-          required
-        />
-        <label>Image 5:</label>
-        <input
-          value={img5}
-          onChange={(e) => setImg5(e.target.value)}
-          required
-        />
-        <button type="submit">Submit Listing</button>
-        <button type="button" onClick={(e) => history.push("/listings")}>
-          Cancel
-        </button>
-      </form>
+      <h1 id="title">Create a listing.</h1>
+      <div id="create-listing-form-div">
+        <form id="form" onSubmit={(e) => handleSubmit(e)}>
+          <div id="labels-inputs-div">
+            <label className="labels-inputs">Listing Name:</label>
+            <input
+              className="labels-inputs"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <label className="labels-inputs">State:</label>
+            <input
+              className="labels-inputs"
+              value={state}
+              onChange={(e) => setState(e.target.value)}
+              required
+            />
+            <label className="labels-inputs">Country:</label>
+            <input
+              className="labels-inputs"
+              value={country}
+              onChange={(e) => setCountry(e.target.value)}
+              required
+            />
+            <label className="labels-inputs">Cost Per Night:</label>
+            <input
+              className="labels-inputs"
+              value={cost}
+              onChange={(e) => setCost(e.target.value)}
+              required
+            />
+            <label className="labels-inputs">Image 1:</label>
+            <input
+              className="labels-inputs"
+              value={img1}
+              onChange={(e) => setImg1(e.target.value)}
+              required
+            />
+            <label className="labels-inputs">Image 2:</label>
+            <input
+              className="labels-inputs"
+              value={img2}
+              onChange={(e) => setImg2(e.target.value)}
+              required
+            />
+            <label className="labels-inputs">Image 3:</label>
+            <input
+              className="labels-inputs"
+              value={img3}
+              onChange={(e) => setImg3(e.target.value)}
+              required
+            />
+            <label className="labels-inputs">Image 4:</label>
+            <input
+              className="labels-inputs"
+              value={img4}
+              onChange={(e) => setImg4(e.target.value)}
+              required
+            />
+            <label className="labels-inputs">Image 5:</label>
+            <input
+              className="labels-inputs"
+              value={img5}
+              onChange={(e) => setImg5(e.target.value)}
+              required
+            />
+          </div>
+          <ul id="errors">
+            {errors.map((error, idx) => (
+              <li key={idx}>{error}</li>
+            ))}
+          </ul>
+          <button className="submit-cancel-btns" type="submit">Submit Listing</button>
+          <button className="submit-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
+            Cancel
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
