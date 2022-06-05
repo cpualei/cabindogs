@@ -45,9 +45,7 @@ const remove = (bookingId) => {
 
 // ------- THUNK ACTION CREATORS -------
 export const getBookings = () => async (dispatch) => {
-  console.log("THUNK IS HIT======")
   const res = await csrfFetch(`/api/bookings`);
-  console.log("RES IS HIT======", res)
 
   if (res.ok) {
     const allbookings = await res.json();
@@ -67,7 +65,7 @@ export const getBookingPage = (id) => async (dispatch) => {
 export const addBooking = (bookingInfo) => async (dispatch) => {
   const res = await csrfFetch(`/api/bookings/book`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    // headers: { "Content-Type": "application/json" },
     body: JSON.stringify(bookingInfo),
   });
 
@@ -96,7 +94,7 @@ export const deleteBooking = (booking) => async (dispatch) => {
 const bookingsReducer = (state = {}, action) => {
   switch (action.type) {
     case LOAD_BOOKINGS:
-      const normalizedBookings = { ...state };
+      const normalizedBookings = { };
       action.bookings.forEach((booking) => {
         normalizedBookings[booking.id] = booking;
       });

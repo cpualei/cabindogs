@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import { deleteListing, getListings } from "../../store/listings";
-import EditListingForm from "../EditListingModal/editListingForm";
-import EditListingFormModal from "../EditListingModal";
+import EditListingForm from "../EditListing/editListingForm";
+import EditListingFormModal from "../EditListing";
 
 import "./ListingDetailsPage.css";
 

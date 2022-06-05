@@ -28,7 +28,7 @@ const CreateBookingPage = () => {
     setErrors(errors);
   }, [totalCost, startDate, endDate]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newBooking = {
@@ -39,10 +39,10 @@ const CreateBookingPage = () => {
       endDate,
     };
 
-    dispatch(addBooking(newBooking))
+    const booking = await dispatch(addBooking(newBooking))
 
-    if (errors.length === 0 && newBooking) {
-      e.preventDefault();
+    if (errors.length === 0 && booking) {
+      // e.preventDefault();
       history.push("/bookings");
     }
   };

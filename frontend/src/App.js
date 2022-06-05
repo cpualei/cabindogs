@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import LoginFormPage from "./components/LoginFormPage";
-import SignupFormPage from "./components/SignupFormPage";
+import LoginFormPage from "./components/LoginForm";
+import SignupFormPage from "./components/SignupForm";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import SplashPage from "./components/SplashPage";
-import AllListings from "./components/AllListingsPage";
-import CreateListingForm from "./components/CreateListingForm";
-import ListingDetailsPage from "./components/ListingDetailsPage";
-import AllBookings from "./components/AllBookingsPage";
-import CreateBookingPage from "./components/CreateBookingPage";
+import AllListings from "./components/AllListings";
+import CreateListingForm from "./components/CreateListing";
+import ListingDetailsPage from "./components/ListingDetails";
+import AllBookings from "./components/AllBookings";
+import CreateBookingPage from "./components/CreateBooking";
 
 function App() {
   const dispatch = useDispatch();
