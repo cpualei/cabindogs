@@ -52,7 +52,7 @@ function LoginFormPage() {
           ))}
         </ul>
         <div id="labels-inputs-btns-div">
-          <div id="lables-inputs-div">
+          <div id="labels-inputs-div">
             <label className="user-email-label-input">
               Username or Email
               <input

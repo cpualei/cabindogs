@@ -1,0 +1,49 @@
+
+#title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#sign-up-form-div {
+    display: flex;
+    justify-content: center;
+}
+
+#form {
+    width: 300px;
+}
+
+#sign-up-ul {
+    display: flex;
+}
+
+#labels-inputs-btns-div {
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    justify-content: center;
+}
+/*
+labels-inputs-div {
+
+} */
+
+.email-user-pw-label-input {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    margin: 10px
+}
+
+#signup-btn {
+    background-color: hwb(162deg 25% 15%);
+    color: #fff;
+    padding: 14px;
+    width: 95%;
+    border: 1px solid transparent;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 5px;
+    border-radius: 5px;
+}
