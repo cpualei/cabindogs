@@ -32,10 +32,10 @@
     justify-content: center;
 }
 
-#labels-inputs-div {
+/* #labels-inputs-div {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .user-email-label-input {
     display: flex;
