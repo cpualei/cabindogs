@@ -42,7 +42,7 @@ const CreateBookingPage = () => {
     dispatch(addBooking(newBooking))
 
     if (errors.length === 0 && newBooking) {
-      e.preventDefault();
+      // e.preventDefault();
       history.push("/bookings");
     }
   };
