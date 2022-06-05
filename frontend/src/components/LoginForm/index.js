@@ -40,33 +40,49 @@ function LoginFormPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, idx) => (
-          <li key={idx}>{error}</li>
-        ))}
-      </ul>
-      <label>
-        Username or Email
-        <input
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Log In</button>
-      <button onClick={(e) => handleDefaultButton(e)}>Demo User</button>
-    </form>
+    <div>
+      <h1 id="title">Welcome back!</h1>
+      <p id="sub-title">Let's get you and your pals outside.</p>
+
+    <div id="login-form-div">
+      <form id="form" onSubmit={handleSubmit}>
+        <ul id="login-ul">
+          {errors.map((error, idx) => (
+            <li key={idx}>{error}</li>
+          ))}
+        </ul>
+        <div id="labels-inputs-btns-div">
+          <div id="lables-inputs-div">
+            <label className="user-email-label-input">
+              Username or Email
+              <input
+                className="user-email-label-input"
+                type="text"
+                value={credential}
+                onChange={(e) => setCredential(e.target.value)}
+                required
+              />
+            </label>
+
+          <label className="user-email-label-input">
+            Password
+            <input
+              className="user-email-label-input"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          </div>
+          <div id="btns-div">
+            <button className="login-and-demo-btns" type="submit">Log in</button>
+            <button className="login-and-demo-btns" onClick={(e) => handleDefaultButton(e)}>Demo User</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
   );
 }
 

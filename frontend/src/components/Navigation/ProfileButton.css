@@ -1,0 +1,40 @@
+#profile-btn {
+    /* display: flex; */
+    color: rgb(114, 107, 95);
+    border-radius: 100%;
+    border-width: 1px;
+    border-color: darkgray;
+    /* box-shadow: 10px; */
+    /* border-style: hidden; */
+    padding: 4px;
+}
+#profile-btn:hover {
+    /* display: flex; */
+    color: hwb(162deg 25% 15%);
+    border-radius: 100%;
+    border-width: 1px;
+    border-color: darkgray;
+    /* box-shadow: 10px; */
+    /* border-style: hidden; */
+    padding: 4px;
+}
+
+fa-solid fa-paw {
+    font-weight: bold;
+}
+
+.profile-dropdown {
+    list-style-type: none;
+}
+
+#logout-btn {
+    background-color:  hwb(162deg 25% 15%);
+    color: #fff;
+    padding: 14px;
+    width: 95%;
+    border: 1px solid transparent;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 5px;
+    border-radius: 5px;
+}

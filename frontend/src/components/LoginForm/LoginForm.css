@@ -1,1 +1,64 @@
 
+#title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#sub-title {
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    color: grey;
+    margin-top: 0px;
+}
+
+#login-form-div {
+    display: flex;
+    justify-content: center;
+}
+
+#form {
+    width: 300px;
+}
+
+#login-ul {
+    display: flex;
+}
+
+#labels-inputs-btns-div {
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    justify-content: center;
+}
+
+#labels-inputs-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-email-label-input {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    margin: 10px
+}
+
+#btns-div {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    justify-content:center;
+}
+
+.login-and-demo-btns {
+    background-color: hwb(162deg 25% 15%);
+    color: #fff;
+    padding: 14px;
+    width: 95%;
+    border: 1px solid transparent;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 5px;
+    border-radius: 5px;
+}
