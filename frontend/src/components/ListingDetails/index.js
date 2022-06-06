@@ -44,15 +44,15 @@ const ListingDetailsPage = () => {
       </div>
       <div className="img-container-div">
         <div className="imgs-container">
-          <div className="img1-div">
-            <img id="img1" src={listing?.img1} alt="img1"></img>
+          {/* <div className="img1-div"> */}
             <div className="other-imgs-div">
+            <img id="img1" src={listing?.img1} alt="img1"></img>
               <img id="img2" src={listing?.img2} alt="img2"></img>
               <img id="img3" src={listing?.img3} alt="img3"></img>
               <img id="img4" src={listing?.img4} alt="img4"></img>
               <img id="img5" src={listing?.img5} alt="img5"></img>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
       <div>From ${listing?.cost} / night</div>

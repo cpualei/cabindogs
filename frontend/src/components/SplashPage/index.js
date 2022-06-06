@@ -22,11 +22,14 @@ const SplashPage = () => {
       </div>
       <div className="snowy-cabin-img-div">
         <NavLink to="/listings">
-        <img
-          id="snowy-cabin-img"
-          src="https://newenglandwithlove.com/wp-content/uploads/2020/08/f69c2d9b.f10.webp"
-        ></img>
+          <img
+            id="snowy-cabin-img"
+            src="https://newenglandwithlove.com/wp-content/uploads/2020/08/f69c2d9b.f10.webp"
+          ></img>
         </NavLink>
+      <div id="img-text-div">CABINDOGS</div>
+      <button id="cabin-btn">View Cabins</button>
+      <div className="solid-color-div"></div>
       </div>
     </div>
   );
