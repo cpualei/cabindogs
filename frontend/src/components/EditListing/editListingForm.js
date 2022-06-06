@@ -127,7 +127,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg5(e.target.value)}
           required
           />
-          <ul>
+          <ul id="errors">
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>
             ))}
