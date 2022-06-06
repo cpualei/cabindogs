@@ -1,44 +1,43 @@
-.bookings-div {
+#bookings-div {
     display: flex;
     flex-direction: column;
 }
 
-.title {
+#title {
     margin: 40px;
     text-align: center;
 }
 
-.bookings-ul-div {
+#bookings-ul-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.booking-description-div {
+#booking-description-div {
     display: flex;
     flex-direction: column;
-    justify-content: row;
     align-items: center;
 }
 
-.bookings-ul {
+#bookings-ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-inline-start: 0px;
 }
 
-.booking-li {
+#booking-li {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 40px;
+    justify-content: space-between;
 }
 
-.booking-description {
+#booking-description {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
     margin-left: 16px;
     margin-right: 16px;
@@ -56,32 +55,54 @@
     border-radius: 50px;
     height: auto;
     width: 600px;
+    margin: 2px;
+    margin-bottom: 15px;
 }
 #booking-name {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 2px;
+    color: grey;
+    font-weight: bold;
 }
 #booking-state {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 2px;
+    color: grey;
 }
 #booking-country {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 2px;
+    color: grey;
 }
 #booking-dates {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 2px;
+    color: grey;
 }
 #booking-cost {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 2px;
+    color: grey;
 }
 #cancel-btn {
-    width: 120px;
+    background-color: hwb(162deg 25% 15%);
+    color: #fff;
+    padding: 14px;
+    width: 50%;
+    border: 1px solid transparent;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
