@@ -66,10 +66,10 @@ CABINDOGS is built with Express (backend), React and Redux (frontend), and Postg
 <br><br>
 
 ### Future Features
-In the near future I will include Google maps to the listings page to provide locations for each listing.
+In the near future I will include Google maps to the listings page to provide locations for each listing. I would also like to include a calendar which works with my website, allowing users to book dates and fill a listing's booking dates.
 
 <br><br>
 
 ### Contact
 <a href="https://www.linkedin.com/in/caitlin-buen-lucas/">Linkedin</a> | <a href="https://github.com/cpualei/">Github</a> |
-<a href="https://github.com/frances-y-h/mememo/wiki">Git Wiki for mememo</a>
+<a href="https://github.com/cpualei/cabindogs/wiki">Git Wiki for CABINDOGS</a>
