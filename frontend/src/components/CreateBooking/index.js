@@ -53,20 +53,20 @@ const CreateBookingPage = () => {
     dispatch(getListings());
   }, [dispatch, id]);
 
+  const goBack = () => {
+    history.goBack();
+  }
+
   return (
     <div>
       <h1 id="title">Create a booking.</h1>
       <div id="create-booking-form-div">
         <form id="form" onSubmit={(e) => handleSubmit(e)}>
-          <div>{booking?.name}</div>
-          <div>{booking?.state}</div>
-          <div>{booking?.country}</div>
-          <img id="create-booking-img" src={booking?.img1} alt="img1"></img>
-          <ul id="errors">
-            {errors.map((error, idx) => (
-              <li key={idx}>{error}</li>
-            ))}
-          </ul>
+          <div id="create-booking-img-div">
+            <img id="create-booking-img" src={booking?.img1} alt="img1"></img>
+          </div>
+            <div id="booking-name">{booking?.name}</div>
+            <div id="state-country-div">{booking?.state}, {booking?.country}</div>
           <label className="labels-inputs">Start Date:</label>
           <input
             className="labels-inputs"
@@ -89,7 +89,15 @@ const CreateBookingPage = () => {
             onChange={(e) => setTotalCost(e.target.value)}
             required
           />
-          <button id="submit-btn" type="submit">Confirm Booking</button>
+          <ul id="errors">
+            {errors.map((error, idx) => (
+              <li key={idx}>{error}</li>
+            ))}
+          </ul>
+          <div id="btns-div">
+            <button id="submit-cancel-btn" type="submit">Confirm Booking</button>
+            <button id="submit-cancel-btn" onClick={goBack}>Cancel</button>
+          </div>
         </form>
       </div>
     </div>

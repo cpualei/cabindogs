@@ -1,0 +1,20 @@
+#edit-form-div {
+    margin: 30px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-cancel-btns {
+    background-color: hwb(162deg 25% 15%);
+    color: #fff;
+    padding: 14px;
+    width: 95%;
+    border: 1px solid transparent;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 5px;
+    border-radius: 5px;
+}

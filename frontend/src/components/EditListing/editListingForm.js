@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateListing } from "../../store/listings";
+import "./EditListing.css"
 
 const EditListingForm = ({ setShowModal }) => {
   const { id } = useParams();
@@ -62,74 +63,77 @@ const EditListingForm = ({ setShowModal }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <ul>
-          {errors.map((error, idx) => (
-            <li key={idx}>{error}</li>
-          ))}
-        </ul>
+    <div id="edit-form-div">
+      <h1 id="title">Edit Listing</h1>
+      <form
+        id="form"
+        onSubmit={(e) => handleSubmit(e)}>
         <label>Listing Name:</label>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-        />
+          />
         <label>State:</label>
         <input
           value={state}
           onChange={(e) => setState(e.target.value)}
           required
-        />
+          />
         <label>Country:</label>
         <input
           value={country}
           onChange={(e) => setCountry(e.target.value)}
           required
-        />
+          />
         <label>Cost Per Night:</label>
         <input
           value={cost}
           onChange={(e) => setCost(e.target.value)}
           required
-        />
+          />
         <label>Image 1:</label>
         <input
           value={img1}
           alt="img1"
           onChange={(e) => setImg1(e.target.value)}
           required
-        />
+          />
         <label>Image 2:</label>
         <input
           value={img2}
           alt="img2"
           onChange={(e) => setImg2(e.target.value)}
           required
-        />
+          />
         <label>Image 3:</label>
         <input
           value={img3}
           alt="img3"
           onChange={(e) => setImg3(e.target.value)}
           required
-        />
+          />
         <label>Image 4:</label>
         <input
           value={img4}
           alt="img4"
           onChange={(e) => setImg4(e.target.value)}
           required
-        />
+          />
         <label>Image 5:</label>
         <input
           value={img5}
           alt="img5"
           onChange={(e) => setImg5(e.target.value)}
           required
-        />
-        <button type="submit">Update Listing</button>
-        <button type="button" onClick={(e) => history.push("/listings")}>
+          />
+          <ul>
+            {errors.map((error, idx) => (
+              <li key={idx}>{error}</li>
+            ))}
+          </ul>
+        <button className="update-cancel-btns" type="submit">Update Listing</button>
+        <button className="update-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
           Cancel
         </button>
       </form>
