@@ -26,26 +26,26 @@ const AllBookings = () => {
 
 
   return (
-    <div className="bookings-div">
-      <h1 className="title">Upcoming Reservations</h1>
-      <div className="bookings-ul-div">
-        <ul className="bookings-ul">
+    <div id="bookings-div">
+      <h1 id="title">Upcoming Reservations</h1>
+      <div id="bookings-ul-div">
+        <ul id="bookings-ul">
           {listings &&
             bookingsArr2.map((booking) => (
-              <li className="booking-li" key={booking.id} >
+              <li id="booking-li" key={booking.id} >
                   {/* <p>{listings[booking.listingId]?.name}</p> */}
-                  <img className="booking-description" id="booking-img" src={listings[booking.listingId]?.img1}></img>
-                  <div className="booking-description-div">
-                    <div className="booking-description" id="booking-name">{listings[booking.listingId]?.name}</div>
-                    <div className="booking-description" id="booking-state">{listings[booking.listingId]?.state}, {listings[booking.listingId]?.country}</div>
-                    {/* <div className="booking-description" id="booking-country">{listings[booking.listingId]?.country}</div> */}
-                    <div className="booking-description" id="booking-dates">{
+                  <img id="booking-description" id="booking-img" src={listings[booking.listingId]?.img1}></img>
+                  <div id="booking-description-div">
+                    <div id="booking-description" id="booking-name">{listings[booking.listingId]?.name}</div>
+                    <div id="booking-description" id="booking-state">{listings[booking.listingId]?.state}, {listings[booking.listingId]?.country}</div>
+                    {/* <div id="booking-description" id="booking-country">{listings[booking.listingId]?.country}</div> */}
+                    <div id="booking-description" id="booking-dates">{
                       // <BookingDate booking={booking?.startDate} />
                       booking?.startDate
                     } to {
                     booking?.endDate
                     }</div>
-                    <div className="booking-description" id="booking-cost">Total Paid: ${listings[booking?.listingId]?.cost+((listings[booking?.listingId]?.cost)*0.4)}</div>
+                    <div id="booking-description" id="booking-cost">Total Paid: ${listings[booking?.listingId]?.cost+((listings[booking?.listingId]?.cost)*0.4)}</div>
                     <button
                       id="cancel-btn"
                       onClick={(e) => {
