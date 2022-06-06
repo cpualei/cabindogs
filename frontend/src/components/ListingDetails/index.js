@@ -27,38 +27,47 @@ const ListingDetailsPage = () => {
 
   return (
     <div>
-      {sessionUser ? <div id="listing-details-btns">
-        <EditListingFormModal />
-        <button
-          onClick={(e) => {
-            dispatch(deleteListing(id));
-            history.push("/listings");
-          }}
-        >
-          Delete Listing
-        </button>
-        <button onClick={bookButtonClick}>Book</button>
-      </div> : <></>}
-      <div className="dscrpt-div">
-        <div className="state-country-div">
-          {listing?.state}, {listing?.country}
+      <div id="listing-details-div">
+        <h1 id="title">Listing Details</h1>
+        <div className="dscrpt-div">
+          <div id="dscrpt-name">{listing?.name}</div>
+          <div className="dscrpt">
+            {listing?.state}, {listing?.country}
+          </div>
+          <div className="dscrpt">From ${listing?.cost} / night</div>
         </div>
-        <div>{listing?.name}</div>
-      </div>
-      <div className="img-container-div">
-        <div className="imgs-container">
-          {/* <div className="img1-div"> */}
-          <div className="other-imgs-div">
-            <img id="img1" src={listing?.img1} alt="img1"></img>
-            <img id="img2" src={listing?.img2} alt="img2"></img>
-            <img id="img3" src={listing?.img3} alt="img3"></img>
-            <img id="img4" src={listing?.img4} alt="img4"></img>
-            <img id="img5" src={listing?.img5} alt="img5"></img>
+        <div className="img-container-div">
+          <div className="imgs-container">
+            <div className="other-imgs-div">
+              <img id="img1" src={listing?.img1} alt="img1"></img>
+              <img id="img2" src={listing?.img2} alt="img2"></img>
+              <img id="img3" src={listing?.img3} alt="img3"></img>
+              <img id="img4" src={listing?.img4} alt="img4"></img>
+              <img id="img5" src={listing?.img5} alt="img5"></img>
+            </div>
           </div>
           {/* </div> */}
         </div>
+        {sessionUser ? (
+          <div>
+            <EditListingFormModal />
+            <button
+              id="listing-details-btns"
+              onClick={(e) => {
+                dispatch(deleteListing(id));
+                history.push("/listings");
+              }}
+            >
+              Delete Listing
+            </button>
+            <button
+              id="listing-details-btns"
+              onClick={bookButtonClick}>Book</button>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
-      <div>From ${listing?.cost} / night</div>
     </div>
   );
 };

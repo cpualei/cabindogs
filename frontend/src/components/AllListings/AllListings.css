@@ -37,8 +37,6 @@
     flex-direction: column;
     height: 320px;
     margin-bottom: 15px;
-    /* width: 373.02px; */
-    /* justify-content: space-between; */
 }
 
 #listing-imgs {
@@ -51,6 +49,8 @@
     margin-left: 16px;
     margin-right: 16px;
     margin-top: 40px;
+    object-fit: cover;
+    object-position: 70% 30%;
 }
 
 .listing-description {
