@@ -39,8 +39,8 @@ const SplashPage = () => {
               src="https://media.istockphoto.com/photos/emerald-lake-on-a-cloudy-day-with-its-thawed-lake-summer-and-fun-picture-id1141078602?b=1&k=20&m=1141078602&s=170667a&w=0&h=7zTs2EsAEwGwBXlzOJIFw0xDmCssiHGsM5d57gcGTmY="
             ></img>
             <div id="img-text-div">CABINDOGS</div>
-            <NavLink to="/users">
-              <button id="cabin-btn-2">Sign up now</button>
+            <NavLink to="/bookings">
+              <button id="cabin-btn-2">View Bookings</button>
             </NavLink>
             <div className="solid-color-div2"></div>
           </div>
