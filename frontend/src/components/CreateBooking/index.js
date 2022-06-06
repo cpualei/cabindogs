@@ -3,6 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBookingPage, addBooking } from "../../store/bookings";
 import { getListings } from "../../store/listings";
+import "./CreateBooking.css"
 
 const CreateBookingPage = () => {
   const { id } = useParams();
@@ -52,39 +53,51 @@ const CreateBookingPage = () => {
     dispatch(getListings());
   }, [dispatch, id]);
 
+  const goBack = () => {
+    history.goBack();
+  }
+
   return (
     <div>
-      <div>
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <div>{booking?.name}</div>
-          <div>{booking?.state}</div>
-          <div>{booking?.country}</div>
-          <img src={booking?.img1} alt="img1"></img>
-          <ul>
-            {errors.map((error, idx) => (
-              <li key={idx}>{error}</li>
-            ))}
-          </ul>
-          <label>Start Date:</label>
+      <h1 id="title">Create a booking.</h1>
+      <div id="create-booking-form-div">
+        <form id="form" onSubmit={(e) => handleSubmit(e)}>
+          <div id="create-booking-img-div">
+            <img id="create-booking-img" src={booking?.img1} alt="img1"></img>
+          </div>
+            <div id="booking-name">{booking?.name}</div>
+            <div id="state-country-div">{booking?.state}, {booking?.country}</div>
+          <label className="labels-inputs">Start Date:</label>
           <input
+            className="labels-inputs"
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
             required
           />
-          <label>End Date:</label>
+          <label className="labels-inputs">End Date:</label>
           <input
+            className="labels-inputs"
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
             required
           />
-          <p>Total Cost: ${booking?.cost + booking?.cost * 0.4}</p>
-          <label>Confirm Total Cost:</label>
+          <p className="labels-inputs">Total Cost: ${booking?.cost + booking?.cost * 0.4}</p>
+          <label className="labels-inputs">Confirm Total Cost:</label>
           <input
+            className="labels-inputs"
             value={totalCost}
             onChange={(e) => setTotalCost(e.target.value)}
             required
           />
-          <button type="submit">Confirm Booking</button>
+          <ul id="errors">
+            {errors.map((error, idx) => (
+              <li key={idx}>{error}</li>
+            ))}
+          </ul>
+          <div id="btns-div">
+            <button id="submit-cancel-btn" type="submit">Confirm Booking</button>
+            <button id="submit-cancel-btn" onClick={goBack}>Cancel</button>
+          </div>
         </form>
       </div>
     </div>

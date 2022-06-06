@@ -1,0 +1,52 @@
+#title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#create-booking-img-div {
+    margin-top: 20px;
+}
+
+#booking-name {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#state-country-div {
+    margin-bottom: 30px;
+}
+
+#create-booking-form-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#submit-cancel-btn {
+    background-color: hwb(162deg 25% 15%);
+    color: #fff;
+    padding: 14px;
+    width: 95%;
+    border: 1px solid transparent;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#create-booking-img-div {
+    display: flex;
+    justify-content: center;
+}
+
+#create-booking-img {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    border-radius: 50px;
+    height: auto;
+    width: 600px;
+    margin: 2px;
+    margin-bottom: 15px;
+}
