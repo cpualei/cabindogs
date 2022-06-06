@@ -48,7 +48,6 @@ npx dotenv sequelize db:migrate
 npx dotenv sequelize db:seed:all
 ```
 6. Run `npm start` in folder "backend", then run `npm start` in folder "frontend"
-7. Have fun!
 
 <br><br>
 
