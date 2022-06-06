@@ -43,37 +43,109 @@ body {
     margin-top: 5px;
 }
 
+#imgs-div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .boy-girl-dog-img-div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 20px;
     margin-left: 90px;
     margin-right: 90px;
+    align-items: center;
 }
 
 #boy-girl-dog-img {
     display: flex;
     border-radius: 24px 24px 24px 24px;
     object-fit: cover;
-    object-position: 50% 32%;
+    object-position: 80% 2%;
+    max-width: 1300px;
 }
 
-.snowy-cabin-img-div {
+/* #smaller-imgs-div {
+    display: flex;
+    flex-direction: row;
+} */
+
+.cabin-img-div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: row;
     float: left;
-    margin: 20px;
-    margin-left: 90px;
-    /* margin-right: 90px; */
+    max-width: 560px;
+    justify-content: center;
+}
+.cabin-img-div2 {
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    max-width: 560px;
+    justify-content: center;
 }
 
-#snowy-cabin-img {
-
+.cabin-img {
     height: 500px;
     width: 500px;
     border-radius: 24px 24px 24px 24px;
     object-fit: cover;
-    object-position: 50% 32%;
+    object-position: 20% 90%;
+}
+
+.solid-color-div {
+    width: 500px;
+    height: 100px;
+    border-bottom-left-radius: 24px;
+    background-color: #daa930;
+    position: relative;
+    bottom: 150px;
+    left: 0px;
+    border-bottom-right-radius: 24px;
+}
+.solid-color-div2 {
+    width: 500px;
+    height: 100px;
+    border-bottom-left-radius: 24px;
+    background-color: rgb(124 124 55);
+    position: relative;
+    bottom: 150px;
+    left: 0px;
+    border-bottom-right-radius: 24px;
+}
+
+#img-text-div {
+    z-index: 1;
+    position: relative;
+    bottom: 63px;
+    right: 66px;
+}
+
+#cabin-btn {
+    z-index: 1;
+    position: relative;
+    left: 86px;
+    bottom: 80px;
+    height: 50px;
+    width: 170px;
+    color: #daa930;
+    border-radius: 24px;
+    border-style: none;
+    font-size: 20px;
+}
+
+#cabin-btn-2 {
+    z-index: 1;
+    position: relative;
+    left: 86px;
+    bottom: 80px;
+    height: 50px;
+    width: 170px;
+    color: rgb(124 124 55);
+    border-radius: 24px;
+    border-style: none;
+    font-size: 20px;
 }
