@@ -11,6 +11,7 @@ const ListingDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
+  const sessionUser = useSelector((state) => state.session.user);
   const listings = useSelector((state) => state.listings);
   const listing = listings[id];
 
@@ -26,16 +27,18 @@ const ListingDetailsPage = () => {
 
   return (
     <div>
-      <EditListingFormModal />
-      <button
-        onClick={(e) => {
-          dispatch(deleteListing(id));
-          history.push("/listings");
-        }}
-      >
-        Delete Listing
-      </button>
-      <button onClick={bookButtonClick}>Book</button>
+      {sessionUser ? <div id="listing-details-btns">
+        <EditListingFormModal />
+        <button
+          onClick={(e) => {
+            dispatch(deleteListing(id));
+            history.push("/listings");
+          }}
+        >
+          Delete Listing
+        </button>
+        <button onClick={bookButtonClick}>Book</button>
+      </div> : <></>}
       <div className="dscrpt-div">
         <div className="state-country-div">
           {listing?.state}, {listing?.country}
@@ -45,13 +48,13 @@ const ListingDetailsPage = () => {
       <div className="img-container-div">
         <div className="imgs-container">
           {/* <div className="img1-div"> */}
-            <div className="other-imgs-div">
+          <div className="other-imgs-div">
             <img id="img1" src={listing?.img1} alt="img1"></img>
-              <img id="img2" src={listing?.img2} alt="img2"></img>
-              <img id="img3" src={listing?.img3} alt="img3"></img>
-              <img id="img4" src={listing?.img4} alt="img4"></img>
-              <img id="img5" src={listing?.img5} alt="img5"></img>
-            </div>
+            <img id="img2" src={listing?.img2} alt="img2"></img>
+            <img id="img3" src={listing?.img3} alt="img3"></img>
+            <img id="img4" src={listing?.img4} alt="img4"></img>
+            <img id="img5" src={listing?.img5} alt="img5"></img>
+          </div>
           {/* </div> */}
         </div>
       </div>
