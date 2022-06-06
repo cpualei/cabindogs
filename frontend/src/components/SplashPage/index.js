@@ -10,8 +10,8 @@ const SplashPage = () => {
       </div>
       <div className="h3-div">
         <h3 id="h3">
-          Discover and book tent camping, RV <br></br>
-          parks, cabins, treehouses, and glamping.
+          Discover cabins for rent all over<br></br>
+          the world. For you and your furry friend.
         </h3>
       </div>
       <div id="imgs-div">

@@ -7,6 +7,16 @@ body {
     padding: 0;
 }
 
+#website-by {
+    margin-right: 10px;
+    text-decoration: none;
+    color:rgba(69, 69, 69, 0.886);
+}
+
+#networking-links {
+    color:rgba(0, 0, 0, 0.886);
+}
+
 .top-msg-bar {
     display: flex;
     align-items: center;
@@ -18,6 +28,7 @@ body {
     font-family: Calibre, Helvetica, Arial, sans-serif;
     width: 100%;
     min-height: 40px;
+
 }
 
 .inner-navbar-div {

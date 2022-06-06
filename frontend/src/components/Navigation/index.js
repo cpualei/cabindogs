@@ -61,7 +61,8 @@ function Navigation({ isLoaded }) {
   return (
     <div>
       <div className="top-msg-bar">
-        Website created by: Caitlin Buen-Lucas
+        <div id="website-by">Website created by: Caitlin Buen-Lucas</div><br></br>
+        <div><a id="networking-links" href="https://www.linkedin.com/in/caitlin-buen-lucas/">Linkedin</a> | <a id="networking-links" href="https://github.com/cpualei/">Github</a></div>
       </div>
       <div className="inner-navbar-div">
         <div id="left-side-nav">
