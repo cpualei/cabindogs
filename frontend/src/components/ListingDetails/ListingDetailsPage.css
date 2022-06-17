@@ -113,3 +113,14 @@ body {
     margin: 5px;
     border-radius: 5px;
 }
+
+#listing-details-btns:hover {
+    color: hwb(162deg 25% 15%);
+    background-color: #fff;
+    padding: 14px;
+    border: 1px solid;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 5px;
+    border-radius: 5px;
+}
