@@ -71,6 +71,7 @@ body {
     margin: 5px;
     object-fit: cover;
 }
+
 #img3 {
     display: flex;
     flex-direction: row;

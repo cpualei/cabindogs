@@ -17,6 +17,10 @@ body {
     color:rgba(0, 0, 0, 0.886);
 }
 
+#networking-links:hover {
+    color:hwb(162deg 25% 15%);
+}
+
 .top-msg-bar {
     display: flex;
     align-items: center;
@@ -34,12 +38,9 @@ body {
 .inner-navbar-div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-family: Calibre, Helvetica, Arial, sans-serif;
-
     margin-top: 27px;
-    margin-left: 90px;
-    margin-right: 90px;
 }
 
 #left-side-nav {
@@ -68,10 +69,20 @@ body {
     color:rgba(69, 69, 69, 0.886);
 }
 
+.listings-btn:hover {
+    display: inline-block;
+    border-bottom: 1px solid hwb(162deg 25% 15%);
+}
+
 .bookings-btn {
     display: flex;
     margin-right: 20px;
     color:rgba(69, 69, 69, 0.886);
+}
+
+.bookings-btn:hover {
+    display: inline-block;
+    border-bottom: 1px solid hwb(162deg 25% 15%);
 }
 
 .addlisting-btn {
@@ -80,8 +91,24 @@ body {
     color:rgba(69, 69, 69, 0.886);
 }
 
+.addlisting-btn:hover {
+    display: inline-block;
+    border-bottom: 1px solid hwb(162deg 25% 15%);
+}
+
 #cabindogs {
     color:rgba(69, 69, 69, 0.886);
     font-size: 25px;
     font-weight: 900;
 }
+#cabindogs:hover {
+    --c: hwb(162deg 25% 15%);
+
+    color: #0000;
+    background:
+      linear-gradient(90deg,#fff 50%,var(--c) 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100% no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
