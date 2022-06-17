@@ -38,7 +38,6 @@ body {
     font-weight: 500;
     text-align: center;
     font-family: Calibre, Helvetica, Arial, sans-serif;
-    /* -webkit-font-smoothing: antialiased; */
     width: 490px;
     margin-top: 5px;
 }
@@ -65,26 +64,22 @@ body {
     border-radius: 24px 24px 24px 24px;
     object-fit: cover;
     object-position: 80% 2%;
-    max-width: 1300px;
+    height: 580px;
 }
-
-/* #smaller-imgs-div {
-    display: flex;
-    flex-direction: row;
-} */
 
 .cabin-img-div {
     display: flex;
     flex-wrap: wrap;
     float: left;
-    max-width: 560px;
+    max-width: 525px;
     justify-content: center;
 }
+
 .cabin-img-div2 {
     display: flex;
     flex-wrap: wrap;
     float: right;
-    max-width: 560px;
+    max-width: 525px;
     justify-content: center;
 }
 
@@ -99,22 +94,24 @@ body {
 .solid-color-div {
     width: 500px;
     height: 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.549);
     border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
     background-color: #daa930;
     position: relative;
     bottom: 150px;
     left: 0px;
-    border-bottom-right-radius: 24px;
 }
 .solid-color-div2 {
     width: 500px;
     height: 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.466);
     border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
     background-color: rgb(124 124 55);
     position: relative;
     bottom: 150px;
     left: 0px;
-    border-bottom-right-radius: 24px;
 }
 
 #img-text-div {
@@ -137,17 +134,8 @@ body {
     font-size: 20px;
 }
 #cabin-btn:hover {
-    z-index: 1;
-    position: relative;
-    left: 86px;
-    bottom: 80px;
-    height: 50px;
-    width: 170px;
     color: white;
     background-color: #daa930;
-    border-radius: 24px;
-    border-style: none;
-    font-size: 20px;
 }
 
 #cabin-btn-2 {
@@ -164,15 +152,6 @@ body {
 }
 
 #cabin-btn-2:hover {
-    z-index: 1;
-    position: relative;
-    left: 86px;
-    bottom: 80px;
-    height: 50px;
-    width: 170px;
     color: white;
     background-color: rgb(124 124 55);
-    border-radius: 24px;
-    border-style: none;
-    font-size: 20px;
 }
