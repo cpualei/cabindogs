@@ -34,12 +34,9 @@ body {
 .inner-navbar-div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-family: Calibre, Helvetica, Arial, sans-serif;
-
     margin-top: 27px;
-    margin-left: 90px;
-    margin-right: 90px;
 }
 
 #left-side-nav {
