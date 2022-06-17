@@ -18,3 +18,9 @@
     margin: 5px;
     border-radius: 5px;
 }
+
+.update-cancel-btns:hover {
+    color: hwb(162deg 25% 15%);
+    background-color: #fff;
+    border: 1px solid;
+}
