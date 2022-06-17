@@ -35,6 +35,18 @@
     border-radius: 5px;
 }
 
+#submit-cancel-btn:hover {
+    color: hwb(162deg 25% 15%);
+    background-color: #fff;
+    padding: 14px;
+    width: 95%;
+    border: 1px solid;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 5px;
+    border-radius: 5px;
+}
+
 #create-booking-img-div {
     display: flex;
     justify-content: center;
