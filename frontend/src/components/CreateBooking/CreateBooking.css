@@ -62,3 +62,8 @@
     margin: 2px;
     margin-bottom: 15px;
 }
+
+.labels-inputs {
+    display: flex;
+    flex-direction: row;
+}

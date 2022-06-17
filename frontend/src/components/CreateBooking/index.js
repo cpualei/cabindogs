@@ -69,6 +69,7 @@ const CreateBookingPage = () => {
             <div id="state-country-div">{booking?.state}, {booking?.country}</div>
           <label className="labels-inputs">Start Date:</label>
           <input
+            type="date"
             className="labels-inputs"
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
@@ -76,6 +77,7 @@ const CreateBookingPage = () => {
           />
           <label className="labels-inputs">End Date:</label>
           <input
+            type="date"
             className="labels-inputs"
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
