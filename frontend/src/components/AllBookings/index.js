@@ -27,7 +27,7 @@ const AllBookings = () => {
 
   return (
     <div id="bookings-div">
-      <h1 id="title">Upcoming Reservations</h1>
+      <h1 id="title">Upcoming Reservations.</h1>
       <div id="bookings-ul-div">
         <ul id="bookings-ul">
           {listings &&
@@ -47,7 +47,7 @@ const AllBookings = () => {
                     }</div>
                     <div id="booking-description" id="booking-cost">Total Paid: ${listings[booking?.listingId]?.cost+((listings[booking?.listingId]?.cost)*0.4)}</div>
                     <button
-                      id="cancel-btn"
+                      id="delete-btn"
                       onClick={(e) => {
                         dispatch(deleteBooking(booking));
                         history.push("/bookings");
