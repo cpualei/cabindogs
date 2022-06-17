@@ -21,19 +21,13 @@
 #labels-inputs-div {
     display: flex;
     flex-direction: column;
-    /* align-items:center; */
     justify-content: center;
 }
-/*
-labels-inputs-div {
-
-} */
 
 .labels-inputs {
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-end; */
-    margin: 10px
+    margin: 10px;
 }
 
 .submit-cancel-btns {
@@ -46,4 +40,10 @@ labels-inputs-div {
     -webkit-font-smoothing: antialiased;
     margin: 5px;
     border-radius: 5px;
+}
+
+.submit-cancel-btns:hover {
+    color: hwb(162deg 25% 15%);
+    background-color: #fff;
+    border: 1px solid;
 }
