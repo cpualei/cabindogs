@@ -43,7 +43,6 @@ const CreateBookingPage = () => {
     const booking = await dispatch(addBooking(newBooking))
 
     if (errors.length === 0 && booking) {
-      // e.preventDefault();
       history.push("/bookings");
     }
   };

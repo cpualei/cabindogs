@@ -20,7 +20,7 @@
 }
 
 .update-cancel-btns:hover {
-    color: hwb(162deg 25% 15%);
     background-color: #fff;
+    color: hwb(162deg 25% 15%);
     border: 1px solid;
 }

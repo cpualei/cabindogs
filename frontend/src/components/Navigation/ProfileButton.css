@@ -1,21 +1,15 @@
 #profile-btn {
-    /* display: flex; */
     color: rgb(114, 107, 95);
     border-radius: 100%;
     border-width: 1px;
     border-color: darkgray;
-    /* box-shadow: 10px; */
-    /* border-style: hidden; */
     padding: 4px;
 }
 #profile-btn:hover {
-    /* display: flex; */
     color: hwb(162deg 25% 15%);
     border-radius: 100%;
     border-width: 1px;
     border-color: darkgray;
-    /* box-shadow: 10px; */
-    /* border-style: hidden; */
     padding: 4px;
 }
 

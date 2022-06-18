@@ -13,27 +13,27 @@ function Navigation({ isLoaded }) {
       <>
         <NavLink
           to="/listings"
-          className="listings-btn"
+          id="listings-btn"
           style={{ textDecoration: "none" }}
         >
           Listings
         </NavLink>
         <NavLink
           to="/bookings"
-          className="bookings-btn"
+          id="bookings-btn"
           style={{ textDecoration: "none" }}
         >
           Bookings
         </NavLink>
         <NavLink
           to="/newlisting"
-          className="addlisting-btn"
+          id="addlisting-btn"
           style={{ textDecoration: "none" }}
         >
           Add a Listing
         </NavLink>
         <ProfileButton
-          className="profile-btn"
+          id="profile-btn"
           user={sessionUser} />
       </>
     );
@@ -42,14 +42,14 @@ function Navigation({ isLoaded }) {
       <>
         <NavLink
           to="/login"
-          className="login-btn"
+          id="login-btn"
           style={{ textDecoration: "none" }}
         >
           Log In
         </NavLink>
         <NavLink
           to="/signup"
-          className="signup-btn"
+          id="signup-btn"
           style={{ textDecoration: "none" }}
         >
           Sign Up
@@ -60,11 +60,11 @@ function Navigation({ isLoaded }) {
 
   return (
     <div>
-      <div className="top-msg-bar">
+      <div id="top-msg-bar">
         <div id="website-by">Website created by: Caitlin Buen-Lucas</div><br></br>
         <div><a id="networking-links" href="https://www.linkedin.com/in/caitlin-buen-lucas/">Linkedin</a> | <a id="networking-links" href="https://github.com/cpualei/">Github</a></div>
       </div>
-      <div className="inner-navbar-div">
+      <div id="inner-navbar-div">
         <div id="left-side-nav">
           <i className="fa-solid fa-dog" />
           <NavLink

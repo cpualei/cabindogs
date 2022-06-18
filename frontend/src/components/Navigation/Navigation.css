@@ -21,7 +21,7 @@ body {
     color:hwb(162deg 25% 15%);
 }
 
-.top-msg-bar {
+#top-msg-bar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,10 +32,9 @@ body {
     font-family: Calibre, Helvetica, Arial, sans-serif;
     width: 100%;
     min-height: 40px;
-
 }
 
-.inner-navbar-div {
+#inner-navbar-div {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -53,45 +52,64 @@ body {
     display: flex;
 }
 
-.login-btn {
-    display: flex;
+#login-btn {
+    display: block;
+    margin-top: 8px;
     margin-right: 20px;
     color:rgba(69, 69, 69, 0.886);
 }
 
-.signup-btn {
-    color:rgba(69, 69, 69, 0.886);
-}
-
-.listings-btn {
-    display: flex;
-    margin-right: 20px;
-    color:rgba(69, 69, 69, 0.886);
-}
-
-.listings-btn:hover {
+#login-btn:hover {
     display: inline-block;
     border-bottom: 1px solid hwb(162deg 25% 15%);
 }
 
-.bookings-btn {
+#signup-btn {
+    display: flex;
+    justify-content: center;
+    background-color: hwb(162deg 25% 15%);
+    color:rgba(255, 255, 255, 0.886);
+    width: 75px;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    padding: 6px 16px 8px;
+}
+
+#signup-btn:hover {
+    background-color:rgba(255, 255, 255, 0.886);
+    color: hwb(162deg 25% 15%);
+    border: 1px solid;
+}
+
+#listings-btn {
     display: flex;
     margin-right: 20px;
     color:rgba(69, 69, 69, 0.886);
 }
 
-.bookings-btn:hover {
+#listings-btn:hover {
     display: inline-block;
     border-bottom: 1px solid hwb(162deg 25% 15%);
 }
 
-.addlisting-btn {
+#bookings-btn {
     display: flex;
     margin-right: 20px;
     color:rgba(69, 69, 69, 0.886);
 }
 
-.addlisting-btn:hover {
+#bookings-btn:hover {
+    display: inline-block;
+    border-bottom: 1px solid hwb(162deg 25% 15%);
+}
+
+#addlisting-btn {
+    display: flex;
+    margin-right: 20px;
+    color:rgba(69, 69, 69, 0.886);
+}
+
+#addlisting-btn:hover {
     display: inline-block;
     border-bottom: 1px solid hwb(162deg 25% 15%);
 }
