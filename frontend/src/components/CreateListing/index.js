@@ -42,7 +42,6 @@ const CreateListingForm = () => {
     e.preventDefault();
 
     const listing = {
-      // newListing === payload
       userId: sessionUser.id,
       name,
       state,

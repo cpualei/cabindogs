@@ -2,7 +2,7 @@ body {
     color: rgb(40, 64, 12);
 }
 
-.h1-div {
+#h1-div {
     display: flex;
     justify-content: center;
     margin-left: 90px;
@@ -21,7 +21,7 @@ body {
     margin-bottom: 0px;
 }
 
-.h3-div {
+#h3-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +38,7 @@ body {
     font-weight: 500;
     text-align: center;
     font-family: Calibre, Helvetica, Arial, sans-serif;
+    /* -webkit-font-smoothing: antialiased; */
     width: 490px;
     margin-top: 5px;
 }
@@ -50,7 +51,7 @@ body {
     align-items: center;
 }
 
-.boy-girl-dog-img-div {
+#boy-girl-dog-img-div {
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -67,32 +68,43 @@ body {
     height: 580px;
 }
 
-.cabin-img-div {
+#smaller-imgs-div {
+    display: flex;
+
+}
+
+#cabin-img-div {
     display: flex;
     flex-wrap: wrap;
-    float: left;
-    max-width: 525px;
+    max-width: 580px;
     justify-content: center;
 }
 
-.cabin-img-div2 {
+#cabin-img-div2 {
     display: flex;
     flex-wrap: wrap;
-    float: right;
-    max-width: 525px;
+    max-width: 580px;
     justify-content: center;
 }
 
 .cabin-img {
-    height: 500px;
-    width: 500px;
+    height: 390px;
+    width: 550px;
     border-radius: 24px 24px 24px 24px;
     object-fit: cover;
-    object-position: 20% 90%;
+    object-position: 20% 70%;
 }
 
-.solid-color-div {
-    width: 500px;
+.cabin-img2 {
+    height: 390px;
+    width: 550px;
+    border-radius: 24px 24px 24px 24px;
+    object-fit: cover;
+    object-position: 0% 90%;
+}
+
+#solid-color-div {
+    width: 550px;
     height: 100px;
     border-top: 1px solid rgba(255, 255, 255, 0.549);
     border-bottom-left-radius: 24px;
@@ -102,8 +114,9 @@ body {
     bottom: 150px;
     left: 0px;
 }
-.solid-color-div2 {
-    width: 500px;
+
+#solid-color-div2 {
+    width: 550px;
     height: 100px;
     border-top: 1px solid rgba(255, 255, 255, 0.466);
     border-bottom-left-radius: 24px;
@@ -124,34 +137,38 @@ body {
 #cabin-btn {
     z-index: 1;
     position: relative;
-    left: 86px;
-    bottom: 80px;
+    left: 110px;
+    bottom: 71px;
     height: 50px;
     width: 170px;
     color: #daa930;
+    border: 1px solid transparent;
     border-radius: 24px;
     border-style: none;
-    font-size: 20px;
+    font-size: 17px;
 }
+
 #cabin-btn:hover {
     color: white;
     background-color: #daa930;
+    border: 1px solid;
 }
 
 #cabin-btn-2 {
     z-index: 1;
     position: relative;
-    left: 86px;
-    bottom: 80px;
+    left: 110px;
+    bottom: 71px;
     height: 50px;
     width: 170px;
     color: rgb(124 124 55);
+    border: 1px solid transparent;
     border-radius: 24px;
-    border-style: none;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 #cabin-btn-2:hover {
     color: white;
     background-color: rgb(124 124 55);
+    border: 1px solid;
 }

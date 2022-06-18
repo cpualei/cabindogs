@@ -19,8 +19,8 @@ const AllListings = () => {
     <div>
       <h1 id="title">Find your favorite cabin.</h1>
       <p id="sub-title">Bring your furry friend too.</p>
-      <div className="listings-div">
-        <ul className="listings-ul">
+      <div id="listings-div">
+        <ul id="listings-ul">
           {listings.map((listing) => (
             <li id="li" key={listing.id}>
               <NavLink to={`/listings/${listing.id}`}>

@@ -1,4 +1,3 @@
-
 #title {
     text-align: center;
     margin-top: 40px;
@@ -45,11 +44,11 @@
 .login-and-demo-btns {
     background-color: hwb(162deg 25% 15%);
     color: #fff;
+    margin: 5px;
     padding: 14px;
     width: 95%;
-    border: 1px solid transparent;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    margin: 5px;
+    border: 1px solid transparent;
     border-radius: 5px;
 }

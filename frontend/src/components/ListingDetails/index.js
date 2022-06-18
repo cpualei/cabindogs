@@ -1,10 +1,8 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import { deleteListing, getListings } from "../../store/listings";
-import EditListingForm from "../EditListing/editListingForm";
 import EditListingFormModal from "../EditListing";
-
 import "./ListingDetailsPage.css";
 
 const ListingDetailsPage = () => {
@@ -28,17 +26,17 @@ const ListingDetailsPage = () => {
   return (
     <div>
       <div id="listing-details-div">
-        <h1 id="title">Listing Details</h1>
-        <div className="dscrpt-div">
+        <h1 id="title">Listing Details.</h1>
+        <div id="dscrpt-div">
           <div id="dscrpt-name">{listing?.name}</div>
           <div className="dscrpt">
             {listing?.state}, {listing?.country}
           </div>
           <div className="dscrpt">From ${listing?.cost} / night</div>
         </div>
-        <div className="img-container-div">
-          <div className="imgs-container">
-            <div className="other-imgs-div">
+        <div id="img-container-div">
+          <div id="imgs-container">
+            <div id="other-imgs-div">
               <img id="img1" src={listing?.img1} alt="img1"></img>
               <img id="img2" src={listing?.img2} alt="img2"></img>
               <img id="img3" src={listing?.img3} alt="img3"></img>
@@ -46,7 +44,6 @@ const ListingDetailsPage = () => {
               <img id="img5" src={listing?.img5} alt="img5"></img>
             </div>
           </div>
-          {/* </div> */}
         </div>
         {sessionUser ? (
           <div>
