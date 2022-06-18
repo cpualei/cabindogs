@@ -46,15 +46,17 @@ const AllBookings = () => {
                     booking?.endDate
                     }</div>
                     <div id="booking-description" id="booking-cost">Total Paid: ${listings[booking?.listingId]?.cost+((listings[booking?.listingId]?.cost)*0.4)}</div>
-                    <button
-                      id="delete-btn"
-                      onClick={(e) => {
-                        dispatch(deleteBooking(booking));
-                        history.push("/bookings");
-                      }}
-                      >
-                      Delete Booking
-                    </button>
+                    <div id="delete-btn-div">
+                      <button
+                        id="delete-btn"
+                        onClick={(e) => {
+                          dispatch(deleteBooking(booking));
+                          history.push("/bookings");
+                        }}
+                        >
+                        Delete Booking
+                      </button>
+                    </div>
                     </div>
                 </li>
             ))}
