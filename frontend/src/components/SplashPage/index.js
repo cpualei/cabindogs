@@ -15,10 +15,10 @@ const SplashPage = () => {
         </h3>
       </div>
       <div id="imgs-div">
-        <div id="boy-girl-dog-img-div">
+        <div id="man-dog-img-div">
           <img
-            id="boy-girl-dog-img"
-            src="https://www.purina.co.uk/sites/default/files/2020-12/Why%20are%20dogs%20so%20loyalTEASER.jpg"
+            id="man-dog-img"
+            src="https://www.pdsa.org.uk/media/11747/golden-lab-running-through-field-with-man.jpg"
           ></img>
         </div>
         <div id="smaller-imgs-div">
@@ -27,7 +27,11 @@ const SplashPage = () => {
               className="cabin-img"
               src="https://newenglandwithlove.com/wp-content/uploads/2020/08/f69c2d9b.f10.webp"
             ></img>
-            <div id="img-text-div">CABINDOGS</div>
+            <div id="img-text-container">
+              <div className="img-text-outter-div">FOURTH OF JULY</div>
+                <div className="img-text-inner-div">Book your July 4th weekend trip<br></br>
+                now to get the best spot!</div>
+            </div>
             <NavLink to="/listings">
               <button id="cabin-btn">View Cabins</button>
             </NavLink>
@@ -38,9 +42,11 @@ const SplashPage = () => {
               className="cabin-img2"
               src="https://media.istockphoto.com/photos/emerald-lake-on-a-cloudy-day-with-its-thawed-lake-summer-and-fun-picture-id1141078602?b=1&k=20&m=1141078602&s=170667a&w=0&h=7zTs2EsAEwGwBXlzOJIFw0xDmCssiHGsM5d57gcGTmY="
             ></img>
-            <div id="img-text-div">CABINDOGS</div>
-            <NavLink to="/bookings">
-              <button id="cabin-btn-2">View Bookings</button>
+            <div className="img-text-outter-div-2">HOSTING MADE EASY</div>
+              <div className="img-text-inner-div-2">Have a cabin and want to host?<br></br>
+                You're just a click away.</div>
+            <NavLink to="/newlisting">
+              <button id="cabin-btn-2">Start Hosting</button>
             </NavLink>
             <div id="solid-color-div2"></div>
           </div>
