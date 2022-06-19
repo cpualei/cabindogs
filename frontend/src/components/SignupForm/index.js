@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 
-import './SignupForm.css';
+import "./SignupForm.css";
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -20,23 +20,29 @@ function SignupFormPage() {
     e.preventDefault();
     if (password === confirmPassword) {
       setErrors([]);
-      return dispatch(sessionActions.signup({ email, username, password }))
-        .catch(async (res) => {
-          const data = await res.json();
-          if (data && data.errors) setErrors(data.errors);
-        });
+      return dispatch(
+        sessionActions.signup({ email, username, password })
+      ).catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      });
     }
-    return setErrors(['Confirm Password field must be the same as the Password field']);
+    return setErrors([
+      "Confirm Password field must be the same as the Password field",
+    ]);
   };
 
   return (
     <div>
-      <h1 id="title">Sign up now.</h1>
+      <h1 id="title">Don't have an account?</h1>
+      <p id="sub-title">Sign up now, for free!</p>
 
       <div id="sign-up-form-div">
         <form id="form" onSubmit={handleSubmit}>
           <ul id="signup-ul">
-            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+            {errors.map((error, idx) => (
+              <li key={idx}>{error}</li>
+            ))}
           </ul>
           <div id="labels-inputs-btns-div">
             <div id="labels-inputs-div">
@@ -82,7 +88,15 @@ function SignupFormPage() {
               </label>
             </div>
           </div>
-          <button id="signup-form-btn" type="submit">Sign Up</button>
+          <button id="signup-form-btn" type="submit">
+            Sign Up
+          </button>
+          <p id="bottom-form-text">
+            Already have an account?{" "}
+            <NavLink to="/login" id="bottom-form-link" style={{ textDecoration: "none" }}>
+              Sign in!
+            </NavLink>
+          </p>
         </form>
       </div>
     </div>
