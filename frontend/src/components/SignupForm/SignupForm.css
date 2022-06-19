@@ -28,7 +28,6 @@
 .email-user-pw-label-input {
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-end; */
     margin: 10px
 }
 
@@ -37,9 +36,15 @@
     color: #fff;
     padding: 14px;
     width: 95%;
-    border: 1px solid transparent;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     margin: 5px;
+    border: 1px solid transparent;
     border-radius: 5px;
+}
+
+#signup-form-btn:hover {
+    background-color: #fff;
+    color: hwb(162deg 25% 15%);
+    border: 1px solid;
 }
