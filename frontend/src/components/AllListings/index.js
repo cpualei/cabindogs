@@ -17,7 +17,7 @@ const AllListings = () => {
 
   return (
     <div>
-      <h1 id="title">Find your favorite cabin.</h1>
+      <h1 id="listings-title">Find your favorite cabin.</h1>
       <p id="sub-title">Bring your furry friend too.</p>
       <div id="listings-div">
         <ul id="listings-ul">
