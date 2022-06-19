@@ -58,7 +58,7 @@ const CreateBookingPage = () => {
 
   return (
     <div>
-      <h1 id="title">Create a booking.</h1>
+      <h1 id="create-booking-title">Create a booking.</h1>
       <div id="create-booking-form-div">
         <form id="form" onSubmit={(e) => handleSubmit(e)}>
           <div id="create-booking-img-div">
