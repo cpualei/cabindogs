@@ -59,7 +59,7 @@ function Navigation({ isLoaded }) {
           Sign Up
         </NavLink>
         <NavLink
-          to="/newlisting"
+          to="/signup"
           id="start-hosting-btn"
           style={{ textDecoration: "none" }}
         >
