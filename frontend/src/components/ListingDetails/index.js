@@ -26,7 +26,7 @@ const ListingDetailsPage = () => {
   return (
     <div>
       <div id="listing-details-div">
-        <h1 id="title">Listing Details.</h1>
+        <h1 id="listing-details-title">Listing Details.</h1>
         <div id="dscrpt-div">
           <div id="dscrpt-name">{listing?.name}</div>
           <div className="dscrpt">
