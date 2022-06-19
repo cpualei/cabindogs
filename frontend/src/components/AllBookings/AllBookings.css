@@ -3,8 +3,9 @@
     flex-direction: column;
 }
 
-#title {
+#bookings-title {
     margin: 40px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -106,13 +107,20 @@
     background-color: hwb(162deg 25% 15%);
     color: #fff;
     padding: 14px;
-    /* width: 50%; */
+    width: 50%;
     border: 1px solid transparent;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     margin: 5px;
     margin-top: 20px;
+    border: 1px solid transparent;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
+}
+
+#delete-btn:hover {
+    background-color: #fff;
+    color: hwb(162deg 25% 15%);
+    border: 1px solid;
 }

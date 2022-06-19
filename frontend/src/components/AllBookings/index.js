@@ -27,7 +27,7 @@ const AllBookings = () => {
 
   return (
     <div id="bookings-div">
-      <h1 id="title">Upcoming Reservations.</h1>
+      <h1 id="bookings-title">Upcoming Reservations.</h1>
       <div id="bookings-ul-div">
         <ul id="bookings-ul">
           {listings &&
@@ -54,7 +54,7 @@ const AllBookings = () => {
                           history.push("/bookings");
                         }}
                         >
-                        Delete Booking
+                        Cancel Reservation
                       </button>
                     </div>
                     </div>

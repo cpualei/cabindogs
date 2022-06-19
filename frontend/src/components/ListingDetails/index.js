@@ -55,11 +55,11 @@ const ListingDetailsPage = () => {
                 history.push("/listings");
               }}
             >
-              Delete Listing
+              Remove Listing
             </button>
             <button
               id="listing-details-btns"
-              onClick={bookButtonClick}>Book</button>
+              onClick={bookButtonClick}>Book this Cabin</button>
           </div>
         ) : (
           <></>
