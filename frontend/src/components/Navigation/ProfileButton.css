@@ -1,4 +1,5 @@
 #profile-btn {
+    display: block;
     color: rgb(114, 107, 95);
     border-radius: 100%;
     border-width: 1px;
@@ -13,13 +14,16 @@
     padding: 4px;
 }
 
+.profile-dropdown {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 0px;
+}
+
 fa-solid fa-paw {
     font-weight: bold;
 }
 
-.profile-dropdown {
-    list-style-type: none;
-}
 
 #logout-btn {
     background-color:  hwb(162deg 25% 15%);
