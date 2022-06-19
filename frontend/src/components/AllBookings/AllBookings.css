@@ -4,8 +4,8 @@
 }
 
 #bookings-title {
-    margin: 40px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -18,8 +18,8 @@
 
 .booking-description-div {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #bookings-ul {
