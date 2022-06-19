@@ -11,30 +11,34 @@ function Navigation({ isLoaded }) {
   if (sessionUser) {
     sessionLinks = (
       <>
-        <NavLink
-          to="/listings"
-          id="listings-btn"
-          style={{ textDecoration: "none" }}
-        >
-          Listings
-        </NavLink>
-        <NavLink
-          to="/bookings"
-          id="bookings-btn"
-          style={{ textDecoration: "none" }}
-        >
-          Bookings
-        </NavLink>
-        <NavLink
-          to="/newlisting"
-          id="addlisting-btn"
-          style={{ textDecoration: "none" }}
-        >
-          Add a Listing
-        </NavLink>
-        <ProfileButton
-          id="profile-btn"
-          user={sessionUser} />
+        <div id="right-side-nav-links">
+          <NavLink
+            to="/listings"
+            id="listings-btn"
+            style={{ textDecoration: "none" }}
+          >
+            Listings
+          </NavLink>
+          <NavLink
+            to="/bookings"
+            id="bookings-btn"
+            style={{ textDecoration: "none" }}
+          >
+            Bookings
+          </NavLink>
+          <NavLink
+            to="/newlisting"
+            id="start-hosting-btn"
+            style={{ textDecoration: "none" }}
+          >
+            Start Hosting
+          </NavLink>
+        </div>
+        <div id="profile-btn-div">
+          <ProfileButton
+            id="profile-btn"
+            user={sessionUser} />
+        </div>
       </>
     );
   } else {
@@ -53,6 +57,13 @@ function Navigation({ isLoaded }) {
           style={{ textDecoration: "none" }}
         >
           Sign Up
+        </NavLink>
+        <NavLink
+          to="/newlisting"
+          id="start-hosting-btn"
+          style={{ textDecoration: "none" }}
+        >
+          Start Hosting
         </NavLink>
       </>
     );
