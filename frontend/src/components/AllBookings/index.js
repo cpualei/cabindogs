@@ -54,7 +54,7 @@ const AllBookings = () => {
                           history.push("/bookings");
                         }}
                         >
-                        Delete Booking
+                        Cancel Reservation
                       </button>
                     </div>
                     </div>
