@@ -58,3 +58,18 @@
     color: hwb(162deg 25% 15%);
     border: 1px solid;
 }
+
+#login-bottom-form-text {
+    text-align: center;
+    font-size: 14px;
+    color: #333333;
+}
+
+#login-bottom-form-link {
+    color: #333333;
+    font-weight: bold;
+}
+
+#login-bottom-form-link:hover {
+    color: hwb(162deg 25% 15%);
+}
