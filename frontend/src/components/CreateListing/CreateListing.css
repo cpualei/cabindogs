@@ -64,3 +64,8 @@
     color: hwb(162deg 25% 15%);
     border: 1px solid;
 }
+
+#create-listing-form-bottom-text {
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+}

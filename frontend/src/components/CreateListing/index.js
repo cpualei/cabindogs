@@ -140,6 +140,7 @@ const CreateListingForm = () => {
                 <li key={idx}>{error}</li>
               ))}
             </ul>
+            <p id="create-listing-form-bottom-text">By clicking Submit Listing, you agree to absolutely nothing and your listing will be submitted.</p>
             <button className="submit-cancel-btns" type="submit">Submit Listing</button>
             <button className="submit-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
               Cancel
