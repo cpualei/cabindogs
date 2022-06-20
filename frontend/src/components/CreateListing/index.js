@@ -63,84 +63,89 @@ const CreateListingForm = () => {
 
   return (
     <div>
-      <h1 id="create-listing-title">Create a listing.</h1>
-      <div id="create-listing-form-div">
-        <form id="form" onSubmit={(e) => handleSubmit(e)}>
-          <div id="labels-inputs-div">
-            <label className="labels-inputs">Listing Name:</label>
-            <input
-              className="labels-inputs"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-            <label className="labels-inputs">State:</label>
-            <input
-              className="labels-inputs"
-              value={state}
-              onChange={(e) => setState(e.target.value)}
-              required
-            />
-            <label className="labels-inputs">Country:</label>
-            <input
-              className="labels-inputs"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-              required
-            />
-            <label className="labels-inputs">Cost Per Night:</label>
-            <input
-              className="labels-inputs"
-              value={cost}
-              onChange={(e) => setCost(e.target.value)}
-              required
-            />
-            <label className="labels-inputs">Image 1:</label>
-            <input
-              className="labels-inputs"
-              value={img1}
-              onChange={(e) => setImg1(e.target.value)}
-              required
-            />
-            <label className="labels-inputs">Image 2:</label>
-            <input
-              className="labels-inputs"
-              value={img2}
-              onChange={(e) => setImg2(e.target.value)}
-              required
-            />
-            <label className="labels-inputs">Image 3:</label>
-            <input
-              className="labels-inputs"
-              value={img3}
-              onChange={(e) => setImg3(e.target.value)}
-              required
-            />
-            <label className="labels-inputs">Image 4:</label>
-            <input
-              className="labels-inputs"
-              value={img4}
-              onChange={(e) => setImg4(e.target.value)}
-              required
-            />
-            <label className="labels-inputs">Image 5:</label>
-            <input
-              className="labels-inputs"
-              value={img5}
-              onChange={(e) => setImg5(e.target.value)}
-              required
-            />
-          </div>
-          <ul id="errors">
-            {errors.map((error, idx) => (
-              <li key={idx}>{error}</li>
-            ))}
-          </ul>
-          <button className="submit-cancel-btns" type="submit">Submit Listing</button>
-          <button className="submit-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
-            Cancel
-          </button>
-        </form>
+      <div id="create-listing-container">
+        <div id="create-listing-title-div">
+          <h1 id="create-listing-title">Earn up to $7,000/month hosting in California.</h1>
+          <p id="create-listing-subtitle">Sign up for free, host when you want, and get paid every week.</p>
+        </div>
+        <div id="create-listing-form-div">
+          <form id="create-listing-form" onSubmit={(e) => handleSubmit(e)}>
+            <div id="create-listing-inputs-div">
+              <input
+                className="create-listing-inputs"
+                placeholder="Listing Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <input
+                className="create-listing-inputs"
+                placeholder="State"
+                value={state}
+                onChange={(e) => setState(e.target.value)}
+                required
+              />
+              <input
+                className="create-listing-inputs"
+                placeholder="Country"
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+                required
+              />
+              <input
+                className="create-listing-inputs"
+                placeholder="Cost per night"
+                value={cost}
+                onChange={(e) => setCost(e.target.value)}
+                required
+              />
+              <input
+                className="create-listing-inputs"
+                placeholder="Image 1"
+                value={img1}
+                onChange={(e) => setImg1(e.target.value)}
+                required
+              />
+              <input
+                className="create-listing-inputs"
+                placeholder="Image 2"
+                value={img2}
+                onChange={(e) => setImg2(e.target.value)}
+                required
+              />
+              <input
+                className="create-listing-inputs"
+                placeholder="Image 3"
+                value={img3}
+                onChange={(e) => setImg3(e.target.value)}
+                required
+              />
+              <input
+                className="create-listing-inputs"
+                placeholder="Image 4"
+                value={img4}
+                onChange={(e) => setImg4(e.target.value)}
+                required
+              />
+              <input
+                className="create-listing-inputs"
+                placeholder="Image 5"
+                value={img5}
+                onChange={(e) => setImg5(e.target.value)}
+                required
+              />
+            </div>
+            <ul id="errors">
+              {errors.map((error, idx) => (
+                <li key={idx}>{error}</li>
+              ))}
+            </ul>
+            <button className="submit-cancel-btns" type="submit">Submit Listing</button>
+            <button className="submit-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
+              Cancel
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
