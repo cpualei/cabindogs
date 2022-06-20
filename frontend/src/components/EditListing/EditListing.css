@@ -7,6 +7,19 @@
     flex-direction: column;
 }
 
+#edit-listing-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.edit-listing-inputs {
+    line-height: 2;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
 .update-cancel-btns {
     background-color: hwb(162deg 25% 15%);
     color: #fff;
