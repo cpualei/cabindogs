@@ -1,7 +1,26 @@
+#create-listing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hwb(41deg 84% 9%);
+    max-width: 450px;
+    margin: 40px;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 12px;
+}
+
 #create-listing-title {
-    text-align: center;
-    margin-top: 60px;
+    max-width: 450px;
     margin-bottom: 40px;
+    padding: 0px 30px 0px 30px;
+}
+
+#create-listing-subtitle {
+    font-size: 20px;
+    max-width: 450px;
+    margin-bottom: 40px;
+    padding: 0px 30px 0px 30px;
 }
 
 #create-listing-form-div {
@@ -9,25 +28,27 @@
     justify-content: center;
 }
 
-#form {
+/* #create-listing-form {
     width: 400px;
-}
+} */
 
 #errors {
     width: 100%;
     color: red;
 }
 
-#labels-inputs-div {
+#create-listing-inputs-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.labels-inputs {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+.create-listing-inputs {
+    line-height: 2;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 12px;
 }
 
 .submit-cancel-btns {
