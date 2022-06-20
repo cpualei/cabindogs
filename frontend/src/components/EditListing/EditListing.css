@@ -5,6 +5,20 @@
 #form {
     display: flex;
     flex-direction: column;
+    width: 400px;
+}
+
+#edit-listing-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.edit-listing-inputs {
+    line-height: 2;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 12px;
 }
 
 .update-cancel-btns {

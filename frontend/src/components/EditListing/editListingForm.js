@@ -64,65 +64,74 @@ const EditListingForm = ({ setShowModal }) => {
 
   return (
     <div id="edit-form-div">
-      <h1 id="title">Edit Listing</h1>
+      <h1 id="edit-listing-title">Update Listing</h1>
       <form
         id="form"
         onSubmit={(e) => handleSubmit(e)}>
-        <label>Listing Name:</label>
         <input
+          className="edit-listing-inputs"
           value={name}
+          placeholder="Listing Name"
           onChange={(e) => setName(e.target.value)}
           required
           />
-        <label>State:</label>
         <input
+          className="edit-listing-inputs"
           value={state}
+          placeholder="State"
           onChange={(e) => setState(e.target.value)}
           required
           />
-        <label>Country:</label>
         <input
+          className="edit-listing-inputs"
           value={country}
+          placeholder="Country"
           onChange={(e) => setCountry(e.target.value)}
           required
           />
-        <label>Cost Per Night:</label>
         <input
+          className="edit-listing-inputs"
           value={cost}
+          placeholder="Cost per night"
           onChange={(e) => setCost(e.target.value)}
           required
           />
-        <label>Image 1:</label>
         <input
+          className="edit-listing-inputs"
           value={img1}
+          placeholder="Image 1"
           alt="img1"
           onChange={(e) => setImg1(e.target.value)}
           required
           />
-        <label>Image 2:</label>
         <input
+          className="edit-listing-inputs"
           value={img2}
+          placeholder="Image 2"
           alt="img2"
           onChange={(e) => setImg2(e.target.value)}
           required
           />
-        <label>Image 3:</label>
         <input
+          className="edit-listing-inputs"
           value={img3}
+          placeholder="Image 3"
           alt="img3"
           onChange={(e) => setImg3(e.target.value)}
           required
           />
-        <label>Image 4:</label>
         <input
+          className="edit-listing-inputs"
           value={img4}
+          placeholder="Image 4"
           alt="img4"
           onChange={(e) => setImg4(e.target.value)}
           required
           />
-        <label>Image 5:</label>
         <input
+          className="edit-listing-inputs"
           value={img5}
+          placeholder="Image 5"
           alt="img5"
           onChange={(e) => setImg5(e.target.value)}
           required
