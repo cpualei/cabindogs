@@ -1,32 +1,57 @@
 #create-booking-title {
     text-align: center;
     margin-top: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+#create-booking-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#create-booking-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #create-booking-img-div {
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
 }
 
-#booking-name {
-    margin-top: 20px;
+#create-booking-img {
+    border-radius: 30px;
+    height: auto;
+    width: 713px
+}
+
+#create-booking-info-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 50px;
+    padding: 20px;
+    background: hwb(41deg 84% 9%);
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+#create-booking-name {
     font-size: 20px;
+    font-weight: bold;
 }
 
-#state-country-div {
+#create-booking-state-country-div {
     margin-bottom: 30px;
 }
 
-#create-booking-form-div {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
 #submit-cancel-btn {
     background-color: hwb(162deg 25% 15%);
     color: #fff;
-    padding: 14px;
+    padding: 12px;
     width: 95%;
     border: 1px solid transparent;
     font-weight: bold;
@@ -38,29 +63,7 @@
 #submit-cancel-btn:hover {
     color: hwb(162deg 25% 15%);
     background-color: #fff;
-    padding: 14px;
-    width: 95%;
     border: 1px solid;
-    font-weight: bold;
-    -webkit-font-smoothing: antialiased;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-#create-booking-img-div {
-    display: flex;
-    justify-content: center;
-}
-
-#create-booking-img {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    border-radius: 50px;
-    height: auto;
-    width: 600px;
-    margin: 2px;
-    margin-bottom: 15px;
 }
 
 .labels-inputs {
