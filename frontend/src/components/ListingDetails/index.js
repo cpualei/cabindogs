@@ -25,45 +25,49 @@ const ListingDetailsPage = () => {
 
   return (
     <div>
-      <div id="listing-details-div">
-        <h1 id="listing-details-title">Listing Details.</h1>
-        <div id="dscrpt-div">
-          <div id="dscrpt-name">{listing?.name}</div>
-          <div className="dscrpt">
-            {listing?.state}, {listing?.country}
+      <h1 id="listing-details-title">Listing Details.</h1>
+      <div id="listing-details-container">
+        <div id="listing-details-div">
+          <div id="listing-dscrpt-div">
+            <div id="listing-dscrpt-name">{listing?.name}</div>
+            <div className="listing-dscrpt">
+              {listing?.state}, {listing?.country}
+            </div>
+            <div className="listing-dscrpt">From ${listing?.cost} / night</div>
           </div>
-          <div className="dscrpt">From ${listing?.cost} / night</div>
-        </div>
-        <div id="img-container-div">
-          <div id="imgs-container">
-            <div id="other-imgs-div">
-              <img id="img1" src={listing?.img1} alt="img1"></img>
-              <img id="img2" src={listing?.img2} alt="img2"></img>
-              <img id="img3" src={listing?.img3} alt="img3"></img>
-              <img id="img4" src={listing?.img4} alt="img4"></img>
-              <img id="img5" src={listing?.img5} alt="img5"></img>
+          <div>
+            {sessionUser ? (
+              <div id="listing-details-btns-div">
+                <EditListingFormModal />
+                <button
+                  className="listing-details-btns"
+                  onClick={(e) => {
+                    dispatch(deleteListing(id));
+                    history.push("/listings");
+                  }}
+                >
+                  Remove Listing
+                </button>
+                <button
+                  className="listing-details-btns"
+                  onClick={bookButtonClick}>Book this Cabin</button>
+              </div>
+            ) : (
+              <></>
+            )}
+          </div>
+          <div id="img-container-div">
+            <div id="imgs-container">
+              <div id="other-imgs-div">
+                <img id="img1" src={listing?.img1} alt="img1"></img>
+                <img id="img2" src={listing?.img2} alt="img2"></img>
+                <img id="img3" src={listing?.img3} alt="img3"></img>
+                <img id="img4" src={listing?.img4} alt="img4"></img>
+                <img id="img5" src={listing?.img5} alt="img5"></img>
+              </div>
             </div>
           </div>
         </div>
-        {sessionUser ? (
-          <div>
-            <EditListingFormModal />
-            <button
-              id="listing-details-btns"
-              onClick={(e) => {
-                dispatch(deleteListing(id));
-                history.push("/listings");
-              }}
-            >
-              Remove Listing
-            </button>
-            <button
-              id="listing-details-btns"
-              onClick={bookButtonClick}>Book this Cabin</button>
-          </div>
-        ) : (
-          <></>
-        )}
       </div>
     </div>
   );
