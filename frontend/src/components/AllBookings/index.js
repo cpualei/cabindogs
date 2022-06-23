@@ -36,7 +36,7 @@ const AllBookings = () => {
                   {/* <p>{listings[booking.listingId]?.name}</p> */}
                   <img class="booking-description" id="booking-img" src={listings[booking.listingId]?.img1}></img>
                   <div id="booking-description-div">
-                    <div class="booking-description" id="booking-name">{listings[booking.listingId]?.name}</div>
+                    <div id="booking-name">{listings[booking.listingId]?.name}</div>
                     <div class="booking-description" id="booking-state">{listings[booking.listingId]?.state}, {listings[booking.listingId]?.country}</div>
                     {/* <div id="booking-description" id="booking-guests">{listings[booking.listingId]?.guests}</div> */}
                     <div class="booking-description" id="booking-dates">{
