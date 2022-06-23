@@ -117,6 +117,20 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          userId: 2,
+          name: "Historic Owl Pine Cabin",
+          state: "Idyllwild-Pine Cove, CA",
+          country: "USA",
+          cost: 308,
+          img1: "https://a0.muscache.com/im/pictures/20dd0cef-d631-4d8e-afc8-97df3d8ff341.jpg?im_w=1200",
+          img2: "https://a0.muscache.com/im/pictures/miso/Hosting-16379417/original/5ec9af62-48c0-4795-b1c1-e94300ae6ffb.jpeg?im_w=1440",
+          img3: "https://a0.muscache.com/im/pictures/729a852b-7199-4ac0-a00f-ee6c07927102.jpg?im_w=1440",
+          img4: "https://a0.muscache.com/im/pictures/miso/Hosting-16379417/original/0dac24dc-bd65-4484-bb03-cf334be129d4.jpeg?im_w=1440",
+          img5: "https://a0.muscache.com/im/pictures/1a7b6181-1b71-4f97-9274-1feed1668076.jpg?im_w=1440",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
