@@ -38,7 +38,7 @@ const AllBookings = () => {
                   <div id="booking-description-div">
                     <div class="booking-description" id="booking-name">{listings[booking.listingId]?.name}</div>
                     <div class="booking-description" id="booking-state">{listings[booking.listingId]?.state}, {listings[booking.listingId]?.country}</div>
-                    {/* <div id="booking-description" id="booking-country">{listings[booking.listingId]?.country}</div> */}
+                    {/* <div id="booking-description" id="booking-guests">{listings[booking.listingId]?.guests}</div> */}
                     <div class="booking-description" id="booking-dates">{
                       // <BookingDate booking={booking?.startDate} />
                       booking?.startDate

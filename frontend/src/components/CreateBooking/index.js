@@ -19,13 +19,14 @@ const CreateBookingPage = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [errors, setErrors] = useState([]);
+  const [showErrors, setShowErrors] = useState(false)
 
   useEffect(() => {
     const errors = [];
 
-    if (!totalCost) errors.push("Please confirm total cost");
-    if (!startDate) errors.push("Please select a start date.");
-    if (!endDate) errors.push("Please select an end date.");
+    if (!startDate.length) errors.push("Please select a start date.");
+    if (!endDate.length) errors.push("Please select an end date.");
+    if (!totalCost.length) errors.push("Please confirm total cost");
 
     setErrors(errors);
   }, [totalCost, startDate, endDate]);
@@ -85,7 +86,6 @@ const CreateBookingPage = () => {
                   onChange={(e) => setEndDate(e.target.value)}
                   required
                 />
-                <p className="labels-inputs">Total Cost: ${booking?.cost + booking?.cost * 0.4}</p>
                 <label className="labels-inputs"># of Guests:</label>
                 <select
                   className="labels-inputs"
@@ -103,6 +103,13 @@ const CreateBookingPage = () => {
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
+                <p className="labels-inputs">Total Cost: ${booking?.cost + booking?.cost * 0.4}</p>
+                <input
+                  className="labels-inputs"
+                  value={totalCost}
+                  onChange={(e) => setTotalCost(e.target.value)}
+                  required
+                />
                 <ul id="errors">
                   {errors.map((error, idx) => (
                     <li key={idx}>{error}</li>
