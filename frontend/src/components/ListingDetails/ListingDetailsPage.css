@@ -2,9 +2,12 @@ body {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
-#listing-details-div {
-    margin-right: 90px;
-    margin-left: 90px
+#listing-details-container {
+    /* margin-right: 90px;
+    margin-left: 90px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #listing-details-title {
@@ -13,29 +16,39 @@ body {
     margin-bottom: 40px;
 }
 
-#dscrpt-div {
+#listing-details-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#listing-dscrpt-div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-#dscrpt-name {
+.listing-dscrpt {
+}
+
+#listing-dscrpt-name {
     font-size: 20px;
     font-weight: bold;
 }
 
 #img-container-div {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap; */
 }
 
 #imgs-container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
     height: 450px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 #other-imgs-div {
@@ -43,7 +56,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     height: 420px;
-    width: 30%;
+    /* width: 30%; */
     box-sizing: border-box;
 }
 
@@ -100,7 +113,12 @@ body {
     object-fit: cover;
 }
 
-#listing-details-btns {
+#listing-details-btns-div {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.listing-details-btns {
     background-color: hwb(162deg 25% 15%);
     color: #fff;
     margin: 5px;
@@ -111,13 +129,8 @@ body {
     border-radius: 5px;
 }
 
-#listing-details-btns:hover {
+.listing-details-btns:hover {
     background-color: #fff;
     color: hwb(162deg 25% 15%);
-    margin: 5px;
-    padding: 14px;
-    font-weight: bold;
-    -webkit-font-smoothing: antialiased;
     border: 1px solid;
-    border-radius: 5px;
 }
