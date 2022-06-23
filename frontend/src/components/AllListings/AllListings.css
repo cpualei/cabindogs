@@ -43,7 +43,7 @@
     flex-direction: column;
     justify-content: center;
     height: 190px;
-    width: 288px;
+    width: 320px;
     margin-left: 16px;
     margin-right: 16px;
     margin-top: 40px;
@@ -79,6 +79,6 @@
     color: rgb(0, 0, 0);
     padding-top: 6px;
     padding-bottom: 6px;
-    border-bottom-style: solid;
+    border-bottom: 3px solid;
     border-bottom-color: lightgrey;
 }
