@@ -1,21 +1,20 @@
 #profile-btn {
-    display: block;
+    display: flex;
     color: rgb(114, 107, 95);
     border-radius: 100%;
-    border-width: 1px;
     border-color: darkgray;
     padding: 4px;
 }
 #profile-btn:hover {
     color: hwb(162deg 25% 15%);
-    border-radius: 100%;
-    border-width: 1px;
-    border-color: darkgray;
+    border-color: hwb(162deg 25% 15%);
     padding: 4px;
 }
 
 .profile-dropdown {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
     list-style-type: none;
     margin-left: 0px;
 }
@@ -28,11 +27,16 @@ fa-solid fa-paw {
 #logout-btn {
     background-color:  hwb(162deg 25% 15%);
     color: #fff;
-    padding: 14px;
-    width: 95%;
+    border-radius: 24px;
+    padding: 6px 16px 8px;
     border: 1px solid transparent;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    margin: 5px;
-    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#logout-btn:hover {
+    color:  hwb(162deg 25% 15%);
+    background-color: #fff;
+    border: 1px solid;
 }

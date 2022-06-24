@@ -32,20 +32,22 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button id="profile-btn" onClick={openMenu}>
-        <i className="fa-solid fa-paw" />
-      </button>
-      {showMenu && (
-        <>
-        <ul className="profile-dropdown">
-          <li>{user.username}</li>
-          <li>{user.email}</li>
-          <li>
-            <button id="logout-btn" onClick={logout}>Log Out</button>
-          </li>
-        </ul>
-        </>
-      )}
+      <div>
+        <button id="profile-btn" onClick={openMenu}>
+          <i className="fa-solid fa-paw" />
+        </button>
+        {showMenu && (
+          <>
+          <ul className="profile-dropdown">
+            <li>{user.username}</li>
+            <li>{user.email}</li>
+            <li>
+              <button id="logout-btn" onClick={logout}>Log Out</button>
+            </li>
+          </ul>
+          </>
+        )}
+      </div>
     </>
   );
 }
