@@ -11,6 +11,7 @@ import CreateListingForm from "./components/CreateListing";
 import ListingDetailsPage from "./components/ListingDetails";
 import AllBookings from "./components/AllBookings";
 import CreateBookingPage from "./components/CreateBooking";
+import Footer from "./components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -50,6 +51,7 @@ function App() {
           </Route>
         </Switch>
       )}
+      <Footer />
     </>
   );
 }
