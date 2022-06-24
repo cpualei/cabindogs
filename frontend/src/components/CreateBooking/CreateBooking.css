@@ -23,8 +23,9 @@
 
 #create-booking-img {
     border-radius: 30px;
-    height: auto;
-    width: 713px
+    height: 500px;
+    width: 713px;
+    object-fit: cover;
 }
 
 #create-booking-info-div {
