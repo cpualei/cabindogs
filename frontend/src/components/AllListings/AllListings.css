@@ -34,18 +34,18 @@
 #li {
     display: flex;
     flex-direction: column;
-    height: 320px;
-    margin-bottom: 15px;
+    height: 350px;
+    margin-bottom: 30px;
 }
 
 #listing-imgs {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 190px;
-    width: 320px;
-    margin-left: 16px;
-    margin-right: 16px;
+    height: 250px;
+    width: 300px;
+    margin-left: 14px;
+    margin-right: 14px;
     margin-top: 40px;
     border-radius: 15px;
     object-fit: cover;
@@ -58,16 +58,15 @@
     justify-content: center;
     margin-left: 16px;
     margin-right: 16px;
-    font-size: 15px;
+    font-size: 16px;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
-    font-style: normal;
     line-height: 1.42;
     color: grey;
 }
 
 #listing-name {
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
     color: rgb(0, 0, 0);
     line-height: 30px;
     padding-top: 6px;
@@ -75,10 +74,7 @@
 }
 
 #listing-cost {
-    font-size: 14px;
+    font-size: 15px;
     color: rgb(0, 0, 0);
     padding-top: 6px;
-    padding-bottom: 6px;
-    border-bottom: 3px solid;
-    border-bottom-color: lightgrey;
 }
