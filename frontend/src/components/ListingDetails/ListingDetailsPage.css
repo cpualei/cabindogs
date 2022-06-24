@@ -4,7 +4,7 @@ body {
 
 #listing-details-title {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 160px;
     margin-bottom: 40px;
 }
 
@@ -30,6 +30,7 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-right: 20%;
+    margin-bottom: 160px;
 }
 
 #listing-dscrpt-name {
