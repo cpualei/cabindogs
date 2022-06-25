@@ -7,15 +7,15 @@ module.exports = (sequelize, DataTypes) => {
       references: { model: 'Users' }
     },
     name: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING(35),
       allowNull: false
     },
     state: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING(35),
       allowNull: false
     },
     country: {
-      type: DataTypes.STRING(75),
+      type: DataTypes.STRING(35),
       allowNull: false
     },
     cost: {

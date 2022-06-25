@@ -15,15 +15,15 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: Sequelize.STRING(50)
+        type: Sequelize.STRING(35)
       },
       state: {
         allowNull: false,
-        type: Sequelize.STRING(50)
+        type: Sequelize.STRING(35)
       },
       country: {
         allowNull: false,
-        type: Sequelize.STRING(75)
+        type: Sequelize.STRING(35)
       },
       cost: {
         allowNull: false,
