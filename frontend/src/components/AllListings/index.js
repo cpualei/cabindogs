@@ -33,7 +33,7 @@ const AllListings = () => {
                 {listing.state}, {listing.country}
               </div>
               <div className="listing-description" id="listing-cost">
-                From ${listing.cost} / night
+                ${listing.cost} / night
               </div>
             </li>
           ))}
