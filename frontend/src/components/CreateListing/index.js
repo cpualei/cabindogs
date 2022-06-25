@@ -62,93 +62,97 @@ const CreateListingForm = () => {
   };
 
   return (
-    <div>
-      <div id="create-listing-container">
-        <div id="create-listing-title-div">
-          <h1 id="create-listing-title">Earn up to $7,000/month hosting in California.</h1>
-          <p id="create-listing-subtitle">Sign up for free, host when you want, and get paid every week.</p>
-        </div>
-        <div id="create-listing-form-div">
-          <form id="create-listing-form" onSubmit={(e) => handleSubmit(e)}>
-            <div id="create-listing-inputs-div">
-              <input
-                className="create-listing-inputs"
-                placeholder="Listing Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-              <input
-                className="create-listing-inputs"
-                placeholder="State"
-                value={state}
-                onChange={(e) => setState(e.target.value)}
-                required
-              />
-              <input
-                className="create-listing-inputs"
-                placeholder="Country"
-                value={country}
-                onChange={(e) => setCountry(e.target.value)}
-                required
-              />
-              <input
-                className="create-listing-inputs"
-                placeholder="Cost per night"
-                value={cost}
-                onChange={(e) => setCost(e.target.value)}
-                required
-              />
-              <input
-                className="create-listing-inputs"
-                placeholder="Image 1"
-                value={img1}
-                onChange={(e) => setImg1(e.target.value)}
-                required
-              />
-              <input
-                className="create-listing-inputs"
-                placeholder="Image 2"
-                value={img2}
-                onChange={(e) => setImg2(e.target.value)}
-                required
-              />
-              <input
-                className="create-listing-inputs"
-                placeholder="Image 3"
-                value={img3}
-                onChange={(e) => setImg3(e.target.value)}
-                required
-              />
-              <input
-                className="create-listing-inputs"
-                placeholder="Image 4"
-                value={img4}
-                onChange={(e) => setImg4(e.target.value)}
-                required
-              />
-              <input
-                className="create-listing-inputs"
-                placeholder="Image 5"
-                value={img5}
-                onChange={(e) => setImg5(e.target.value)}
-                required
-              />
+    <>
+      <div style={{ backgroundImage: `url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/23453275/4026_McKeown_Lake_Rd_NW_044.jpg)` }}>
+        <div id="create-listing-outer-container">
+          <div id="create-listing-container">
+            <div id="create-listing-title-div">
+              <h1 id="create-listing-title">Earn up to $7,000/month hosting in California.</h1>
+              <p id="create-listing-subtitle">Sign up for free, host when you want, and get paid every week.</p>
             </div>
-            <ul id="errors">
-              {errors.map((error, idx) => (
-                <li key={idx}>{error}</li>
-              ))}
-            </ul>
-            <p id="create-listing-form-bottom-text">By clicking Submit Listing, you agree to absolutely nothing and your listing will be submitted.</p>
-            <button className="submit-cancel-btns" type="submit">Submit Listing</button>
-            <button className="submit-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
-              Cancel
-            </button>
-          </form>
+            <div id="create-listing-form-div">
+              <form id="create-listing-form" onSubmit={(e) => handleSubmit(e)}>
+                <div id="create-listing-inputs-div">
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="Listing Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="State"
+                    value={state}
+                    onChange={(e) => setState(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="Country"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="Cost per night"
+                    value={cost}
+                    onChange={(e) => setCost(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="Image 1"
+                    value={img1}
+                    onChange={(e) => setImg1(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="Image 2"
+                    value={img2}
+                    onChange={(e) => setImg2(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="Image 3"
+                    value={img3}
+                    onChange={(e) => setImg3(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="Image 4"
+                    value={img4}
+                    onChange={(e) => setImg4(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="create-listing-inputs"
+                    placeholder="Image 5"
+                    value={img5}
+                    onChange={(e) => setImg5(e.target.value)}
+                    required
+                  />
+                </div>
+                <ul id="errors">
+                  {errors.map((error, idx) => (
+                    <li key={idx}>{error}</li>
+                  ))}
+                </ul>
+                <p id="create-listing-form-bottom-text">By clicking Submit Listing, you agree to absolutely nothing and your listing will be submitted.</p>
+                <button className="submit-cancel-btns" type="submit">Submit Listing</button>
+                <button className="submit-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
+                  Cancel
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
