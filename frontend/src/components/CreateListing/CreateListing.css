@@ -1,3 +1,8 @@
+#create-listing-outer-container {
+    display: flex;
+    justify-content: center;
+}
+
 #create-listing-container {
     display: flex;
     flex-direction: column;
