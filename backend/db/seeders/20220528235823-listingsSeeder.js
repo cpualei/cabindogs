@@ -49,7 +49,7 @@ module.exports = {
         },
         {
           userId: 2,
-          name: "Eco Friendly Tiny House at Cotopaxi National Park",
+          name: "Eco Friendly Tiny House",
           state: "Machachi, Pichincha",
           country: "Ecuador",
           cost: 168,
