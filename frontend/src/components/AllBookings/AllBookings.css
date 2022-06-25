@@ -29,7 +29,6 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 60px;
-    justify-content: space-between;
 }
 
 .booking-description {
@@ -88,7 +87,7 @@
 
 #delete-btn-div {
     display: flex;
-    justify-content: center;
+    /* justify-content: flex-start; */
 }
 
 #delete-btn {
@@ -96,7 +95,6 @@
     background-color: hwb(162deg 25% 15%);
     color: #fff;
     padding: 10px;
-    width: 100%;
     border: 1px solid transparent;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
