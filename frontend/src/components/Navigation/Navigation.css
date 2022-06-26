@@ -52,7 +52,7 @@ body {
     top: 0px;
     left: 0px;
     /* background-color: rgb(243, 242, 239); */
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(239, 239, 239, 0.89);
     z-index: 500;
 }
 
