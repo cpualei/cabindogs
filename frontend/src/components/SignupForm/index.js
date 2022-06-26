@@ -34,11 +34,11 @@ function SignupFormPage() {
 
   return (
     <div>
-      <h1 id="title">Don't have an account?</h1>
+      <h1 id="signup-title">Don't have an account?</h1>
       <p id="sub-title">Sign up now, for free!</p>
 
       <div id="sign-up-form-div">
-        <form id="form" onSubmit={handleSubmit}>
+        <form id="signup-form" onSubmit={handleSubmit}>
           <ul id="signup-ul">
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>
