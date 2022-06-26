@@ -69,26 +69,26 @@ const CreateBookingPage = () => {
                 </div>
               <div id="create-booking-info-div">
                   <div id="create-booking-name">{booking?.name}</div>
-                  <div id="create-booking-state-country-div">{booking?.state}, {booking?.country}</div>
-                <label className="labels-inputs">Start Date:</label>
+                  <div id="create-booking-state-country">{booking?.state}, {booking?.country}</div>
+                <label className="create-booking-labels">Start Date:</label>
                 <input
                   type="date"
-                  className="labels-inputs"
+                  className="create-booking-inputs"
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
                   required
                 />
-                <label className="labels-inputs">End Date:</label>
+                <label className="create-booking-labels">End Date:</label>
                 <input
                   type="date"
-                  className="labels-inputs"
+                  className="create-booking-inputs"
                   value={endDate}
                   onChange={(e) => setEndDate(e.target.value)}
                   required
                 />
-                <label className="labels-inputs"># of Guests:</label>
+                <label className="create-booking-labels"># of Guests:</label>
                 <select
-                  className="labels-inputs"
+                  className="create-booking-inputs"
                   onChange={(e) => setTotalGuests(e.target.value)}
                   required>
                     <option value="">-- Select # of guests --</option>
@@ -103,9 +103,9 @@ const CreateBookingPage = () => {
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
-                <p className="labels-inputs">Total Cost: ${booking?.cost + booking?.cost * 0.4}</p>
+                <label className="create-booking-labels">Total Cost: ${booking?.cost + booking?.cost * 0.4}</label>
                 <input
-                  className="labels-inputs"
+                  className="create-booking-inputs"
                   value={totalCost}
                   onChange={(e) => setTotalCost(e.target.value)}
                   required

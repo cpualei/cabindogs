@@ -35,6 +35,7 @@
     margin-left: 50px;
     padding: 20px;
     background: hwb(41deg 84% 9%);
+    /* background: rgb(143, 203, 207); */
     border: 1px solid;
     border-radius: 8px;
 }
@@ -44,13 +45,16 @@
     font-weight: bold;
 }
 
-#create-booking-state-country-div {
-    margin-bottom: 30px;
+#create-booking-state-country {
+    font-size: 18px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 20px;
 }
 
 
 #submit-cancel-btn {
-    background-color: hwb(162deg 25% 15%);
+    background-color: cadetblue;
     color: #fff;
     padding: 12px;
     width: 95%;
@@ -62,12 +66,21 @@
 }
 
 #submit-cancel-btn:hover {
-    color: hwb(162deg 25% 15%);
+    color: cadetblue;
     background-color: #fff;
     border: 1px solid;
 }
 
-.labels-inputs {
-    display: flex;
-    flex-direction: row;
+.create-booking-labels {
+    /* display: flex;
+    flex-direction: row; */
+    font-size: 15px;
+}
+
+.create-booking-inputs {
+    /* display: flex;
+    flex-direction: row; */
+    font-size: 13px;
+    padding: 5px;
+    margin-bottom: 8px;
 }
