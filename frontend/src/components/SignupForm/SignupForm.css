@@ -8,7 +8,6 @@
     flex-direction: column;
     justify-content: center;
     background-color: hwb(41deg 84% 9%);
-    /* margin: 40px; */
     margin-top: 160px;
     margin-bottom: 160px;
     padding: 30px;
@@ -18,14 +17,12 @@
 
 #signup-title {
     text-align: center;
-    /* margin-top: 160px; */
     margin-bottom: 10px;
 }
 
 #sign-up-form-div {
     display: flex;
     justify-content: center;
-    /* margin-bottom: 160px; */
 }
 
 #signup-form {
