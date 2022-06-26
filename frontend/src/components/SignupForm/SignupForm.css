@@ -1,19 +1,49 @@
+/* bkgrnd-img {
+    background: url('https://i.pinimg.com/originals/59/26/5e/59265e0c9ef458f88b130aa5a2621527.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+} */
+
+#bkgrnd-img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+#signup-form-outer-container {
+    display:flex;
+    justify-content: center;
+}
+
+#signup-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hwb(41deg 84% 9%);
+    /* margin: 40px; */
+    margin-top: 160px;
+    margin-bottom: 160px;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 12px;
+}
 
 #signup-title {
     text-align: center;
-    margin-top: 160px;
+    /* margin-top: 160px; */
     margin-bottom: 10px;
 }
 
 #sign-up-form-div {
     display: flex;
     justify-content: center;
-    margin-bottom: 160px;
+    /* margin-bottom: 160px; */
 }
 
 #signup-form {
     width: 400px;
-
 }
 
 #sign-up-ul {
