@@ -14,6 +14,7 @@
 #login-form-div {
     display: flex;
     justify-content: center;
+    margin-bottom: 160px;
 }
 
 #form {
@@ -22,12 +23,6 @@
 
 #login-ul {
     display: flex;
-}
-
-#labels-inputs-btns-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .user-email-label-input {
