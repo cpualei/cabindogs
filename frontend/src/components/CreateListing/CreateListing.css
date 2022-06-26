@@ -55,7 +55,7 @@
 }
 
 .submit-cancel-btns {
-    background-color: hwb(162deg 25% 15%);
+    background-color: cadetblue;
     color: #fff;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
@@ -68,7 +68,7 @@
 
 .submit-cancel-btns:hover {
     background-color: #fff;
-    color: hwb(162deg 25% 15%);
+    color: cadetblue;
     border: 1px solid;
 }
 
