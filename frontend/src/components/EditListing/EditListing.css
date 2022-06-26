@@ -28,7 +28,7 @@
 }
 
 .update-cancel-btns {
-    background-color: hwb(162deg 25% 15%);
+    background-color: cadetblue;
     color: #fff;
     padding: 10px;
     border: 1px solid transparent;
@@ -40,6 +40,6 @@
 
 .update-cancel-btns:hover {
     background-color: #fff;
-    color: hwb(162deg 25% 15%);
+    color: cadetblue;
     border: 1px solid;
 }
