@@ -34,12 +34,15 @@ function SignupFormPage() {
 
   return (
     <>
-      <div id="bkgrnd-img" style={{
+      <div
+        id="bkgrnd-img"
+        style={{
           backgroundImage: `url(https://cdn.80.lv/api/upload/content/29/606a861e97a38.jpg)`,
-          height:'100vh',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat'
-        }}>
+          height: "100vh",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div id="signup-form-outer-container">
           <div id="signup-form-container">
             <h1 id="signup-title">Don't have an account?</h1>
@@ -101,7 +104,11 @@ function SignupFormPage() {
                 </button>
                 <p id="bottom-form-text">
                   Already have an account?{" "}
-                  <NavLink to="/login" id="bottom-form-link" style={{ textDecoration: "none" }}>
+                  <NavLink
+                    to="/login"
+                    id="bottom-form-link"
+                    style={{ textDecoration: "none" }}
+                  >
                     Sign in!
                   </NavLink>
                 </p>
