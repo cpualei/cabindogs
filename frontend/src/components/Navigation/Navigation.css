@@ -19,14 +19,15 @@ body {
 }
 
 #networking-links:hover {
-    color:hwb(162deg 25% 15%);
+    color:cadetblue;
 }
 
 #top-msg-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(234, 232, 228);
+    /* background-color: rgb(90, 211, 207); */
+    background-color: whitesmoke;
     color: rgb(40, 64, 12);
     font-size: 12px;
     font-weight: 700;
@@ -81,7 +82,7 @@ body {
 
 #login-btn:hover {
     display: inline-block;
-    border-bottom: 1px solid hwb(162deg 25% 15%);
+    border-bottom: 1px solid cadetblue;
 }
 #signup-btn {
     display: block;
@@ -92,7 +93,7 @@ body {
 
 #signup-btn:hover {
     display: inline-block;
-    border-bottom: 1px solid hwb(162deg 25% 15%);
+    border-bottom: 1px solid cadetblue;
 }
 
 #listings-btn {
@@ -104,7 +105,7 @@ body {
 
 #listings-btn:hover {
     display: inline-block;
-    border-bottom: 1px solid hwb(162deg 25% 15%);
+    border-bottom: 1px solid cadetblue;
 }
 
 #bookings-btn {
@@ -116,13 +117,14 @@ body {
 
 #bookings-btn:hover {
     display: inline-block;
-    border-bottom: 1px solid hwb(162deg 25% 15%);
+    border-bottom: 1px solid cadetblue;
 }
 
 #start-hosting-btn {
     display: flex;
     justify-content: center;
-    background-color: hwb(162deg 25% 15%);
+    /* background-color: hwb(162deg 25% 15%); */
+    background-color:cadetblue;
     color:rgba(255, 255, 255, 0.886);
     margin-right: 20px;
     width: 100px;
@@ -133,7 +135,7 @@ body {
 
 #start-hosting-btn:hover {
     background-color:rgba(255, 255, 255, 0.886);
-    color: hwb(162deg 25% 15%);
+    color: cadetblue;
     border: 1px solid;
 }
 
@@ -143,7 +145,7 @@ body {
     font-weight: 900;
 }
 #cabindogs:hover {
-    --c: hwb(162deg 25% 15%);
+    --c: cadetblue;
 
     color: #0000;
     background:

@@ -6,8 +6,8 @@
     padding: 4px;
 }
 #profile-btn:hover {
-    color: hwb(162deg 25% 15%);
-    border-color: hwb(162deg 25% 15%);
+    color: cadetblue;
+    border-color: cadetblue;
     padding: 4px;
 }
 
@@ -25,7 +25,7 @@ fa-solid fa-paw {
 
 
 #logout-btn {
-    background-color:  hwb(162deg 25% 15%);
+    background-color:  cadetblue;
     color: #fff;
     border-radius: 24px;
     padding: 6px 16px 8px;
@@ -36,7 +36,7 @@ fa-solid fa-paw {
 }
 
 #logout-btn:hover {
-    color:  hwb(162deg 25% 15%);
+    color:  cadetblue;
     background-color: #fff;
     border: 1px solid;
 }
