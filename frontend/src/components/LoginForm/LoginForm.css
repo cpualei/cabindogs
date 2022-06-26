@@ -1,6 +1,6 @@
-#title {
+#login-title {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 160px;
     margin-bottom: 10px;
 }
 
@@ -42,11 +42,11 @@
 }
 
 .login-and-demo-btns {
-    background-color: hwb(162deg 25% 15%);
+    background-color: cadetblue;
     color: #fff;
     margin: 5px;
-    padding: 14px;
-    width: 95%;
+    padding: 10px;
+    width: 100%;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     border: 1px solid transparent;
@@ -55,7 +55,7 @@
 
 .login-and-demo-btns:hover {
     background-color: #fff;
-    color: hwb(162deg 25% 15%);
+    color: cadetblue;
     border: 1px solid;
 }
 
@@ -71,5 +71,5 @@
 }
 
 #login-bottom-form-link:hover {
-    color: hwb(162deg 25% 15%);
+    color: cadetblue;
 }

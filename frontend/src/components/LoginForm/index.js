@@ -40,7 +40,7 @@ function LoginFormPage() {
 
   return (
     <div>
-      <h1 id="title">Welcome back!</h1>
+      <h1 id="login-title">Welcome back!</h1>
       <p id="sub-title">Let's get you and your pals outside.</p>
 
       <div id="login-form-div">
