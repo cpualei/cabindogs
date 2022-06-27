@@ -26,7 +26,7 @@ const CreateBookingPage = () => {
 
     if (!startDate.length) errors.push("Please select a start date.");
     if (!endDate.length) errors.push("Please select an end date.");
-    if (!totalCost.length) errors.push("Please confirm total cost");
+    // if (!totalCost.length) errors.push("Please confirm total cost");
 
     setErrors(errors);
   }, [totalCost, startDate, endDate]);
