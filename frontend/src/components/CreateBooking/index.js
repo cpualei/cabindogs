@@ -24,12 +24,14 @@ const CreateBookingPage = () => {
   useEffect(() => {
     const errors = [];
 
-    if (!startDate.length) errors.push("Please select a start date.");
-    if (!endDate.length) errors.push("Please select an end date.");
+    if (!startDate) errors.push("Please select a start date.");
+    if (!endDate) errors.push("Please select an end date.");
+    if (!totalPeople) errors.push("Please select amount of people.");
+    if (!totalDogs) errors.push("Please select amount of dogs.");
     // if (!totalCost.length) errors.push("Please confirm total cost");
 
     setErrors(errors);
-  }, [totalCost, startDate, endDate]);
+  }, [startDate, endDate, totalPeople, totalDogs]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +39,8 @@ const CreateBookingPage = () => {
     const newBooking = {
       userId: sessionUser.id,
       listingId: listing.id,
-      totalCost,
+      totalPeople,
+      totalDogs,
       startDate,
       endDate,
     };
