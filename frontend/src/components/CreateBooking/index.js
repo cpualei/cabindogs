@@ -28,10 +28,10 @@ const CreateBookingPage = () => {
     if (!endDate) errors.push("Please select an end date.");
     if (!totalPeople) errors.push("Please select amount of people.");
     if (!totalDogs) errors.push("Please select amount of dogs.");
-    // if (!totalCost.length) errors.push("Please confirm total cost");
+    if (!totalCost) errors.push("Please confirm total cost");
 
     setErrors(errors);
-  }, [startDate, endDate, totalPeople, totalDogs]);
+  }, [startDate, endDate, totalPeople, totalDogs, totalCost]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,8 +39,9 @@ const CreateBookingPage = () => {
     const newBooking = {
       userId: sessionUser.id,
       listingId: listing.id,
-      totalPeople,
-      totalDogs,
+      // totalPeople,
+      // totalDogs,
+      totalCost,
       startDate,
       endDate,
     };
@@ -129,12 +130,12 @@ const CreateBookingPage = () => {
                 <label
                   id="create-booking-total-cost"
                   className="create-booking-labels">Total Cost: ${booking?.cost + booking?.cost * 0.4}</label>
-                {/* <input
+                <input
                   className="create-booking-inputs"
                   value={totalCost}
                   onChange={(e) => setTotalCost(e.target.value)}
                   required
-                /> */}
+                />
                 <ul id="errors">
                   {errors.map((error, idx) => (
                     <li key={idx}>{error}</li>
