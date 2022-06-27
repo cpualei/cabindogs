@@ -11,7 +11,15 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       references: { model: 'Listings' }
     },
-    totalCost: {
+    // totalCost: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // },
+    totalPeople: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    totalDogs: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
