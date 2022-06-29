@@ -37,7 +37,8 @@ function SignupFormPage() {
       <div
         id="bkgrnd-img"
         style={{
-          backgroundImage: `url(https://cdn.80.lv/api/upload/content/29/606a861e97a38.jpg)`,
+          // backgroundImage: `url(https://cdn.80.lv/api/upload/content/29/606a861e97a38.jpg)`,
+          backgroundImage: `url(https://barkavenuedaycamp.com/wp-content/uploads/2018/02/bigstock-German-Shepherd-Dog-Sticking-H-95556023.jpg)`,
           height: "100vh",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
