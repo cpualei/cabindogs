@@ -8,25 +8,17 @@
 
 <p align="center"><a  href="https://cabindogs.herokuapp.com/">Demo CABINDOGS now!</a></p>
 
-<p align="center">![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/93879557/176935906-b4f611fb-bb8e-410a-bd5d-90612f6c4a5b.gif)</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/93879557/176935906-b4f611fb-bb8e-410a-bd5d-90612f6c4a5b.gif" />
+</p>
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/93879557/176939402-d919a32d-af4f-48c6-8bbb-3277c835ad6a.gif" />
+</p>
 
-<br><br>
-
-<img width="1422" alt="Screen Shot 2022-06-06 at 1 50 18 AM" src="https://user-images.githubusercontent.com/93879557/172131946-cb48bb14-f501-4415-a990-0ad3194a3a6c.png">
-Listings Page
-
-<br><br>
-
-<img width="1426" alt="Screen Shot 2022-06-06 at 1 52 40 AM" src="https://user-images.githubusercontent.com/93879557/172132078-5e9d2fff-0887-43b7-93a1-fd099f097ded.png">
-Listings Details
-
-<br><br>
-
-<img width="1440" alt="Screen Shot 2022-06-06 at 2 13 50 AM" src="https://user-images.githubusercontent.com/93879557/172132273-33483f89-4303-4a93-9421-50a4160311e8.png">
-All Bookings
-
-<br><br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/93879557/176943591-4071e3a5-d9d7-444f-82ab-78960fd4d806.gif" />
+</p>
 
 
 ## CABINDOGS at a Glance
