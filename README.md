@@ -8,11 +8,8 @@
 
 <p align="center"><a  href="https://cabindogs.herokuapp.com/">Demo CABINDOGS now!</a></p>
 
+<p align="center">![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/93879557/176935906-b4f611fb-bb8e-410a-bd5d-90612f6c4a5b.gif)</p>
 
-
-
-<img width="1425" alt="Screen Shot 2022-06-06 at 1 48 33 AM" src="https://user-images.githubusercontent.com/93879557/172131619-ed673635-18da-4d70-8b0a-8bc887e81a5a.png">
-Splash Page
 
 <br><br>
 
