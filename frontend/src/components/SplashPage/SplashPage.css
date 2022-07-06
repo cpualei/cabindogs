@@ -181,6 +181,7 @@ body {
     border-radius: 24px;
     border-style: none;
     font-size: 17px;
+    cursor: pointer;
 }
 
 #cabin-btn:hover {
@@ -200,6 +201,7 @@ body {
     border: 1px solid transparent;
     border-radius: 24px;
     font-size: 17px;
+    cursor: pointer;
 }
 
 #cabin-btn-2:hover {
