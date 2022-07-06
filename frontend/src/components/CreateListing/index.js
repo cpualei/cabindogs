@@ -9,15 +9,15 @@ const CreateListingForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const [name, setName] = useState("");
-  const [state, setState] = useState("");
-  const [country, setCountry] = useState("");
-  const [cost, setCost] = useState("");
-  const [img1, setImg1] = useState("");
-  const [img2, setImg2] = useState("");
-  const [img3, setImg3] = useState("");
-  const [img4, setImg4] = useState("");
-  const [img5, setImg5] = useState("");
+  const [name, setName] = useState("Listing Name");
+  const [state, setState] = useState("State");
+  const [country, setCountry] = useState("Country");
+  const [cost, setCost] = useState("Cost per night");
+  const [img1, setImg1] = useState("Image 1");
+  const [img2, setImg2] = useState("Image 2");
+  const [img3, setImg3] = useState("Image 3");
+  const [img4, setImg4] = useState("Image 4");
+  const [img5, setImg5] = useState("Image 5");
   const [errors, setErrors] = useState([]);
 
   useEffect(() => {
