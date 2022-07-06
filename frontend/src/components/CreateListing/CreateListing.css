@@ -52,6 +52,8 @@
     border-radius: 4px;
     font-size: 14px;
     padding: 6px 12px;
+    color: cadetblue;
+    /* font-weight: bold; */
 }
 
 .submit-cancel-btns {
@@ -64,6 +66,7 @@
     width: 95%;
     border: 1px solid transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .submit-cancel-btns:hover {
