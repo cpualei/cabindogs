@@ -15,6 +15,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    // totalPeople: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // },
+    // totalDogs: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // },
     startDate: {
       type: DataTypes.DATEONLY,
       allowNull: false

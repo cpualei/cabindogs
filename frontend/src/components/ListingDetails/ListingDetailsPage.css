@@ -119,6 +119,7 @@ body {
     -webkit-font-smoothing: antialiased;
     border: 1px solid transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .listing-details-btns:hover {

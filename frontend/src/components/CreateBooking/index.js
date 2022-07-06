@@ -24,12 +24,14 @@ const CreateBookingPage = () => {
   useEffect(() => {
     const errors = [];
 
-    if (!startDate.length) errors.push("Please select a start date.");
-    if (!endDate.length) errors.push("Please select an end date.");
-    // if (!totalCost.length) errors.push("Please confirm total cost");
+    if (!startDate) errors.push("Please select a start date.");
+    if (!endDate) errors.push("Please select an end date.");
+    if (!totalPeople) errors.push("Please select amount of people.");
+    if (!totalDogs) errors.push("Please select amount of dogs.");
+    if (!totalCost) errors.push("Please confirm total cost");
 
     setErrors(errors);
-  }, [totalCost, startDate, endDate]);
+  }, [startDate, endDate, totalPeople, totalDogs, totalCost]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +39,8 @@ const CreateBookingPage = () => {
     const newBooking = {
       userId: sessionUser.id,
       listingId: listing.id,
+      // totalPeople,
+      // totalDogs,
       totalCost,
       startDate,
       endDate,
@@ -126,12 +130,12 @@ const CreateBookingPage = () => {
                 <label
                   id="create-booking-total-cost"
                   className="create-booking-labels">Total Cost: ${booking?.cost + booking?.cost * 0.4}</label>
-                {/* <input
+                <input
                   className="create-booking-inputs"
                   value={totalCost}
                   onChange={(e) => setTotalCost(e.target.value)}
                   required
-                /> */}
+                />
                 <ul id="errors">
                   {errors.map((error, idx) => (
                     <li key={idx}>{error}</li>
