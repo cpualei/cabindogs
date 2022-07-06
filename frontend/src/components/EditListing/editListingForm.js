@@ -7,13 +7,15 @@ import "./EditListing.css"
 const EditListingForm = ({ setShowModal }) => {
   const { id } = useParams();
   const sessionUser = useSelector((state) => state.session.user);
+  const listings = useSelector((state) => state.listings);
+  const listing = listings[id];
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const [name, setName] = useState("");
-  const [state, setState] = useState("");
-  const [country, setCountry] = useState("");
-  const [cost, setCost] = useState("");
+  const [name, setName] = useState(listing.name);
+  const [state, setState] = useState(listing.state);
+  const [country, setCountry] = useState(listing.country);
+  const [cost, setCost] = useState(listing.cost);
   const [img1, setImg1] = useState("");
   const [img2, setImg2] = useState("");
   const [img3, setImg3] = useState("");
@@ -24,17 +26,15 @@ const EditListingForm = ({ setShowModal }) => {
   useEffect(() => {
     const errors = [];
 
-    if (!name) errors.push("Please enter a listing a name.");
-    if (!state)
-      errors.push("Please select the state where listing is located.");
-    if (!country)
-      errors.push("Please select the country where listing is located.");
-    if (!cost) errors.push("Please provide the cost per day for your listing.");
-    if (!img1) errors.push("Please upload an image for your listing.");
-    if (!img2) errors.push("Please upload an image for your listing.");
-    if (!img3) errors.push("Please upload an image for your listing.");
-    if (!img4) errors.push("Please upload an image for your listing.");
-    if (!img5) errors.push("Please upload an image for your listing.");
+    if (name.length > 35) errors.push("Listing must be shorter than 35 characters.");
+    if (state.length > 35) errors.push("State must be shorter than 35 characters.");
+    if (country.length > 35) errors.push("Country must be shorter than 35 characters.");
+    // if (!cost) errors.push("Please provide the cost per day for your listing.");
+    // if (!img1) errors.push("Please upload an image for your listing.");
+    // if (!img2) errors.push("Please upload an image for your listing.");
+    // if (!img3) errors.push("Please upload an image for your listing.");
+    // if (!img4) errors.push("Please upload an image for your listing.");
+    // if (!img5) errors.push("Please upload an image for your listing.");
 
     setErrors(errors);
   }, [name, state, country, cost, img1, img2, img3, img4, img5]);
@@ -92,7 +92,7 @@ const EditListingForm = ({ setShowModal }) => {
         <input
           className="edit-listing-inputs"
           value={cost}
-          placeholder="Cost per night"
+          placeholder="Cost per night "
           onChange={(e) => setCost(e.target.value)}
           required
           />
