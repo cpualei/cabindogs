@@ -63,6 +63,7 @@
     -webkit-font-smoothing: antialiased;
     margin: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #submit-cancel-btn:hover {
