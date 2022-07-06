@@ -1,6 +1,22 @@
+#login-form-outer-container {
+    display: flex;
+    justify-content: center;
+}
+
+#login-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hwb(41deg 84% 9%);
+    margin-top: 160px;
+    margin-bottom: 160px;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 12px;
+}
+
 #login-title {
     text-align: center;
-    margin-top: 160px;
     margin-bottom: 10px;
 }
 
@@ -14,7 +30,6 @@
 #login-form-div {
     display: flex;
     justify-content: center;
-    margin-bottom: 160px;
 }
 
 #login-form {

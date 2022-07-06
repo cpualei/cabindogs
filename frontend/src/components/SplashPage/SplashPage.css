@@ -60,12 +60,13 @@ body {
     align-items: center;
 }
 
-#man-dog-img {
+#cabin-img {
     display: flex;
     border-radius: 24px 24px 24px 24px;
     object-fit: cover;
-    height: 450px;
+    height: 530px;
     width: 1130px;
+    object-position: 40% 60%;
 }
 
 #smaller-imgs-div {
@@ -87,20 +88,19 @@ body {
     justify-content: center;
 }
 
-.cabin-img {
-    height: 390px;
-    width: 550px;
-    border-radius: 24px 24px 24px 24px;
-    object-fit: cover;
-    object-position: 20% 70%;
-}
-
 .cabin-img2 {
     height: 390px;
     width: 550px;
     border-radius: 24px 24px 24px 24px;
     object-fit: cover;
-    object-position: 0% 90%;
+}
+
+.cabin-img3 {
+    height: 390px;
+    width: 550px;
+    border-radius: 24px 24px 24px 24px;
+    object-fit: cover;
+    object-position: 20% 70%;
 }
 
 #solid-color-div {

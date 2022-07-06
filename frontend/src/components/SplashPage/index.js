@@ -17,15 +17,15 @@ const SplashPage = () => {
       <div id="imgs-div">
         <div id="man-dog-img-div">
           <img
-            id="man-dog-img"
-            src="https://www.pdsa.org.uk/media/11747/golden-lab-running-through-field-with-man.jpg"
+            id="cabin-img"
+            src="https://shorttermrentalz.com/wp-content/uploads/2020/05/Unique-Airbnb-Fund.jpg"
           ></img>
         </div>
         <div id="smaller-imgs-div">
           <div id="cabin-img-div">
             <img
-              className="cabin-img"
-              src="https://newenglandwithlove.com/wp-content/uploads/2020/08/f69c2d9b.f10.webp"
+              className="cabin-img2"
+              src="https://www.beaversbendcreativeescape.com/wp-content/uploads/2020/02/Campfire-at-Pet-Friendly-Cabins-in-Oklahoma.jpg"
             ></img>
             <div id="img-text-container">
               <div className="img-text-outter-div">FOURTH OF JULY</div>
@@ -39,8 +39,8 @@ const SplashPage = () => {
           </div>
           <div id="cabin-img-div2">
             <img
-              className="cabin-img2"
-              src="https://media.istockphoto.com/photos/emerald-lake-on-a-cloudy-day-with-its-thawed-lake-summer-and-fun-picture-id1141078602?b=1&k=20&m=1141078602&s=170667a&w=0&h=7zTs2EsAEwGwBXlzOJIFw0xDmCssiHGsM5d57gcGTmY="
+              className="cabin-img3"
+              src="https://cdn.vox-cdn.com/thumbor/0eoiN9XqqsSVbiCNo_h0hbUP_yI=/0x0:1023x682/1200x800/filters:focal(431x260:593x422)/cdn.vox-cdn.com/uploads/chorus_image/image/64006695/0b0cd00c_891f_49a5_a75c_cdd640a23020.f10.0.jpg"
             ></img>
             <div className="img-text-outter-div-2">HOSTING MADE EASY</div>
               <div className="img-text-inner-div-2">Have a cabin and want to host?<br></br>

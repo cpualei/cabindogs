@@ -14,19 +14,19 @@ const CreateBookingPage = () => {
   const listing = useSelector((state) => state.listings[id]);
   const booking = useSelector((state) => state.bookings[id]);
 
-  const [totalGuests, setTotalGuests] = useState("");
   const [totalCost, setTotalCost] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [totalPeople, setTotalPeople] = useState("");
+  const [totalDogs, setTotalDogs] = useState("");
   const [errors, setErrors] = useState([]);
-  const [showErrors, setShowErrors] = useState(false)
 
   useEffect(() => {
     const errors = [];
 
     if (!startDate.length) errors.push("Please select a start date.");
     if (!endDate.length) errors.push("Please select an end date.");
-    if (!totalCost.length) errors.push("Please confirm total cost");
+    // if (!totalCost.length) errors.push("Please confirm total cost");
 
     setErrors(errors);
   }, [totalCost, startDate, endDate]);
@@ -67,10 +67,10 @@ const CreateBookingPage = () => {
                 <div id="create-booking-img-div">
                     <img id="create-booking-img" src={booking?.img1} alt="img1"></img>
                 </div>
-              <div id="create-booking-info-div">
+              <div id="create-booking-info-form">
                   <div id="create-booking-name">{booking?.name}</div>
                   <div id="create-booking-state-country">{booking?.state}, {booking?.country}</div>
-                <label className="create-booking-labels">Start Date:</label>
+                <label className="create-booking-labels">Start Date</label>
                 <input
                   type="date"
                   className="create-booking-inputs"
@@ -78,7 +78,7 @@ const CreateBookingPage = () => {
                   onChange={(e) => setStartDate(e.target.value)}
                   required
                 />
-                <label className="create-booking-labels">End Date:</label>
+                <label className="create-booking-labels">End Date</label>
                 <input
                   type="date"
                   className="create-booking-inputs"
@@ -86,12 +86,13 @@ const CreateBookingPage = () => {
                   onChange={(e) => setEndDate(e.target.value)}
                   required
                 />
-                <label className="create-booking-labels"># of Guests:</label>
+                <label className="create-booking-labels">People</label>
                 <select
                   className="create-booking-inputs"
-                  onChange={(e) => setTotalGuests(e.target.value)}
+                  value={totalPeople}
+                  onChange={(e) => setTotalPeople(e.target.value)}
                   required>
-                    <option value="">-- Select # of guests --</option>
+                    <option value="">-- Select # of people --</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -103,13 +104,34 @@ const CreateBookingPage = () => {
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
-                <label className="create-booking-labels">Total Cost: ${booking?.cost + booking?.cost * 0.4}</label>
-                <input
+                <label className="create-booking-labels">Dogs</label>
+                <select
+                  className="create-booking-inputs"
+                  value={totalDogs}
+                  onChange={(e) => setTotalDogs(e.target.value)}
+                  required>
+                    <option value="">-- Select # of dogs --</option>
+                  <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <label
+                  id="create-booking-total-cost"
+                  className="create-booking-labels">Total Cost: ${booking?.cost + booking?.cost * 0.4}</label>
+                {/* <input
                   className="create-booking-inputs"
                   value={totalCost}
                   onChange={(e) => setTotalCost(e.target.value)}
                   required
-                />
+                /> */}
                 <ul id="errors">
                   {errors.map((error, idx) => (
                     <li key={idx}>{error}</li>
