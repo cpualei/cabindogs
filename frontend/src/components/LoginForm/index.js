@@ -49,64 +49,60 @@ function LoginFormPage() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div id="login-form-outer-container">
-          <div id="login-form-container">
-            <h1 id="login-title">Welcome back!</h1>
-            <p id="sub-title">Let's get you and your pals outside.</p>
+        <div id="login-signup-form-outer-container">
+          <div id="login-signup-form-container">
+            <h1 id="login-signup-title">Welcome back!</h1>
+            <p id="login-signup-sub-title">Let's get you and your pals outside.</p>
 
-            <div id="login-form-div">
-              <form id="login-form" onSubmit={handleSubmit}>
-                <ul id="login-ul">
+            <div id="login-signup-form-div">
+              <form id="login-signup-form" onSubmit={handleSubmit}>
+                <ul>
                   {errors.map((error, idx) => (
                     <li key={idx}>{error}</li>
                   ))}
                 </ul>
-                <div id="labels-inputs-btns-div">
-                  <div id="labels-inputs-div">
-                    <label className="user-email-label-input">
-                      Username or Email
+                  <div id="login-signup-inputs-div">
                       <input
-                        className="user-email-label-input"
+                        className="login-signup-label-input"
+                        id="login-signup-input"
                         type="text"
                         value={credential}
+                        placeholder="Username or Email"
                         onChange={(e) => setCredential(e.target.value)}
                         required
-                      />
-                    </label>
-
-                    <label className="user-email-label-input">
-                      Password
+                        />
+                    <br/>
                       <input
-                        className="user-email-label-input"
+                        className="login-signup-label-input"
+                        id="login-signup-input"
                         type="password"
                         value={password}
+                        placeholder="Password"
                         onChange={(e) => setPassword(e.target.value)}
                         required
                       />
-                    </label>
                   </div>
                   <div id="btns-div">
-                    <button className="login-and-demo-btns" type="submit">
+                    <button className="login-signup-and-demo-btns" type="submit">
                       Log in
                     </button>
                     <button
-                      className="login-and-demo-btns"
+                      className="login-signup-and-demo-btns"
                       onClick={(e) => handleDefaultButton(e)}
                     >
-                      Demo User
+                      Demo site
                     </button>
                   </div>
-                  <p id="login-bottom-form-text">
+                  <p id="login-signup-bottom-form-text">
                     Don't have an account?{" "}
                     <NavLink
                       to="/signup"
-                      id="login-bottom-form-link"
+                      id="login-signup-bottom-form-link"
                       style={{ textDecoration: "none" }}
                     >
                       Sign up!
                     </NavLink>
                   </p>
-                </div>
               </form>
             </div>
           </div>
