@@ -37,18 +37,21 @@
 }
 
 #login-signup-form {
-    width: 300px;
+    width: 90%;
 }
 
 .login-signup-label-input {
     display: flex;
     flex-direction: column;
-}
-
-#login-signup-input {
     padding: 12px;
     border: none;
     border-radius: 3px;
+}
+
+#login-signup-input {
+    /* padding: 12px;
+    border: none;
+    border-radius: 3px; */
 }
 
 #btns-div {
