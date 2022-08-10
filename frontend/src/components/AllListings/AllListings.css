@@ -15,11 +15,8 @@
 #listings-div {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between;
-    float: left;
-    width: 60%; */
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #listings-ul {
@@ -44,7 +41,7 @@
     flex-direction: column;
     justify-content: center;
     height: 250px;
-    width: 300px;
+    width: 280px;
     margin-left: 14px;
     margin-right: 14px;
     margin-top: 40px;
