@@ -49,14 +49,14 @@ function Navigation({ isLoaded }) {
           id="login-btn"
           style={{ textDecoration: "none" }}
         >
-          Log In
+          Log in
         </NavLink>
         <NavLink
           to="/signup"
           id="signup-btn"
           style={{ textDecoration: "none" }}
         >
-          Sign Up
+          Sign up
         </NavLink>
         <NavLink
           to="/signup"
