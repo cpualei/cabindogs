@@ -43,6 +43,7 @@ body {
 #inner-navbar-div {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     font-family: Calibre, Helvetica, Arial, sans-serif;
     margin-top: 40px;
     padding-top: 15px;
@@ -51,7 +52,6 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    /* background-color: rgb(243, 242, 239); */
     background-color: rgba(239, 239, 239, 0.89);
     z-index: 500;
 }
@@ -70,7 +70,6 @@ body {
 
 #right-side-nav-links {
     display: flex;
-    align-items: flex-start;
 }
 
 #login-btn {

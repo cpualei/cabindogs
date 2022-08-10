@@ -31,10 +31,8 @@ function Navigation({ isLoaded }) {
             id="start-hosting-btn"
             style={{ textDecoration: "none" }}
           >
-            Start Hosting
+            Start hosting
           </NavLink>
-        </div>
-        <div id="profile-btn-div">
           <ProfileButton
             id="profile-btn"
             user={sessionUser} />

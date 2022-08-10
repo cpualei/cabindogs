@@ -32,7 +32,6 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <div>
         <button id="profile-btn" onClick={openMenu}>
           <i className="fa-solid fa-paw" />
         </button>
@@ -42,12 +41,11 @@ function ProfileButton({ user }) {
             <li>{user.username}</li>
             <li>{user.email}</li>
             <li>
-              <button id="logout-btn" onClick={logout}>Log Out</button>
+              <button id="logout-btn" onClick={logout}>Log out</button>
             </li>
           </ul>
           </>
         )}
-      </div>
     </>
   );
 }

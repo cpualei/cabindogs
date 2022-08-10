@@ -1,22 +1,32 @@
 #profile-btn {
     display: flex;
     color: rgb(114, 107, 95);
-    border-radius: 100%;
-    border-color: darkgray;
-    padding: 4px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    height: 27px;
+    align-items: center;
+    cursor: pointer;
 }
+
 #profile-btn:hover {
     color: cadetblue;
     border-color: cadetblue;
-    padding: 4px;
 }
 
 .profile-dropdown {
     display: flex;
     flex-direction: column;
-    /* align-items: flex-end; */
+    align-items: center;
     list-style-type: none;
-    margin-left: 0px;
+    margin: 0;
+    padding: 15px 20px 20px;
+    position: absolute;
+    top: 64.5px;
+    right: 0px;
+    background-color: rgba(239, 239, 239, 0.89);
+    border-radius: 0 0 5px 5px;
+    font-size: 14px;
 }
 
 fa-solid fa-paw {
@@ -25,14 +35,16 @@ fa-solid fa-paw {
 
 
 #logout-btn {
-    background-color:  cadetblue;
+    background-color: cadetblue;
     color: #fff;
     border-radius: 24px;
-    padding: 6px 16px 8px;
+    padding: 4px 14px;
     border: 1px solid transparent;
     font-weight: bold;
+    font-size: 13px;
     -webkit-font-smoothing: antialiased;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 #logout-btn:hover {
