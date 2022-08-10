@@ -1,57 +1,66 @@
-#login-form-outer-container {
+#login-signup-form-outer-container {
     display: flex;
     justify-content: center;
 }
 
-#login-form-container {
+#login-signup-form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: hwb(41deg 84% 9%);
+    background-color: hwb(0deg 100% 0% / 90%);
     margin-top: 160px;
     margin-bottom: 160px;
     padding: 30px;
-    border: 1px solid;
     border-radius: 12px;
 }
 
-#login-title {
+#login-signup-title {
     text-align: center;
     margin-bottom: 10px;
 }
 
-#sub-title {
+#login-signup-sub-title {
     text-align: center;
     -webkit-font-smoothing: antialiased;
     color: grey;
     margin-top: 0px;
 }
 
-#login-form-div {
+#login-signup-form-div {
     display: flex;
     justify-content: center;
 }
 
-#login-form {
-    width: 300px;
-}
-
-#login-ul {
-    display: flex;
-}
-
-.user-email-label-input {
+#login-signup-inputs-div {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+}
+
+#login-signup-form {
+    width: 100%;
+}
+
+.login-signup-label-input {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+}
+
+#login-signup-input {
+    /* padding: 12px;
+    border: none;
+    border-radius: 3px; */
 }
 
 #btns-div {
     display: flex;
     justify-content:center;
+    margin-top: 15px;
 }
 
-.login-and-demo-btns {
+.login-signup-and-demo-btns {
     background-color: cadetblue;
     color: #fff;
     margin: 5px;
@@ -61,25 +70,26 @@
     -webkit-font-smoothing: antialiased;
     border: 1px solid transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.login-and-demo-btns:hover {
+.login-signup-and-demo-btns:hover {
     background-color: #fff;
     color: cadetblue;
     border: 1px solid;
 }
 
-#login-bottom-form-text {
+#login-signup-bottom-form-text {
     text-align: center;
     font-size: 14px;
     color: #333333;
 }
 
-#login-bottom-form-link {
+#login-signup-bottom-form-link {
     color: #333333;
     font-weight: bold;
 }
 
-#login-bottom-form-link:hover {
+#login-signup-bottom-form-link:hover {
     color: cadetblue;
 }
