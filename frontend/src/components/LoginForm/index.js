@@ -51,7 +51,7 @@ function LoginFormPage() {
       >
         <div id="login-signup-form-outer-container">
           <div id="login-signup-form-container">
-            <h1 id="login-signup-title">Welcome back!</h1>
+            <h2 id="login-signup-title">Welcome back!</h2>
             <p id="login-signup-sub-title">Let's get you and your pals outside.</p>
 
             <div id="login-signup-form-div">

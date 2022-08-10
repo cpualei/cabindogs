@@ -46,7 +46,7 @@ function SignupFormPage() {
       >
         <div id="login-signup-form-outer-container">
           <div id="login-signup-form-container">
-            <h1 id="login-signup-title">Don't have an account?</h1>
+            <h2 id="login-signup-title">Don't have an account?</h2>
             <p id="login-signup-sub-title">Sign up now, for free!</p>
 
             <div id="login-signup-form-div">
