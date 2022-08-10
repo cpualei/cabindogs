@@ -77,14 +77,14 @@ body {
 #cabin-img-div {
     display: flex;
     flex-wrap: wrap;
-    max-width: 580px;
+    width: 580px;
     justify-content: center;
 }
 
 #cabin-img-div2 {
     display: flex;
     flex-wrap: wrap;
-    max-width: 580px;
+    width: 580px;
     justify-content: center;
 }
 
