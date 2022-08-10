@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-
-import "./SignupForm.css";
+import "../LoginForm/LoginForm.css";
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -100,11 +99,11 @@ function SignupFormPage() {
                     Sign Up
                   </button>
                 </div>
-                <p id="bottom-form-text">
+                <p id="login-signup-bottom-form-text">
                   Already have an account?{" "}
                   <NavLink
                     to="/login"
-                    id="bottom-form-link"
+                    id="login-signup-bottom-form-link"
                     style={{ textDecoration: "none" }}
                   >
                     Sign in!
