@@ -63,12 +63,23 @@ const CreateListingForm = () => {
 
   return (
     <>
-      <div style={{ backgroundImage: `url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/23453275/4026_McKeown_Lake_Rd_NW_044.jpg)` }}>
+      <div
+        style={{
+          backgroundImage: `url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/23453275/4026_McKeown_Lake_Rd_NW_044.jpg)`,
+          // height: "100vh",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div id="create-listing-outer-container">
           <div id="create-listing-container">
             <div id="create-listing-title-div">
-              <h1 id="create-listing-title">Earn up to $7,000/month hosting in California.</h1>
-              <p id="create-listing-subtitle">Sign up for free, host when you want, and get paid every week.</p>
+              <h1 id="create-listing-title">
+                Earn up to $7,000/month hosting in California.
+              </h1>
+              <p id="create-listing-subtitle">
+                Sign up for free, host when you want, and get paid every week.
+              </p>
             </div>
             <div id="create-listing-form-div">
               <form id="create-listing-form" onSubmit={(e) => handleSubmit(e)}>
@@ -142,9 +153,18 @@ const CreateListingForm = () => {
                     <li key={idx}>{error}</li>
                   ))}
                 </ul>
-                <p id="create-listing-form-bottom-text">By clicking 'Submit your listing', you agree to absolutely nothing and your listing will be submitted.</p>
-                <button className="submit-cancel-btns" type="submit">Submit your listing</button>
-                <button className="submit-cancel-btns" type="button" onClick={(e) => history.push("/")}>
+                <p id="create-listing-form-bottom-text">
+                  By clicking 'Submit your listing', you agree to absolutely
+                  nothing and your listing will be submitted.
+                </p>
+                <button className="submit-cancel-btns" type="submit">
+                  Submit your listing
+                </button>
+                <button
+                  className="submit-cancel-btns"
+                  type="button"
+                  onClick={(e) => history.push("/")}
+                >
                   Cancel
                 </button>
               </form>

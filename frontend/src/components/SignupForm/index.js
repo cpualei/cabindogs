@@ -38,7 +38,7 @@ function SignupFormPage() {
         style={{
           // backgroundImage: `url(https://cdn.80.lv/api/upload/content/29/606a861e97a38.jpg)`,
           backgroundImage: `url(https://www.racshop.co.uk/advice/wp-content/uploads/2018/08/terrior-in-a-car.jpeg)`,
-          // height: "100vh",
+          height: "100vh",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
