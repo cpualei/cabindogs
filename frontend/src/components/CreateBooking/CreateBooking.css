@@ -6,14 +6,7 @@
 
 #create-booking-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-}
-
-#create-booking-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin-bottom: 160px;
 }
 
@@ -30,13 +23,8 @@
 }
 
 #create-booking-info-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin-left: 50px;
-    padding: 40px;
-    /* background-color: rgba(95, 158, 160, 0.412); */
-    /* border: 1px dashed; */
+    line-height: 2;
     border-radius: 8px;
 }
 
@@ -69,8 +57,6 @@
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-    /* display: flex;
-    justify-content: center; */
 }
 
 #submit-cancel-btn:hover {
@@ -80,10 +66,7 @@
 }
 
 #create-booking-errors {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    margin-left: 30px;
+    list-style: circle;
 }
 
 .create-booking-labels {
@@ -91,7 +74,6 @@
     padding-top: 10px;
     padding-bottom: 5px;
     padding-left: 2px;
-    /* font-weight: bold; */
     margin-right: 10px;
 }
 
@@ -103,37 +85,36 @@
     border-radius: 4px;
     padding: 6px 12px;
     line-height: 1.4;
-}
-#create-booking-dates-div {
-    display: flex;
-    justify-content:space-between;
-    margin-right: 30px;
-    margin-left: 30px;
+    border: none;
+    border-bottom: 1px grey dashed;
+
 }
 
-#create-booking-start-date-input {
+/* #create-booking-dates-div {
+} */
+
+/* #create-booking-start-date-input {
     width: 60%;
 }
 
 #create-booking-end-date-input {
     width: 60%;
-}
+} */
 
-.create-booking-people-dogs-div {
+/* .create-booking-people-dogs-div {
     margin-left: 30px;
-}
+} */
 
 #create-booking-dogs-label{
     margin-left: 20px;
 }
 
-#create-booking-total-cost-div {
-    margin-left: 30px;
-    /* margin-right: 30px; */
-}
+/* #create-booking-total-cost-div {
+    width: 30px;
+} */
 
 #create-booking-total-cost-input {
-    width: 41%;
+    width: 50px;
 }
 
 #create-booking-total-cost {

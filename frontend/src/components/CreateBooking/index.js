@@ -61,11 +61,10 @@ const CreateBookingPage = () => {
   };
 
   return (
-    <div>
-      <h1 id="create-booking-title">Create a booking.</h1>
-      <div id="create-booking-container">
+    <>
+      <h1 id="create-booking-title">Create a booking for...</h1>
         <form onSubmit={(e) => handleSubmit(e)}>
-          <div id="create-booking-div">
+          <div id="create-booking-container">
             <div id="create-booking-img-div">
               <img id="create-booking-img" src={booking?.img1} alt="img1"></img>
             </div>
@@ -135,7 +134,6 @@ const CreateBookingPage = () => {
                   <option value="10">10</option>
                 </select>
               </div>
-              <div id="create-booking-total-cost-div">
                 <label
                   id="create-booking-total-cost"
                   className="create-booking-labels"
@@ -149,7 +147,7 @@ const CreateBookingPage = () => {
                   onChange={(e) => setTotalCost(e.target.value)}
                   required
                 />
-              </div>
+
               <ul id="create-booking-errors">
                 {errors.map((error, idx) => (
                   <li key={idx}>{error}</li>
@@ -157,7 +155,7 @@ const CreateBookingPage = () => {
               </ul>
               <div className="create-bookings-btns-div">
                 <button id="submit-cancel-btn" type="submit">
-                  Confirm Booking
+                  Confirm booking
                 </button>
                 <button id="submit-cancel-btn" onClick={goBack}>
                   Cancel
@@ -166,8 +164,7 @@ const CreateBookingPage = () => {
             </div>
           </div>
         </form>
-      </div>
-    </div>
+    </>
   );
 };
 
