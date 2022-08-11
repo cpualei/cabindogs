@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import SearchBar from "./SearchBar";
 import "./SplashPage.css";
 
 
@@ -15,6 +16,7 @@ const SplashPage = () => {
         </h3>
       </div>
       <div id="imgs-div">
+          <SearchBar />
         <div id="man-dog-img-div">
           <img
             id="cabin-img"

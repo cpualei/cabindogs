@@ -1,0 +1,42 @@
+.splash-search-container {
+    background-color: #4d7a7b;
+    height: 110px;
+    width: 504px;
+    border-radius: 50px;
+    position: absolute;
+    top: 365px;
+}
+
+.splash-search-div {
+    display: flex;
+    justify-content: center;
+}
+
+#where-to-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.591);
+}
+
+#nav-search {
+    height: 35px;
+    width: 350px;
+    border-radius: 50px;
+    border: none;
+    padding: 5px 16px;
+    font-size: 16px;
+    color: grey;
+}
+
+.search-result {
+    background-color: whitesmoke;
+    width: 300px;
+    padding: 2px 20px;
+    position: absolute;
+    left: 84px;
+    border-radius: 0 0 5px 5px;
+}
+
+#listing-result {
+    color: cadetblue;
+}
