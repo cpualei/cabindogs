@@ -44,7 +44,7 @@ function LoginFormPage() {
         id="bkgrnd-img"
         style={{
           backgroundImage: `url(https://www.chaletvillage.com/wp-content/uploads/2017/09/shutterstock_512245666.jpg)`,
-          height: "100vh",
+          // height: "100vh",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
