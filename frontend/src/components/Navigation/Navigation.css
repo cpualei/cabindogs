@@ -72,49 +72,15 @@ body {
     display: flex;
 }
 
-#login-btn {
+.nav-links {
     display: block;
     margin-top: 8px;
     margin-right: 20px;
     color:rgba(69, 69, 69, 0.886);
+    font-size: 15px;
 }
 
-#login-btn:hover {
-    display: inline-block;
-    border-bottom: 1px solid cadetblue;
-}
-#signup-btn {
-    display: block;
-    margin-top: 8px;
-    margin-right: 20px;
-    color:rgba(69, 69, 69, 0.886);
-}
-
-#signup-btn:hover {
-    display: inline-block;
-    border-bottom: 1px solid cadetblue;
-}
-
-#listings-btn {
-    display: block;
-    margin-top: 8px;
-    margin-right: 20px;
-    color:rgba(69, 69, 69, 0.886);
-}
-
-#listings-btn:hover {
-    display: inline-block;
-    border-bottom: 1px solid cadetblue;
-}
-
-#bookings-btn {
-    display: block;
-    margin-top: 8px;
-    margin-right: 20px;
-    color:rgba(69, 69, 69, 0.886);
-}
-
-#bookings-btn:hover {
+.nav-links:hover {
     display: inline-block;
     border-bottom: 1px solid cadetblue;
 }
@@ -130,6 +96,7 @@ body {
     border: 1px solid transparent;
     border-radius: 24px;
     padding: 6px 16px 8px;
+    font-size: 15px;
 }
 
 #start-hosting-btn:hover {

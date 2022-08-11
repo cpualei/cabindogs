@@ -14,14 +14,14 @@ function Navigation({ isLoaded }) {
         <div id="right-side-nav-links">
           <NavLink
             to="/listings"
-            id="listings-btn"
+            className="nav-links"
             style={{ textDecoration: "none" }}
           >
             Listings
           </NavLink>
           <NavLink
             to="/bookings"
-            id="bookings-btn"
+            className="nav-links"
             style={{ textDecoration: "none" }}
           >
             Bookings
@@ -44,14 +44,14 @@ function Navigation({ isLoaded }) {
       <>
         <NavLink
           to="/login"
-          id="login-btn"
+          className="nav-links"
           style={{ textDecoration: "none" }}
         >
           Log in
         </NavLink>
         <NavLink
           to="/signup"
-          id="signup-btn"
+          className="nav-links"
           style={{ textDecoration: "none" }}
         >
           Sign up
