@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import { deleteListing, getListings } from "../../store/listings";
@@ -13,8 +13,13 @@ const ListingDetailsPage = () => {
   const listings = useSelector((state) => state.listings);
   const listing = listings[id];
 
+  // const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
-    dispatch(getListings(id));
+    (async () => {
+    await dispatch(getListings(id));
+    // setLoaded(true);
+    })();
   }, [dispatch, id]);
 
   const history = useHistory();
@@ -25,6 +30,8 @@ const ListingDetailsPage = () => {
 
   return (
     <div>
+    {/* {loaded ? */}
+      {/* <> */}
       <h1 id="listing-details-title">Listing Details.</h1>
       <div id="listing-dscrpt-container">
         <div id="listing-dscrpt-div">
@@ -54,7 +61,7 @@ const ListingDetailsPage = () => {
               dispatch(deleteListing(id));
               history.push("/listings");
             }}
-          >
+            >
             Remove Listing
           </button>
           <button className="listing-details-btns" onClick={bookButtonClick}>
@@ -63,8 +70,10 @@ const ListingDetailsPage = () => {
         </div>
       ) : (
         <></>
-      )}
-    </div>
+        )}
+        {/* </> */}
+        {/* : <h1> Loading</h1>} */}
+      </div>
   );
 };
 
