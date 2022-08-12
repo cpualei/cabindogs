@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import { deleteListing, getListings } from "../../store/listings";
@@ -32,7 +32,7 @@ const ListingDetailsPage = () => {
     <div>
     {/* {loaded ? */}
       {/* <> */}
-      <h1 id="listing-details-title">Listing Details.</h1>
+      <h1 id="listing-details-title">Listing details</h1>
       <div id="listing-dscrpt-container">
         <div id="listing-dscrpt-div">
           <div id="listing-dscrpt-name">{listing?.name}</div>
@@ -62,10 +62,10 @@ const ListingDetailsPage = () => {
               history.push("/listings");
             }}
             >
-            Remove Listing
+            Remove listing
           </button>
           <button className="listing-details-btns" onClick={bookButtonClick}>
-            Book this Cabin
+            Book this cabin
           </button>
         </div>
       ) : (

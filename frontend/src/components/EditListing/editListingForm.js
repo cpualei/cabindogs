@@ -64,7 +64,7 @@ const EditListingForm = ({ setShowModal }) => {
 
   return (
     <div id="edit-form-div">
-      <h1 id="edit-listing-title">Update Listing</h1>
+      <h1 id="edit-listing-title">Update listing</h1>
       <form
         id="form"
         onSubmit={(e) => handleSubmit(e)}>
@@ -141,7 +141,7 @@ const EditListingForm = ({ setShowModal }) => {
               <li key={idx}>{error}</li>
             ))}
           </ul>
-        <button className="update-cancel-btns" type="submit">Update Listing</button>
+        <button className="update-cancel-btns" type="submit">Update listing</button>
         <button className="update-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
           Cancel
         </button>
