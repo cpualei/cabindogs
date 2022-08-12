@@ -41,6 +41,7 @@ body {
     /* -webkit-font-smoothing: antialiased; */
     width: 490px;
     margin-top: 5px;
+    margin-bottom: 80px;
 }
 
 #imgs-div {
@@ -77,14 +78,14 @@ body {
 #cabin-img-div {
     display: flex;
     flex-wrap: wrap;
-    width: 580px;
+    max-width: 580px;
     justify-content: center;
 }
 
 #cabin-img-div2 {
     display: flex;
     flex-wrap: wrap;
-    width: 580px;
+    max-width: 580px;
     justify-content: center;
 }
 
@@ -181,7 +182,6 @@ body {
     border-radius: 24px;
     border-style: none;
     font-size: 17px;
-    cursor: pointer;
 }
 
 #cabin-btn:hover {
@@ -201,7 +201,6 @@ body {
     border: 1px solid transparent;
     border-radius: 24px;
     font-size: 17px;
-    cursor: pointer;
 }
 
 #cabin-btn-2:hover {
