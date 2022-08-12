@@ -35,7 +35,7 @@ const SplashPage = () => {
                 now to get the best spot!</div>
             </div>
             <NavLink to="/listings">
-              <button id="cabin-btn">View Cabins</button>
+              <button id="cabin-btn">View abins</button>
             </NavLink>
             <div id="solid-color-div"></div>
           </div>
@@ -48,7 +48,7 @@ const SplashPage = () => {
               <div className="img-text-inner-div-2">Have a cabin and want to host?<br></br>
                 You're just a click away.</div>
             <NavLink to="/newlisting">
-              <button id="cabin-btn-2">Start Hosting</button>
+              <button id="cabin-btn-2">Start hosting</button>
             </NavLink>
             <div id="solid-color-div2"></div>
           </div>
