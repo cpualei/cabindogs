@@ -1,6 +1,5 @@
 #edit-form-div {
     border-radius: 40px;
-    /* margin-bottom: 500px; */
 }
 
 #form {
@@ -20,6 +19,15 @@
     padding-top: 30px;
 }
 
+#edit-listing-subtitle {
+    text-align: center;
+}
+
+.edit-listing-labels {
+    color: rgb(87, 87, 87);
+    margin: 5px 8px;
+}
+
 .edit-listing-inputs {
     line-height: 2;
     margin-bottom: 10px;
@@ -29,6 +37,12 @@
     color: cadetblue;
     font-weight: bold;
     width: 70%;
+    border: none;
+}
+
+#edit-listing-errors {
+    list-style: none;
+    padding: 0;
 }
 
 .update-cancel-btns {

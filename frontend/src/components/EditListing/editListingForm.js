@@ -16,11 +16,11 @@ const EditListingForm = ({ setShowModal }) => {
   const [state, setState] = useState(listing.state);
   const [country, setCountry] = useState(listing.country);
   const [cost, setCost] = useState(listing.cost);
-  const [img1, setImg1] = useState("");
-  const [img2, setImg2] = useState("");
-  const [img3, setImg3] = useState("");
-  const [img4, setImg4] = useState("");
-  const [img5, setImg5] = useState("");
+  const [img1, setImg1] = useState(listing.img1);
+  const [img2, setImg2] = useState(listing.img2);
+  const [img3, setImg3] = useState(listing.img3);
+  const [img4, setImg4] = useState(listing.img4);
+  const [img5, setImg5] = useState(listing.img5);
   const [errors, setErrors] = useState([]);
 
   useEffect(() => {
@@ -29,14 +29,13 @@ const EditListingForm = ({ setShowModal }) => {
     if (name.length > 35) errors.push("Listing must be shorter than 35 characters.");
     if (state.length > 35) errors.push("State must be shorter than 35 characters.");
     if (country.length > 35) errors.push("Country must be shorter than 35 characters.");
-    // if (!cost) errors.push("Please provide the cost per day for your listing.");
-    // if (!img1) errors.push("Please upload an image for your listing.");
-    // if (!img2) errors.push("Please upload an image for your listing.");
-    // if (!img3) errors.push("Please upload an image for your listing.");
-    // if (!img4) errors.push("Please upload an image for your listing.");
-    // if (!img5) errors.push("Please upload an image for your listing.");
-
-    setErrors(errors);
+    if (cost < 1) errors.push("Please provide the cost per day for your listing.");
+    if (!img1.includes('http' || 'https' && '.jpeg' || '.jpg' || '.png')) errors.push("Please provide a valid image for listing image 1.");
+    if (!img2.includes('http' || 'https' && '.jpeg' || '.jpg' || '.png')) errors.push("Please provide a valid image for listing image 2.");
+    if (!img3.includes('http' || 'https' && '.jpeg' || '.jpg' || '.png')) errors.push("Please provide a valid image for listing image 3.");
+    if (!img4.includes('http' || 'https' && '.jpeg' || '.jpg' || '.png')) errors.push("Please provide a valid image for listing image 4.");
+    if (!img5.includes('http' || 'https' && '.jpeg' || '.jpg' || '.png')) errors.push("Please provide a valid image for listing image 5.");
+    setErrors(errors)
   }, [name, state, country, cost, img1, img2, img3, img4, img5]);
 
   const handleSubmit = (e) => {
@@ -65,9 +64,11 @@ const EditListingForm = ({ setShowModal }) => {
   return (
     <div id="edit-form-div">
       <h1 id="edit-listing-title">Update listing</h1>
+      <p id="edit-listing-subtitle">Fields with an asterisk (*)  are required.</p>
       <form
         id="form"
         onSubmit={(e) => handleSubmit(e)}>
+          <label className="edit-listing-labels">Listing name *</label>
         <input
           className="edit-listing-inputs"
           value={name}
@@ -75,6 +76,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setName(e.target.value)}
           required
           />
+          <label className="edit-listing-labels">State *</label>
         <input
           className="edit-listing-inputs"
           value={state}
@@ -82,6 +84,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setState(e.target.value)}
           required
           />
+          <label className="edit-listing-labels">Country *</label>
         <input
           className="edit-listing-inputs"
           value={country}
@@ -89,6 +92,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setCountry(e.target.value)}
           required
           />
+          <label className="edit-listing-labels">Cost per night *</label>
         <input
           className="edit-listing-inputs"
           value={cost}
@@ -96,6 +100,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setCost(e.target.value)}
           required
           />
+          <label className="edit-listing-labels">Listing image 1 *</label>
         <input
           className="edit-listing-inputs"
           value={img1}
@@ -104,6 +109,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg1(e.target.value)}
           required
           />
+          <label className="edit-listing-labels">Listing image 2 *</label>
         <input
           className="edit-listing-inputs"
           value={img2}
@@ -112,6 +118,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg2(e.target.value)}
           required
           />
+          <label className="edit-listing-labels">Listing image 3 *</label>
         <input
           className="edit-listing-inputs"
           value={img3}
@@ -120,6 +127,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg3(e.target.value)}
           required
           />
+          <label className="edit-listing-labels">Listing image 4 *</label>
         <input
           className="edit-listing-inputs"
           value={img4}
@@ -128,6 +136,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg4(e.target.value)}
           required
           />
+          <label className="edit-listing-labels">Listing image 5 *</label>
         <input
           className="edit-listing-inputs"
           value={img5}
@@ -136,7 +145,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg5(e.target.value)}
           required
           />
-          <ul id="errors">
+          <ul id="edit-listing-errors">
             {errors.map((error, idx) => (
               <li key={idx}>{error}</li>
             ))}
