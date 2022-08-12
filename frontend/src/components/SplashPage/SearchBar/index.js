@@ -25,7 +25,7 @@ function SearchBar() {
         <p id="where-to-text">WHERE TO?</p>
         <input
           id="nav-search"
-          placeholder="Try typing 'California'..."
+          placeholder="Search by state or country..."
           onChange={(e) => setQuery(e.target.value)}
         />
         </div>
