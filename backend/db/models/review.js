@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     review: {
-      type: DataTypes.STRING(2200),
+      type: DataTypes.STRING(2000),
       allowNull: false
     }
   }, {});
