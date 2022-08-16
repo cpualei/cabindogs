@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import { deleteListing, getListings } from "../../store/listings";
 import EditListingFormModal from "../EditListing";
+import Reviews from "../Reviews";
 import "./ListingDetailsPage.css";
 
 const ListingDetailsPage = () => {
@@ -17,8 +18,8 @@ const ListingDetailsPage = () => {
 
   useEffect(() => {
     (async () => {
-    await dispatch(getListings(id));
-    // setLoaded(true);
+      await dispatch(getListings(id));
+      // setLoaded(true);
     })();
   }, [dispatch, id]);
 
@@ -30,7 +31,7 @@ const ListingDetailsPage = () => {
 
   return (
     <div>
-    {/* {loaded ? */}
+      {/* {loaded ? */}
       {/* <> */}
       <h1 id="listing-details-title">Listing details</h1>
       <div id="listing-dscrpt-container">
@@ -61,7 +62,7 @@ const ListingDetailsPage = () => {
               dispatch(deleteListing(id));
               history.push("/listings");
             }}
-            >
+          >
             Remove listing
           </button>
           <button className="listing-details-btns" onClick={bookButtonClick}>
@@ -70,10 +71,12 @@ const ListingDetailsPage = () => {
         </div>
       ) : (
         <></>
-        )}
-        {/* </> */}
-        {/* : <h1> Loading</h1>} */}
-      </div>
+      )}
+      {/* </> */}
+      {/* : <h1> Loading</h1>} */}
+
+      <Reviews listing={listing} />
+    </div>
   );
 };
 
