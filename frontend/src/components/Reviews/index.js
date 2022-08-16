@@ -24,9 +24,9 @@ const Reviews = (listing) => {
       <h1 id="reviews-heading">Cabin reviews</h1>
       <CreateReview />
         {listingReviews.map((review) => (
-            <ul key={review.id}>
-                <div>{review.userId}</div>
-                <div>{review.review}</div>
+            <ul key={review?.id}>
+                <div>{review?.userId}</div>
+                <div>{review?.review}</div>
             </ul>
         ))}
     </div>
