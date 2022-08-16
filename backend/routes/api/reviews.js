@@ -14,4 +14,14 @@ router.get(
   })
 );
 
+router.post(
+  "/new-review",
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    const review = await Review.create(req.body);
+    console.log(review)
+    return res.json(review);
+  })
+);
+
 module.exports = router;

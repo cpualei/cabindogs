@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     listingId: {
       type: DataTypes.INTEGER,
-      allowNull: false
     },
     review: {
       type: DataTypes.STRING(2000),
