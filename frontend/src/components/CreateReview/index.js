@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addReview } from "../../store/reviews";
+import "./CreateReview.css";
 
 const CreateReview = () => {
   const { id } = useParams();
@@ -13,7 +14,6 @@ const CreateReview = () => {
 
   const [review, setReview] = useState("");
   const [errors, setErrors] = useState([]);
-
 
   useEffect(() => {
     const errors = [];
@@ -33,20 +33,38 @@ const CreateReview = () => {
     };
 
     const reviews = dispatch(addReview(payload));
+
+    if (reviews) {
+      setReview("");
+    }
   };
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form className="review-form" onSubmit={(e) => handleSubmit(e)}>
         <textarea
+          id="review-textbox"
           type="textarea"
           value={review}
           onChange={(e) => setReview(e.target.value)}
-          placeholder="Enjoy your stay? Write a review here."
+          placeholder="Enjoy your stay? Write a review here..."
         />
-        <button type="submit">Submit review</button>
+        <div className="review-btns-container">
+          <button className="review-btns" id="review-submit-btn" type="submit">
+            Submit review
+          </button>
+          <button
+            className="review-btns"
+            id="review-cancel-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              setReview("");
+            }}
+          >
+            Cancel
+          </button>
+        </div>
       </form>
-        <button onClick={(e) => setReview("")}>Cancel</button>
     </>
   );
 };
