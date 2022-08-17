@@ -15,11 +15,11 @@ body {
 }
 
 #networking-links {
-    color:rgba(0, 0, 0, 0.886);
+    color: cadetblue;
 }
 
 #networking-links:hover {
-    color:cadetblue;
+    color: grey
 }
 
 #top-msg-bar {
@@ -58,6 +58,7 @@ body {
 
 #left-side-nav {
     display: flex;
+    align-items: center;
     text-decoration: none;
     font-size: 20px;
     margin-right: 15%;
@@ -105,9 +106,14 @@ body {
     border: 1px solid;
 }
 
+.fa-dog {
+    color: cadetblue;
+    margin-right: 5px;
+}
+
 #cabindogs {
     color:rgba(69, 69, 69, 0.886);
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 900;
 }
 #cabindogs:hover {
