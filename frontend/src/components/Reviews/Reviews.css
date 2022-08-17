@@ -1,8 +1,40 @@
 .reviews-container {
-    margin-bottom: 200px;
+    background-color: cadetblue;
+    padding: 60px 0 120px;
 }
 
 #reviews-heading {
     font-size: 22px;
-    margin-left: 20%;
+    margin:  0 0 15px 20%;
+}
+
+.reviews-ul {
+    display: flex;
+    align-items: center;
+    margin: 0 10%;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+#review-delete-btn {
+    display: flex;
+    cursor: pointer;
+    margin: 5px;
+    padding: 8px;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #4e4e4e;
+    background-color: white;
+}
+
+#review-delete-btn:hover {
+    background-color: #a3a3a3;
+    color: white;
+    border: 1px solid white;
+}
+
+#ASDF {
+    margin: 100px;
 }
