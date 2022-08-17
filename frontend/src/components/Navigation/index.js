@@ -61,7 +61,7 @@ function Navigation({ isLoaded }) {
           id="start-hosting-btn"
           style={{ textDecoration: "none" }}
         >
-          Start Hosting
+          Start hosting
         </NavLink>
       </>
     );
@@ -82,7 +82,7 @@ function Navigation({ isLoaded }) {
             to="/"
             style={{ textDecoration: "none" }}
           >
-            CABINDOGS
+            CabinDogs
           </NavLink>
         </div>
         <div id="right-side-nav">{isLoaded && sessionLinks}</div>
