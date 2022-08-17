@@ -11,9 +11,19 @@
 .reviews-ul {
     display: flex;
     align-items: center;
-    margin: 0 10%;
+    margin: 0 20% 0 20%;
     justify-content: space-between;
     padding: 40px 0;
+}
+
+.reviews-user-and-review {
+    display: flex;
+    flex-direction: column;
+}
+
+#reviews-content {
+    margin-top: 15px;
+    width: 750px;
 }
 
 #review-delete-btn {
