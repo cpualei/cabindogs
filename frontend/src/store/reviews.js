@@ -2,10 +2,9 @@ import { csrfFetch } from "./csrf";
 
 // ACTIONS
 export const LOAD_REVIEWS = "cabins/LOAD_REVIEWS";
-// export const LOAD_REVIEW = "cabins/LOAD_BOOKING";
 export const ADD_REVIEW = "cabins/ADD_REVIEW";
 // export const UPDATE_REVIEW = "cabins/UPDATE_REVIEW";
-// export const REMOVE_REVIEW = "cabins/REMOVE_REVIEW";
+export const REMOVE_REVIEW = "cabins/REMOVE_REVIEW";
 
 // ACTION CREATORS
 const load = (reviews) => {
@@ -14,13 +13,6 @@ const load = (reviews) => {
     reviews,
   };
 };
-
-// const loadOne = (review) => {
-//   return {
-//     type: LOAD_BOOKING,
-//     review,
-//   };
-// };
 
 const add = (newReview) => {
   return {
@@ -36,12 +28,12 @@ const add = (newReview) => {
 //   };
 // };
 
-// const remove = (reviewId) => {
-//   return {
-//     type: REMOVE_REVIEW,
-//     reviewId,
-//   };
-// };
+const remove = (reviewId) => {
+  return {
+    type: REMOVE_REVIEW,
+    reviewId,
+  };
+};
 
 // ------- THUNK ACTION CREATORS -------
 export const getReviews = () => async (dispatch) => {
@@ -79,17 +71,17 @@ export const addReview = (review) => async (dispatch) => {
   return newReview;
 };
 
-// export const deleteBooking = (booking) => async (dispatch) => {
-//   const res = await csrfFetch(`/api/bookings/${booking.id}`, {
-//     method: "DELETE",
-//   });
+export const deleteReview = (review) => async (dispatch) => {
+  const res = await csrfFetch(`/api/reviews/${review.id}`, {
+    method: "DELETE",
+  });
 
-//   if (res.ok) {
-//     const id = await res.json();
-//     dispatch(remove(id));
-//     return booking;
-//   }
-// }
+  if (res.ok) {
+    const id = await res.json();
+    dispatch(remove(id));
+    return res;
+  }
+}
 
 // ------- REDUCER -------
 const reviewsReducer = (state = {}, action) => {
@@ -108,10 +100,10 @@ const reviewsReducer = (state = {}, action) => {
     case ADD_REVIEW:
       const addState = { ...state, [action.newReview.id]: action.newReview }
       return addState;
-    // case REMOVE_BOOKING:
-    //   const deleteState= { ...state }
-    //   delete deleteState[action.bookingId]
-    //   return deleteState;
+    case REMOVE_REVIEW:
+      const deleteState= { ...state }
+      delete deleteState[action.reviewId]
+      return deleteState;
     default:
         return state;
   }

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import CreateReview from "../CreateReview";
 import { getListings } from "../../store/listings";
-import { getReviews } from "../../store/reviews";
+import { getReviews, deleteReview } from "../../store/reviews";
 import "./Reviews.css";
 
 const Reviews = (listing) => {
@@ -27,6 +27,7 @@ const Reviews = (listing) => {
             <ul key={review?.id}>
                 <div>{review?.userId}</div>
                 <div>{review?.review}</div>
+                <button onClick={(e) => dispatch(deleteReview(review))}>Delete review</button>
             </ul>
         ))}
     </div>

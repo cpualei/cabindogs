@@ -14,7 +14,7 @@ const CreateReview = () => {
   const [review, setReview] = useState("");
   const [errors, setErrors] = useState([]);
 
-  
+
   useEffect(() => {
     const errors = [];
 
@@ -45,8 +45,8 @@ const CreateReview = () => {
           placeholder="Enjoy your stay? Write a review here."
         />
         <button type="submit">Submit review</button>
-        <button onClick={(e) => setReview("")}>Cancel</button>
       </form>
+        <button onClick={(e) => setReview("")}>Cancel</button>
     </>
   );
 };
