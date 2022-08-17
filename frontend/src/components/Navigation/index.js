@@ -17,7 +17,7 @@ function Navigation({ isLoaded }) {
             className="nav-links"
             style={{ textDecoration: "none" }}
           >
-            Listings
+            Cabins
           </NavLink>
           <NavLink
             to="/bookings"
