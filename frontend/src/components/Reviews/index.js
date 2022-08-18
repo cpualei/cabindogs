@@ -33,11 +33,11 @@ const Reviews = (listing) => {
         <GetUsers userId={review?.userId} />
           <div id="reviews-content">{review?.review}</div>
           </div>
-          {/* {sessionUser?.id === review?.userId ? */}
+          {sessionUser?.id === review?.userId ?
           <button id="review-delete-btn" onClick={(e) => dispatch(deleteReview(review))}>
             Delete review
           </button>
-          {/* : null} */}
+          : null}
         </div>
           {/* : <p id="ASDF">"Be the first to leave a review!"</p>} */}
         </>
