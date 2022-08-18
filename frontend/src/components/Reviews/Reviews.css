@@ -1,17 +1,16 @@
 .reviews-container {
     background-color: cadetblue;
-    padding: 60px 0 120px;
+    padding: 60px 20% 120px;
 }
 
 #reviews-heading {
     font-size: 22px;
-    margin:  0 0 15px 20%;
+    margin:  0 0 15px;
 }
 
 .reviews-ul {
     display: flex;
     align-items: center;
-    margin: 0 20% 0 20%;
     justify-content: space-between;
     padding: 40px 0;
 }
@@ -23,7 +22,7 @@
 
 #reviews-content {
     margin-top: 15px;
-    width: 750px;
+    width: 100%;
 }
 
 #review-delete-btn {
@@ -37,6 +36,7 @@
     border-radius: 5px;
     color: #4e4e4e;
     background-color: white;
+    flex: none;
 }
 
 #review-delete-btn:hover {
