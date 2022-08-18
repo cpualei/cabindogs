@@ -8,7 +8,8 @@
 #review-textbox {
     display: flex;
     height: 150px;
-    width: 840px;
+    max-width: 840px;
+    width: 100%;
     align-items: center;
     resize: none;
     padding: 20px;
