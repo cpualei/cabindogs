@@ -24,7 +24,7 @@ const AllBookings = () => {
       {!bookingsArr2.length ? (
         <h1 id="bookings-title">You have no bookings.</h1>
       ) : (
-        <h1 id="bookings-title">Upcoming reservations</h1>
+        <h1 id="bookings-title">Upcoming cabin reservations</h1>
       )}
       <div id="bookings-ul-div">
         <ul id="bookings-ul">
@@ -53,7 +53,7 @@ const AllBookings = () => {
                     to {booking?.endDate}
                   </div>
                   <div className="booking-description" id="booking-cost">
-                    Total Paid: $
+                    Total paid: $
                     {listings[booking?.listingId]?.cost +
                       listings[booking?.listingId]?.cost * 0.4}
                   </div>
@@ -65,7 +65,7 @@ const AllBookings = () => {
                         history.push("/bookings");
                       }}
                     >
-                      Cancel Reservation
+                      Cancel reservation
                     </button>
                   </div>
                 </div>

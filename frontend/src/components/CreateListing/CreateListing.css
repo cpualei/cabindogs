@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: hwb(0deg 100% 0% / 77%);
+    background-color: #f5f5f5d6;
     max-width: 450px;
     margin: 40px;
     margin-top: 160px;

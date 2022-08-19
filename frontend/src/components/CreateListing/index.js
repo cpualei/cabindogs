@@ -23,17 +23,17 @@ const CreateListingForm = () => {
   useEffect(() => {
     const errors = [];
 
-    if (!name) errors.push("Please enter a listing a name.");
+    if (!name) errors.push("Please enter a cabin name.");
     if (!state)
-      errors.push("Please select the state where listing is located.");
+      errors.push("Please select the state where cabin is located.");
     if (!country)
-      errors.push("Please select the country where listing is located.");
-    if (!cost) errors.push("Please provide the cost per day for your listing.");
-    if (!img1) errors.push("Please upload an image for your listing.");
-    if (!img2) errors.push("Please upload an image for your listing.");
-    if (!img3) errors.push("Please upload an image for your listing.");
-    if (!img4) errors.push("Please upload an image for your listing.");
-    if (!img5) errors.push("Please upload an image for your listing.");
+      errors.push("Please select the country where cabin is located.");
+    if (!cost) errors.push("Please provide the cost per day for your cabin.");
+    if (!img1) errors.push("Please upload an image for your cabin.");
+    if (!img2) errors.push("Please upload an image for your cabin.");
+    if (!img3) errors.push("Please upload an image for your cabin.");
+    if (!img4) errors.push("Please upload an image for your cabin.");
+    if (!img5) errors.push("Please upload an image for your cabin.");
 
     setErrors(errors);
   }, [name, state, country, cost, img1, img2, img3, img4, img5]);
@@ -86,7 +86,7 @@ const CreateListingForm = () => {
                 <div id="create-listing-inputs-div">
                   <input
                     className="create-listing-inputs"
-                    placeholder="Listing Name"
+                    placeholder="Cabin name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -154,11 +154,11 @@ const CreateListingForm = () => {
                   ))}
                 </ul>
                 <p id="create-listing-form-bottom-text">
-                  By clicking 'Submit your listing', you agree to absolutely
-                  nothing and your listing will be submitted.
+                  By clicking 'Submit your cabin', you agree to absolutely
+                  nothing and your cabin will be submitted.
                 </p>
                 <button className="submit-cancel-btns" type="submit">
-                  Submit your listing
+                  Submit your cabin
                 </button>
                 <button
                   className="submit-cancel-btns"
