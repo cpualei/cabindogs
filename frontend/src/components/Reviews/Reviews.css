@@ -1,6 +1,7 @@
 .reviews-container {
     background-color: cadetblue;
-    padding: 60px 20% 120px;
+    padding: 100px 20% 120px;
+    margin-top: 150px;
 }
 
 #reviews-heading {
