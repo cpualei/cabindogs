@@ -33,7 +33,7 @@ const ListingDetailsPage = () => {
     <div>
       {/* {loaded ? */}
       {/* <> */}
-      <h1 id="listing-details-title">Listing details</h1>
+      <h1 id="listing-details-title">Cabin details</h1>
       <div id="listing-dscrpt-container">
         <div id="listing-dscrpt-div">
           <div id="listing-dscrpt-name">{listing?.name}</div>
@@ -63,7 +63,7 @@ const ListingDetailsPage = () => {
               history.push("/listings");
             }}
           >
-            Remove listing
+            Remove cabin
           </button>
           <button className="listing-details-btns" onClick={bookButtonClick}>
             Book this cabin

@@ -74,7 +74,7 @@ const CreateBookingPage = () => {
                 {booking?.state}, {booking?.country}
               </div>
               <div id="create-booking-dates-div">
-                <label className="create-booking-labels">Start Date</label>
+                <label className="create-booking-labels">Start date</label>
                 <input
                   type="date"
                   id="create-booking-start-date-input"
@@ -85,7 +85,7 @@ const CreateBookingPage = () => {
                 />
               </div>
               <div id="create-booking-dates-div">
-                <label className="create-booking-labels">End Date</label>
+                <label className="create-booking-labels">End date</label>
                 <input
                   type="date"
                   id="create-booking-end-date-input"
@@ -138,7 +138,7 @@ const CreateBookingPage = () => {
                   id="create-booking-total-cost"
                   className="create-booking-labels"
                 >
-                  Total Cost: ${booking?.cost + booking?.cost * 0.4}
+                  Total cost: ${booking?.cost + booking?.cost * 0.4}
                 </label>
                 <input
                   id="create-booking-total-cost-input"

@@ -63,16 +63,16 @@ const EditListingForm = ({ setShowModal }) => {
 
   return (
     <div id="edit-form-div">
-      <h1 id="edit-listing-title">Update listing</h1>
+      <h1 id="edit-listing-title">Update cabin</h1>
       <p id="edit-listing-subtitle">Fields with an asterisk (*)  are required.</p>
       <form
         id="form"
         onSubmit={(e) => handleSubmit(e)}>
-          <label className="edit-listing-labels">Listing name *</label>
+          <label className="edit-listing-labels">Cabin name *</label>
         <input
           className="edit-listing-inputs"
           value={name}
-          placeholder="Listing Name"
+          placeholder="Cabin name"
           onChange={(e) => setName(e.target.value)}
           required
           />
@@ -100,7 +100,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setCost(e.target.value)}
           required
           />
-          <label className="edit-listing-labels">Listing image 1 *</label>
+          <label className="edit-listing-labels">Cabin image 1 *</label>
         <input
           className="edit-listing-inputs"
           value={img1}
@@ -109,7 +109,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg1(e.target.value)}
           required
           />
-          <label className="edit-listing-labels">Listing image 2 *</label>
+          <label className="edit-listing-labels">Cabin image 2 *</label>
         <input
           className="edit-listing-inputs"
           value={img2}
@@ -118,7 +118,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg2(e.target.value)}
           required
           />
-          <label className="edit-listing-labels">Listing image 3 *</label>
+          <label className="edit-listing-labels">Cabin image 3 *</label>
         <input
           className="edit-listing-inputs"
           value={img3}
@@ -127,7 +127,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg3(e.target.value)}
           required
           />
-          <label className="edit-listing-labels">Listing image 4 *</label>
+          <label className="edit-listing-labels">Cabin image 4 *</label>
         <input
           className="edit-listing-inputs"
           value={img4}
@@ -136,7 +136,7 @@ const EditListingForm = ({ setShowModal }) => {
           onChange={(e) => setImg4(e.target.value)}
           required
           />
-          <label className="edit-listing-labels">Listing image 5 *</label>
+          <label className="edit-listing-labels">Cabin image 5 *</label>
         <input
           className="edit-listing-inputs"
           value={img5}
@@ -150,7 +150,7 @@ const EditListingForm = ({ setShowModal }) => {
               <li key={idx}>{error}</li>
             ))}
           </ul>
-        <button className="update-cancel-btns" type="submit">Update listing</button>
+        <button className="update-cancel-btns" type="submit">Update cabin</button>
         <button className="update-cancel-btns" type="button" onClick={(e) => history.push("/listings")}>
           Cancel
         </button>
