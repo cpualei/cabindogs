@@ -53,8 +53,9 @@ const ListingDetailsPage = () => {
         </div>
       </div>
 
-      {sessionUser ? (
         <div id="listing-btns-div">
+      {sessionUser && sessionUser?.id === listing?.userId ? (
+        <>
           <EditListingFormModal />
           <button
             className="listing-details-btns"
@@ -65,13 +66,14 @@ const ListingDetailsPage = () => {
           >
             Remove cabin
           </button>
+          </>
+            ) : (
+              <></>
+            )}
           <button className="listing-details-btns" onClick={bookButtonClick}>
             Book this cabin
           </button>
         </div>
-      ) : (
-        <></>
-      )}
       {/* </> */}
       {/* : <h1> Loading</h1>} */}
 
