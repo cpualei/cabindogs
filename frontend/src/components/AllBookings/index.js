@@ -19,6 +19,10 @@ const AllBookings = () => {
     dispatch(getBookings());
   }, [dispatch]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div id="bookings-div">
       {!bookingsArr2.length ? (

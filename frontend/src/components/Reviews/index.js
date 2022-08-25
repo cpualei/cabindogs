@@ -10,8 +10,8 @@ import "./Reviews.css";
 const Reviews = (listing) => {
   const dispatch = useDispatch();
 
-  const reviews = Object.values(useSelector((state) => state.reviews));
   const sessionUser = useSelector((state) => state.session.user);
+  const reviews = Object.values(useSelector((state) => state.reviews));
 
   const listingReviews = reviews.filter((review) => {
     return review.listingId === listing?.listing?.id;
@@ -24,8 +24,12 @@ const Reviews = (listing) => {
 
   return (
     <div className="reviews-container">
-      <h1 id="reviews-heading">Cabin reviews</h1>
+      <h1 id="reviews-heading">CABIN REVIEWS</h1>
+      {sessionUser ?
       <CreateReview />
+      : null}
+      {listingReviews.length ?
+      <>
       {listingReviews?.map((review) => (
         <div className="reviews-ul" key={review?.id}>
           <div className="reviews-review-container">
@@ -46,6 +50,8 @@ const Reviews = (listing) => {
           ) : null}
         </div>
       ))}
+      </>
+      : <p id="no-reviews-text">Whoops. Looks like there are no reviews for this cabin.</p>}
     </div>
   );
 };
