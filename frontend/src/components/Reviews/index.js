@@ -4,6 +4,7 @@ import CreateReview from "../CreateReview";
 import GetUsers from "../GetUsers";
 import { getListings } from "../../store/listings";
 import { getReviews, deleteReview } from "../../store/reviews";
+import moment from "moment";
 import "./Reviews.css";
 
 const Reviews = (listing) => {
@@ -26,21 +27,24 @@ const Reviews = (listing) => {
       <h1 id="reviews-heading">Cabin reviews</h1>
       <CreateReview />
       {listingReviews?.map((review) => (
-        <>
-        {/* {listingReviews.length > 0 ? */}
         <div className="reviews-ul" key={review?.id}>
-          <div className="reviews-user-and-review">
-        <GetUsers userId={review?.userId} />
-          <div id="reviews-content">{review?.review}</div>
+          <div className="reviews-review-container">
+            <div className="reviews-user-and-time">
+              <p><GetUsers userId={review?.userId} /></p>&nbsp;&nbsp;
+              <p id="reviews-timestamp">{ moment().format("MMM Do YYYY")}</p>
+            </div>
+
+            <div id="reviews-content">{review?.review}</div>
           </div>
-          {sessionUser?.id === review?.userId ?
-          <button id="review-delete-btn" onClick={(e) => dispatch(deleteReview(review))}>
-            Delete review
-          </button>
-          : null}
+          {sessionUser?.id === review?.userId ? (
+            <button
+              id="review-delete-btn"
+              onClick={() => dispatch(deleteReview(review))}
+            >
+              Delete review
+            </button>
+          ) : null}
         </div>
-          {/* : <p id="ASDF">"Be the first to leave a review!"</p>} */}
-        </>
       ))}
     </div>
   );

@@ -16,14 +16,25 @@
     padding: 40px 0;
 }
 
-.reviews-user-and-review {
+.reviews-review-container {
     display: flex;
     flex-direction: column;
+    margin-right: 15px;
+}
+
+.reviews-user-and-time {
+    display: flex;
+    align-items: center;
+}
+
+#reviews-timestamp {
+    font-size: 13px;
 }
 
 #reviews-content {
     margin-top: 15px;
     width: 100%;
+    color: #1c3030;
 }
 
 #review-delete-btn {
@@ -44,8 +55,4 @@
     background-color: #a3a3a3;
     color: white;
     border: 1px solid white;
-}
-
-#ASDF {
-    margin: 100px;
 }
