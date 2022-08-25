@@ -8,13 +8,12 @@ import "./ListingDetailsPage.css";
 
 const ListingDetailsPage = () => {
   const { id } = useParams();
+  const history = useHistory();
   const dispatch = useDispatch();
 
   const sessionUser = useSelector((state) => state.session.user);
   const listings = useSelector((state) => state.listings);
   const listing = listings[id];
-
-  // const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -23,7 +22,9 @@ const ListingDetailsPage = () => {
     })();
   }, [dispatch, id]);
 
-  const history = useHistory();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const bookButtonClick = (e) => {
     history.push(`/listings/${id}/book`);
@@ -76,7 +77,6 @@ const ListingDetailsPage = () => {
         </div>
       {/* </> */}
       {/* : <h1> Loading</h1>} */}
-
       <Reviews listing={listing} />
     </div>
   );

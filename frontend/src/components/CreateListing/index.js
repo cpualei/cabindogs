@@ -38,6 +38,10 @@ const CreateListingForm = () => {
     setErrors(errors);
   }, [name, state, country, cost, img1, img2, img3, img4, img5]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 

@@ -15,6 +15,10 @@ const AllListings = () => {
     dispatch(getListings());
   }, [dispatch]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <h1 id="listings-title">Find your favorite cabin.</h1>

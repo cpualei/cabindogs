@@ -1,9 +1,15 @@
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import "./SplashPage.css";
 
 
 const SplashPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <div id="h1-div">
