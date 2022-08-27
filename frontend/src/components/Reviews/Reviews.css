@@ -1,17 +1,22 @@
 .reviews-container {
-    background-color: cadetblue;
-    padding: 100px 20% 120px;
+    background-color: #5f9ea069;
+    padding: 30px 20% 120px;
     margin-top: 150px;
 }
 
 #reviews-heading {
     display: flex;
-    font-size: 22px;
+    font-size: 25px;
     margin: 0 0 15px;
-    border-radius: 25px;
-    padding: 10px;
-    background-color: rgb(255 255 255 / 55%);
+    border-radius: 50px;
+    padding: 15px;
+    background-color: cadetblue;
     justify-content: center;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    border: 1px dashed #585858;
+    top: -58px;
+    position: relative;
 }
 
 .reviews-ul {
@@ -51,8 +56,8 @@
     -webkit-font-smoothing: antialiased;
     border: 1px solid transparent;
     border-radius: 5px;
-    color: #4e4e4e;
-    background-color: white;
+    color: #ffffff;
+    background-color: rgb(88 88 88);
     flex: none;
 }
 
