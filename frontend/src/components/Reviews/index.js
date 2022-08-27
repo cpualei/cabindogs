@@ -35,7 +35,7 @@ const Reviews = (listing) => {
           <div className="reviews-review-container">
             <div className="reviews-user-and-time">
               <p><GetUsers userId={review?.userId} /></p>&nbsp;&nbsp;
-              <p id="reviews-timestamp">{ moment(review?.createdAt).format("MMM Do YYYY")}</p>
+              <p id="reviews-timestamp">{ moment(review?.createdAt).format("MMM Do, YYYY")}</p>
             </div>
 
             <div id="reviews-content">{review?.review}</div>
