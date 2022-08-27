@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBookings, deleteBooking } from "../../store/bookings";
 import { getListings } from "../../store/listings";
+import moment from "moment";
 import "./AllBookings.css";
 
 const AllBookings = () => {
@@ -41,6 +42,7 @@ const AllBookings = () => {
                   src={listings[booking.listingId]?.img1}
                 ></img>
                 <div id="booking-description-div">
+                  <div className="booking-name-and-location-cntnr">
                   <div className="booking-description" id="booking-name">
                     {listings[booking.listingId]?.name}
                   </div>
@@ -48,18 +50,23 @@ const AllBookings = () => {
                     {listings[booking.listingId]?.state},{" "}
                     {listings[booking.listingId]?.country}
                   </div>
-                  {/* <div id="booking-description" id="booking-guests">{listings[booking.listingId]?.guests}</div> */}
-                  <div className="booking-description" id="booking-dates">
-                    {
-                      // <BookingDate booking={booking?.startDate} />
-                      booking?.startDate
-                    }{" "}
-                    to {booking?.endDate}
                   </div>
-                  <div className="booking-description" id="booking-cost">
-                    Total paid: $
-                    {listings[booking?.listingId]?.cost +
-                      listings[booking?.listingId]?.cost * 0.4}
+                  <div className="booking-description" id="booking-dates">
+                    <p className="bookings-timestamp">
+                      {moment(booking?.startDate).format("MMM Do, YYYY")}
+                    </p>{" "}
+                    &nbsp;&nbsp; <p id="bookings-to">to</p> &nbsp;&nbsp;{" "}
+                    <p className="bookings-timestamp">
+                      {moment(booking?.endDate).format("MMM Do, YYYY")}
+                    </p>
+                  </div>
+                  <div className="booking-description" id="booking-cost-cntr">
+                    Total paid: &nbsp;{" "}
+                    <p id="booking-cost">
+                      $
+                      {listings[booking?.listingId]?.cost +
+                        listings[booking?.listingId]?.cost * 0.4}
+                    </p>
                   </div>
                   <div id="delete-btn-div">
                     <button

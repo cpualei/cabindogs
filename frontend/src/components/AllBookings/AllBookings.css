@@ -53,20 +53,23 @@ div#booking-description-div {
     margin-bottom: 15px;
 }
 
+.booking-name-and-location-cntnr {
+    background-color: #5f9ea042;
+}
+
 #booking-name {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #booking-state {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10px;
+    margin: 0 0 15px 15px;
 }
 
 /* #booking-country {
@@ -75,23 +78,32 @@ div#booking-description-div {
     justify-content: center;
 } */
 
-#booking-dates {
+.bookings-timestamp {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+#bookings-to {
+    display: flex;
+    font-style: italic;
+    /* font-weight: bold; */
+}
+
+#booking-cost-cntr {
+    display: flex;
+    align-items: center;
 }
 
 #booking-cost {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
 }
 
 #delete-btn-div {
     display: flex;
-    /* justify-content: flex-start; */
 }
 
 #delete-btn {
@@ -102,8 +114,6 @@ div#booking-description-div {
     border: 1px solid transparent;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-    margin: 5px;
-    margin-left: 10px;
     margin-top: 20px;
     margin-bottom: 40px;
     border: 1px solid transparent;
