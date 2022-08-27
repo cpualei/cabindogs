@@ -13,10 +13,12 @@
     align-items: center;
     resize: none;
     padding: 20px;
+    margin-bottom: 8px;
     font-family: inherit;
     font-size: inherit;
-    color: #7a7a7a;
+    color: cadetblue;
     border-radius: 15px;
+    box-shadow: 0px 0px 9px 1px cadetblue;
 }
 
 #review-textbox:focus {
@@ -41,19 +43,19 @@
 }
 
 #review-submit-btn {
-    background-color: #fff;
-    color: cadetblue;
+    background-color: cadetblue;
+    color: white;
 }
 
 #review-submit-btn:hover {
     color: white;
-    background-color: cadetblue;
+    background-color: rgba(100, 167, 169, 0.737);
     border: 1px solid rgb(255, 255, 255);
 }
 
 #review-cancel-btn {
-    background-color: #d4d4d4;
-    color: #4e4e4e;
+    background-color: #585858;
+    color: white;
 }
 
 #review-cancel-btn:hover {
