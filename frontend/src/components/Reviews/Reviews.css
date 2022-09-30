@@ -24,6 +24,14 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 15px;
+    border-style: groove;
+}
+
+#reviews-user {
+    margin: 0;
 }
 
 .reviews-review-container {
@@ -39,6 +47,7 @@
 
 #reviews-timestamp {
     font-size: 13px;
+    margin: 0;
 }
 
 #reviews-content {
