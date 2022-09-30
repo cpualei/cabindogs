@@ -25,33 +25,42 @@ const Reviews = (listing) => {
   return (
     <div className="reviews-container">
       <h1 id="reviews-heading">CABIN REVIEWS</h1>
-      {sessionUser ?
-      <CreateReview />
-      : null}
-      {listingReviews.length ?
-      <>
-      {listingReviews?.map((review) => (
-        <div className="reviews-ul" key={review?.id}>
-          <div className="reviews-review-container">
-            <div className="reviews-user-and-time">
-              <p id="reviews-user"><GetUsers userId={review?.userId} /></p>&nbsp;&nbsp;
-              <p id="reviews-timestamp">{ moment(review?.createdAt).format("MMM Do, YYYY")}</p>
-            </div>
+      {sessionUser ? <CreateReview /> : null}
+      {listingReviews.length ? (
+        <>
+          {listingReviews?.map((review) => (
+            <div className="reviews-ul" key={review?.id}>
+              <div className="reviews-review-container">
+                <div className="reviews-user-and-time">
+                  <p id="reviews-user">
+                    <GetUsers userId={review?.userId} />
+                  </p>
+                  &nbsp;&nbsp;
+                  <p id="reviews-timestamp">
+                    {moment(review?.createdAt).format("MMM Do, YYYY")}
+                  </p>
+                </div>
 
-            <div id="reviews-content">{review?.review}</div>
-          </div>
-          {sessionUser?.id === review?.userId ? (
-            <button
-              id="review-delete-btn"
-              onClick={() => dispatch(deleteReview(review))}
-            >
-              Delete review
-            </button>
-          ) : null}
+                <div id="reviews-content">{review?.review}</div>
+              </div>
+              {sessionUser?.id === review?.userId ? (
+                <button
+                  id="review-delete-btn"
+                  onClick={() => dispatch(deleteReview(review))}
+                >
+                  Delete review
+                </button>
+              ) : null}
+            </div>
+          ))}
+        </>
+      ) : (
+        <div className="no-reviews-text-div">
+          <p id="no-reviews-text">
+            <i><b>Whoops!</b></i>&nbsp; Looks like there are no reviews for this cabin.
+          </p>
         </div>
-      ))}
-      </>
-      : <p id="no-reviews-text">Whoops. Looks like there are no reviews for this cabin.</p>}
+      )}
     </div>
   );
 };

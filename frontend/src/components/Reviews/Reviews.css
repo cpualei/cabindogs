@@ -76,7 +76,16 @@
     border: 1px solid white;
 }
 
-#no-reviews-text {
-    color: white;
+.no-reviews-text-div {
     text-align: center;
+}
+
+#no-reviews-text {
+    color: #585858;
+    text-align: center;
+    background-color: whitesmoke;
+    width: auto;
+    padding: 15px;
+    border-radius: 20px;
+    border-style: groove;
 }
