@@ -55,11 +55,12 @@ const Reviews = (listing) => {
           ))}
         </>
       ) : (
-        <div className="no-reviews-text-div">
-          <p id="no-reviews-text">
-            <i><b>Whoops!</b></i>&nbsp; Looks like there are no reviews for this cabin.
-          </p>
-        </div>
+        <p id="no-reviews-text">
+          <i>
+            <b>Whoops!</b>
+          </i>
+          &nbsp; Looks like there are no reviews for this cabin.
+        </p>
       )}
     </div>
   );
