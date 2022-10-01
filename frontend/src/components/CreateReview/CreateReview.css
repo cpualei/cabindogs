@@ -17,8 +17,9 @@
     font-family: inherit;
     font-size: inherit;
     color: cadetblue;
-    border-radius: 15px;
-    box-shadow: 0px 0px 9px 1px cadetblue;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px #929292;
+    border: 1px solid transparent;
 }
 
 #review-textbox:focus {

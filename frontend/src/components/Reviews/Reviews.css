@@ -8,13 +8,13 @@
     display: flex;
     font-size: 25px;
     margin: 0 0 15px;
-    border-radius: 50px;
+    border-radius: 5px;
     padding: 15px;
     background-color: cadetblue;
     justify-content: center;
     color: white;
     -webkit-font-smoothing: antialiased;
-    border: 1px dashed #585858;
+    border: 1px solid #7b7b7b;
     top: -58px;
     position: relative;
 }
@@ -24,10 +24,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
-    background-color: whitesmoke;
+    background-color: #e6f1f3;
     padding: 20px;
-    border-radius: 15px;
-    border: solid 1px cadetblue;
+    border-radius: 5px;
+    border: solid 1px #9c9c9c96;
 }
 
 #reviews-user {
