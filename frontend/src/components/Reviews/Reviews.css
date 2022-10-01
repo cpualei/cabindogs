@@ -27,7 +27,7 @@
     background-color: whitesmoke;
     padding: 20px;
     border-radius: 15px;
-    border-style: groove;
+    border: solid 1px cadetblue;
 }
 
 #reviews-user {
@@ -83,5 +83,5 @@
     width: auto;
     padding: 15px;
     border-radius: 20px;
-    border-style: groove;
+    border: solid 1px cadetblue;
 }
