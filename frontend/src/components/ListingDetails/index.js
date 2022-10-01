@@ -12,8 +12,13 @@ const ListingDetailsPage = () => {
   const dispatch = useDispatch();
 
   const sessionUser = useSelector((state) => state.session.user);
+  const users = useSelector((state) => Object.values(state.users));
+  console.log(users)
   const listings = useSelector((state) => state.listings);
+
   const listing = listings[id];
+  const getOwner = users.filter((user) => user?.id === listing?.userId)[0]
+  const cabinOwner = getOwner?.username
 
   useEffect(() => {
     (async () => {
@@ -34,15 +39,18 @@ const ListingDetailsPage = () => {
     <div>
       {/* {loaded ? */}
       {/* <> */}
-      <h1 id="listing-details-title">Cabin details</h1>
+      <h1 id="listing-details-title">{listing?.name}</h1>
       <div id="listing-dscrpt-container">
         <div id="listing-dscrpt-div">
           <div id="listing-dscrpt-name">{listing?.name}</div>
-          <div className="listing-dscrpt">
-            {listing?.state}, {listing?.country}
+          <div id="listing-dscrpt-location">
+            <i>{listing?.state}, {listing?.country}</i>
           </div>
-          <div className="listing-dscrpt">From ${listing?.cost} / night</div>
+          <div id="listing-dscrpt-cost">From ${listing?.cost} / night</div>
+          <br/>
         </div>
+          <div id="cabin-host"><b>Host</b>:&nbsp; {cabinOwner}</div>
+          <br/>
       </div>
       <div id="img-container-div">
         <img id="img1" src={listing?.img1} alt="img1"></img>
