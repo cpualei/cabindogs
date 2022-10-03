@@ -13,7 +13,6 @@ const ListingDetailsPage = () => {
 
   const sessionUser = useSelector((state) => state.session.user);
   const users = useSelector((state) => Object.values(state.users));
-  console.log(users)
   const listings = useSelector((state) => state.listings);
 
   const listing = listings[id];
@@ -37,8 +36,6 @@ const ListingDetailsPage = () => {
 
   return (
     <div>
-      {/* {loaded ? */}
-      {/* <> */}
       <h1 id="listing-details-title">{listing?.name}</h1>
       <div id="listing-dscrpt-container">
         <div id="listing-dscrpt-div">
@@ -83,8 +80,6 @@ const ListingDetailsPage = () => {
             Book this cabin
           </button>
         </div>
-      {/* </> */}
-      {/* : <h1> Loading</h1>} */}
       <Reviews listing={listing} />
     </div>
   );
