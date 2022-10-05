@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import terrior from "./terrior.jpg"
 import "../LoginForm/LoginForm.css";
 
 function SignupFormPage() {
@@ -38,7 +37,6 @@ function SignupFormPage() {
       <div
         id="bkgrnd-img"
         style={{
-          // backgroundImage: `url(https://cdn.80.lv/api/upload/content/29/606a861e97a38.jpg)`,
           backgroundImage: `url(https://cbsaustin.com/resources/media/cb9285fb-ff16-441a-b156-d227c9a7810d-jumbo16x9_GettyImages1216278125.jpg?1616544103796)`,
           height: "100vh",
           backgroundSize: "cover",

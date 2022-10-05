@@ -70,7 +70,6 @@ const CreateListingForm = () => {
       <div
         style={{
           backgroundImage: `url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/23453275/4026_McKeown_Lake_Rd_NW_044.jpg)`,
-          // height: "100vh",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}

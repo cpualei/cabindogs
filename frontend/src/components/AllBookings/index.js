@@ -36,7 +36,6 @@ const AllBookings = () => {
           {listings &&
             bookingsArr2.map((booking) => (
               <li id="booking-li" key={booking.id}>
-                {/* <p>{listings[booking.listingId]?.name}</p> */}
                 <img
                   id="booking-img"
                   src={listings[booking.listingId]?.img1}

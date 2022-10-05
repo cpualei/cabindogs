@@ -3,7 +3,6 @@ import { csrfFetch } from "./csrf";
 // ACTIONS
 export const LOAD_REVIEWS = "cabins/LOAD_REVIEWS";
 export const ADD_REVIEW = "cabins/ADD_REVIEW";
-// export const UPDATE_REVIEW = "cabins/UPDATE_REVIEW";
 export const REMOVE_REVIEW = "cabins/REMOVE_REVIEW";
 
 // ACTION CREATORS
@@ -20,13 +19,6 @@ const add = (newReview) => {
     newReview,
   };
 };
-
-// const update = (review) => {
-//   return {
-//     type: UPDATE_REVIEW,
-//     review,
-//   };
-// };
 
 const remove = (reviewId) => {
   return {
@@ -45,19 +37,9 @@ export const getReviews = () => async (dispatch) => {
   }
 };
 
-// export const getBookingPage = (id) => async (dispatch) => {
-//   const res = await csrfFetch(`/api/listings/${id}/book`);
-
-//   if (res.ok) {
-//     const booking = await res.json();
-//     dispatch(loadOne(booking));
-//   }
-// };
-
 export const addReview = (review) => async (dispatch) => {
     const res = await csrfFetch(`/api/reviews/new-review`, {
         method: "POST",
-        // headers: { "Content-Type": "application/json" },
         body: JSON.stringify(review),
     });
 
@@ -91,12 +73,7 @@ const reviewsReducer = (state = {}, action) => {
       action.reviews.forEach((review) => {
         normalizedReviews[review.id] = review;
       });
-    //   console.log(normalizedReviews)
       return { ...normalizedReviews };
-    // case LOAD_BOOKING:
-    //   const newState = { ...state };
-    //   newState[action.booking.id] = action.booking;
-    //   return newState;
     case ADD_REVIEW:
       const addState = { ...state, [action.newReview.id]: action.newReview }
       return addState;
