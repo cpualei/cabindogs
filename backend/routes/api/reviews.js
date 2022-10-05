@@ -7,7 +7,6 @@ const router = express.Router();
 
 router.get(
   "/",
-//   requireAuth,
   asyncHandler(async (req, res) => {
     const reviews = await Review.findAll();
     return res.json(reviews);

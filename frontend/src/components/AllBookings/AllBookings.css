@@ -72,12 +72,6 @@ div#booking-description-div {
     margin: 0 0 15px 15px;
 }
 
-/* #booking-country {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
-
 .bookings-timestamp {
     display: flex;
     font-size: 15px;
@@ -87,7 +81,6 @@ div#booking-description-div {
 #bookings-to {
     display: flex;
     font-style: italic;
-    /* font-weight: bold; */
 }
 
 #booking-cost-cntr {

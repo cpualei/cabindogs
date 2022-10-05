@@ -16,14 +16,11 @@ const ListingDetailsPage = () => {
   const listings = useSelector((state) => state.listings);
 
   const listing = listings[id];
-  const getOwner = users.filter((user) => user?.id === listing?.userId)[0]
-  const cabinOwner = getOwner?.username
+  const getOwner = users.filter((user) => user?.id === listing?.userId)[0];
+  const cabinOwner = getOwner?.username;
 
   useEffect(() => {
-    (async () => {
-      await dispatch(getListings(id));
-      // setLoaded(true);
-    })();
+    dispatch(getListings(id));
   }, [dispatch, id]);
 
   useEffect(() => {

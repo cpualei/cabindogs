@@ -65,7 +65,6 @@ export const getBookingPage = (id) => async (dispatch) => {
 export const addBooking = (bookingInfo) => async (dispatch) => {
   const res = await csrfFetch(`/api/bookings/book`, {
     method: "POST",
-    // headers: { "Content-Type": "application/json" },
     body: JSON.stringify(bookingInfo),
   });
 
