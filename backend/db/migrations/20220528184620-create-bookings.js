@@ -26,10 +26,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATEONLY
       },
-      totalDays: {
-        allowNull: false,
-        type: Sequelize.INTEGER
-      },
       totalPeople: {
         allowNull: false,
         type: Sequelize.INTEGER

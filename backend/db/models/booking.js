@@ -19,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATEONLY,
       allowNull: false
     },
-    totalDays: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
+    // totalDays: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // },
     totalPeople: {
       type: DataTypes.INTEGER,
       allowNull: false

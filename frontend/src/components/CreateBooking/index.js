@@ -13,8 +13,6 @@ const CreateBookingPage = () => {
 
   const listing = useSelector((state) => state.listings[id]);
   const booking = useSelector((state) => state.bookings[id]);
-  // console.log('listing', listing)
-  // console.log('booking', booking)
 
   const [totalCost, setTotalCost] = useState("");
   const [startDate, setStartDate] = useState("");
@@ -41,7 +39,7 @@ const CreateBookingPage = () => {
       listingId: listing.id,
       // totalPeople,
       // totalDogs,
-      totalCost,
+      // totalCost,
       startDate,
       endDate,
     };
@@ -62,24 +60,18 @@ const CreateBookingPage = () => {
     history.goBack();
   };
 
-  // console.log(endDate.split("-"))
-
-  const parseStartDate = (startDate) => {
-    const mdy = startDate.split("-");
+  const parseDate = (date) => {
+    const mdy = date.split("-");
     return new Date(mdy[0], mdy[1] - 1, mdy[2]);
   };
 
-  const parseEndDate = (endDate) => {
-    const mdy = endDate.split("-");
-    return new Date(mdy[0], mdy[1] - 1, mdy[2]);
+  const findTotalNights = (startDate, endDate) => {
+    let start = parseDate(startDate);
+    let end = parseDate(endDate)
+    return Math.round((end - start) / (1000 * 60 * 60 * 24));
   };
 
-  const totalNights = (startDate, endDate) => {
-    return Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
-  };
-  console.log(parseStartDate(startDate));
-  console.log(parseEndDate(endDate));
-  console.log(totalNights(parseStartDate(startDate), parseEndDate(endDate)))
+  const totalNights = findTotalNights(startDate, endDate);
 
   return (
     <>
@@ -166,7 +158,7 @@ const CreateBookingPage = () => {
             >
               {/* Total cost: ${booking?.cost + booking?.cost * 0.4} */}
               Cost per night: ${listing?.cost} <br />
-              Total nights: {endDate} {startDate}
+              Total nights: {totalNights ? totalNights : 0}
             </label>
             {/* <input
                   id="create-booking-total-cost-input"
