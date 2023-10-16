@@ -18,10 +18,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: { model: 'Listings' }
       },
-      totalCost: {
-        allowNull: false,
-        type: Sequelize.INTEGER
-      },
       startDate: {
         allowNull: false,
         type: Sequelize.DATEONLY
@@ -29,6 +25,14 @@ module.exports = {
       endDate: {
         allowNull: false,
         type: Sequelize.DATEONLY
+      },
+      totalPeople: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      totalDogs: {
+        allowNull: false,
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
